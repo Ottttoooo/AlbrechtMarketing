@@ -1,0 +1,195 @@
+{
+  "HomePage": {
+    "MetaData": {
+      "title": "Albrecht Marketing"
+    },
+    "hero": {
+      "heading": "Erklimme neue Höhen",
+      "listItems": {
+        "0": "Webdesign & Entwicklung",
+        "1": "Digitale Werbung",
+        "2": "Content Creation",
+        "3": "Social Media Managment"
+      }
+    },
+    "infoBoxes": {
+      "0": {
+        "title": "Entfalte dein Potenzial – Erreiche deine Kunden",
+        "description1": "Du hast ein großartiges Produkt oder eine Dienstleistung, die deinen Kunden echten Mehrwert bringt. Aber ohne die richtige Sichtbarkeit geht dieses Potenzial verloren. Viele Unternehmen setzen darauf, dass ihr Angebot schon irgendwie ankommt, doch das ist ein riskanter Weg.",
+        "descriptionBold": "Bei Albrecht Marketing wissen wir: Marketingerfolg ist kein Zufall. ",
+        "description2": "Unser Team versteht, wie man dein Geschäft authentisch und effektiv präsentiert – und wie man es dorthin bringt, wo deine Kunden sind. Mit bewährten Strategien und einem klaren Plan sorgen wir dafür, dass dein Angebot nicht nur sichtbar wird, sondern überzeugt.",
+        "description3": "Lass uns dir helfen, den Erfolg zu erreichen, den dein Geschäft verdient. Verpasse keine Chancen mehr – sichere dein Einkommen und zeige der Welt, was dein Business kann."
+      },
+      "1": {
+        "title": "Mehr Zeit für das, was wirklich zählt",
+        "description1": "Als Unternehmer kennst du den Druck, alles selbst managen zu müssen – von der Produktentwicklung bis zur Kundenpflege. Marketing wird da oft zur zusätzlichen Belastung. Genau hier kommen wir ins Spiel.",
+        "descriptionBold": "Wir bei Albrecht Marketing verstehen deinen Alltag und nehmen dir den Marketingstress ab. ",
+        "description2": "Unser erfahrenes Team übernimmt die Verantwortung für deine Online-Präsenz und entwickelt maßgeschneiderte Strategien, die deinem Geschäft Aufmerksamkeit verschaffen. So kannst du dich auf das Wesentliche konzentrieren, während wir dafür sorgen, dass dein Unternehmen im digitalen Raum wächst.",
+        "description3": "Und das Beste: Du behältst jederzeit den Überblick. Unser Dashboard macht alle Fortschritte und Ergebnisse transparent und einfach für dich einsehbar – alles an einem Ort, mit minimalem Aufwand für dich."
+      },
+      "2": {
+        "title": "Erfolg ist kein Zufall – Wir garantieren Ergebnisse",
+        "description1": "Bei Albrecht Marketing sind wir überzeugt von der Qualität unserer Arbeit. Unser Ziel ist klar: Dein Erfolg ist unser Erfolg. Deshalb bieten wir dir eine ",
+        "descriptionBold": "Geld-zurück-Garantie ",
+        "description2": "– wir profitieren nur, wenn auch du profitierst. Unsere Strategien sind darauf ausgerichtet, Ergebnisse zu liefern. Ob mehr Besucher, neue Leads oder höhere Umsätze – wir stehen für messbaren Mehrwert. Sollte dein Projekt die vereinbarten Ziele nicht erreichen, erhältst du dein Geld zurück. Mit dieser Garantie gehen wir sicher, dass du bei uns in guten Händen bist und volle Kontrolle über deine Investition hast.",
+        "description3": "Setze auf Marketing, das Ergebnisse bringt – ohne Risiko."
+      }
+    },
+    "packages": {
+      "heading": "Deine Pakete",
+      "subheading": "Für jedes Unternehmen die richtige Lösung."
+    },
+    "stepsSection": {
+      "heading": "Dein Weg zum Erfolg",
+      "steps": {
+        "0": {
+          "heading": "Strategiegespräch",
+          "text": "Zuerst möchten wir dein Unternehmen und deine Ziele verstehen. In einem persönlichen Gespräch analysieren wir, welche Herausforderungen und Chancen bestehen. So können wir gezielt Maßnahmen entwickeln, die genau zu deinem Geschäft passen – ob Webdesign, Social Media oder Online-Werbung."
+        },
+        "1": {
+          "heading": "Individuelle Planung",
+          "text": "Basierend auf unserer Analyse erstellen wir eine maßgeschneiderte Strategie für dich. Wir legen fest, welche Kanäle, Inhalte und Designs am besten funktionieren, und entwickeln einen klaren Plan, um deine Zielgruppe effektiv zu erreichen."
+        },
+        "2": {
+          "heading": "Umsetzung und Anpassung",
+          "text": "Nun geht es an die Umsetzung. Unser erfahrenes Team sorgt dafür, dass alle Maßnahmen präzise und mit höchster Qualität umgesetzt werden – vom Erstellen deiner Website bis zur Optimierung deiner Social Media Präsenz. Währenddessen halten wir dich auf dem Laufenden und reagieren flexibel auf Feedback."
+        },
+        "3": {
+          "heading": "Ergebnisse und fortlaufende Optimierung",
+          "text": "Nach dem Start analysieren wir kontinuierlich die Ergebnisse unserer Maßnahmen. Durch regelmäßige Updates und Optimierungen stellen wir sicher, dass deine digitale Präsenz auf Kurs bleibt und den bestmöglichen Erfolg erzielt. Mit unserem Dashboard hast du dabei alle Fortschritte stets im Blick."
+        }
+      }
+    },
+    "reviewsSection": {
+      "heading": "Was unsere Kunden über uns sagen"
+    },
+    "faqSection": {
+      "heading": "FAQ - Häufig Gestellte Fragen",
+      "faqItems": {
+        "0": {
+          "question": "Über unser Profil?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        "1": {
+          "question": "Neuigkeiten und Themen?",
+          "answer": "Hier erfahren Sie alles über die neuesten Themen und Neuigkeiten."
+        },
+        "2": {
+          "question": "Wie benutzt man es?",
+          "answer": "Eine einfache Anleitung, um loszulegen."
+        }
+      }
+    }
+  },
+
+  "Common": {
+    "CTACard": {
+      "heading": "Lass Uns Gemeinsam Starten!"
+    },
+    "primaryButton": {
+      "text": "Kostenlose Beratung Sichern"
+    },
+    "secondaryButton": {
+      "text": "Unsere Angebote"
+    },
+    "notFound": {
+      "heading": "Seite Nicht Gefunden",
+      "message": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht.",
+      "homeButton": "Zur Startseite"
+    }
+  },
+  "NavBar": {
+    "links": {
+      "home": "Home",
+      "services": "Dienstleistungen",
+      "pricing": "Preise",
+      "webDesign": "Webdesign & Entwicklung",
+      "onlineAds": "Digitale Werbung",
+      "contentCreation": "Content Creation",
+      "socialMedia": "Social Media Management",
+      "about": "Über Uns",
+      "contact": "Kontakt"
+    }
+  },
+  "Footer": {
+    "column1": {
+      "text1": "Für Fragen stehen wir zur Verfügung unter:",
+      "text2": "info@albrecht-marketing.com"
+    },
+
+    "column2": {
+      "heading": "Quick Links",
+      "link1": "Home",
+      "link2": "Dienstleistungen",
+      "link3": "Über Uns",
+      "link4": "Kontakt"
+    },
+    "column3": {
+      "heading": "Lösungen",
+      "link1": "Kombipakete",
+      "link2": "Webdesign",
+      "link3": "Online Werbung",
+      "link4": "Content-Creation",
+      "link5": "Videographie",
+      "link6": ""
+    },
+    "column4": {
+      "heading": "Newsletter",
+      "text1": "Abonniere unseren Newsletter, um die neuesten Updates zu erhalten.",
+      "placeholder": "E-Mail Eingeben",
+      "button": "Abonnieren"
+    },
+    "bottomSection": {
+      "text": "Albrecht Marketing. Alle Rechte vorbehalten."
+    },
+    "socialMedia": {
+      "facebook": "Folge uns auf Facebook",
+      "twitter": "Folge uns auf Twitter",
+      "instagram": "Folge uns auf Instagram"
+    }
+  },
+  "Services": {
+    "ads": {
+      "MetaData": {
+        "title": "Online Werbung"
+      },
+      "title": "Online Werbung"
+    },
+    "content": {
+      "MetaData": {
+        "title": "Content Erstellung"
+      },
+      "title": "Content Erstellung"
+    },
+    "web": {
+      "MetaData": {
+        "title": "Webdesign & Entwicklung"
+      },
+      "title": "Webdesign & Entwicklung"
+    },
+    "social": {
+      "MetaData": {
+        "title": "Social Media Management"
+      },
+      "title": "Social Media Management"
+    }
+  },
+  "Pricing": {
+    "MetaData": {
+        "title": "Unsere Preise"
+      },
+    "title": "Unsere Preise"
+  },
+  "About": {
+    "MetaData": {
+        "title": "Über Uns"
+      },
+    "title": "Über Uns"
+  },
+  "Contact": {
+    "MetaData": {
+        "title": "Kontaktiere Uns"
+      },
+    "title": "Kontaktiere Uns"
+  }
+}
