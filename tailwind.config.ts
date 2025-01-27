@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "hsl(215,84,62)",
         secondary: "hsl(270,80,71)",
+        secondaryHover: "hsl(270,80,55)",
         accent: "hsl(29,84,61)",
         darkNeutral: "hsl(212,80,8)",
         lightNeutral: "hsl(218,80,98)",
