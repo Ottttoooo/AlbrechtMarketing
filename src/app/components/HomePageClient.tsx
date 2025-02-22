@@ -42,6 +42,8 @@ export default function HomePageClient() {
   // Hero data
   const heroHeading = tHomepage("hero.heading");
 
+  const heroSubHeading = tHomepage("hero.subHeading");
+
   const listItems: string[] = [];
   let i = 0;
   while (true) {
@@ -101,7 +103,7 @@ export default function HomePageClient() {
 
   // FAQ section
   const faqSection: FAQSection = {
-    heading: tHomepage('faqSection.heading'),
+    heading: tHomepage("faqSection.heading"),
     faqItems: [],
   };
 
@@ -117,35 +119,43 @@ export default function HomePageClient() {
     l++;
   }
 
-
   return (
     <div className="flex center justify-center align-middle flex-col">
       {/* HERO SECTION */}
       <section
         id="Hero"
-        className="flex flex-col items-center w-full min-h-screen px-8 pt-56 bg-[url('/images/hero-bg.svg')] bg-center bg-no-repeat bg-cover"
+        className="flex flex-col items-center w-full sm:min-h-screen px-8 pt-44 pb-48 bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-100px_bottom_0px] bg-no-repeat
+        sm:bg-[url('/images/hero-bg.svg')] sm:bg-[length:1300px_auto] sm:bg-[position:right_-200px_bottom_0px]
+        md:bg-bottom md:bg-[1600px_auto]"
+        
       >
         <div className="w-full max-w-[1200px]">
-          <div className="flex Hero-content w-full items-center ">
-            <div className="flex flex-col max-w-max gap-7 mr-5">
+          <div className="flex Hero-content w-full lg:w-2/3 items-center ">
+            <div className="flex flex-col max-w-max mr-5">
               {/* Heading */}
-              <h1 className="text-5xl font-black">
-                {heroHeading /* e.g. "Erklimme neue Höhen" */}
+              <h1 className="mb-1 text-4xl font-extrabold sm:text-5xl">
+                {heroHeading}
               </h1>
 
+              <h2 className="mb-4 w-3/4 text-lg italic sm:text-xl ">
+                {heroSubHeading}
+              </h2>
+
               {/* List of bullet points */}
-              <ul className="text-2xl font-normal">
+              <ul className="mb-4 text-lg font-normal">
                 {listItems.map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
               {/* Buttons */}
-              <Buttons
-                color="dark"
-                primary={primaryButtonText}
-                secondary={secondaryButtonText}
-              />
+              <div className="w-1/2 sm:w-full">
+                <Buttons
+                  color="dark"
+                  primary={primaryButtonText}
+                  secondary={secondaryButtonText}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -207,9 +217,9 @@ export default function HomePageClient() {
         className="flex flex-col items-center justify-center w-full px-8"
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center py-32 gap-5">
-          <h2 className="font-bold text-5xl">{packagesHeading}</h2>
-          <h3 className="text-4xl font-light">{packagesSubheading}</h3>
-          <div className="w-full flex flex-row justify-center py-10 gap-10">
+          <h2 className="font-bold text-3xl sm:text-5xl">{packagesHeading}</h2>
+          <h3 className=" text-xl sm:text-4xl font-light">{packagesSubheading}</h3>
+          <div className="w-full flex flex-col items-center lg:flex-row justify-center py-10 gap-10">
             <PackageCard
               title="Webstart"
               description="Der perfekte Einstieg in die Online-Welt."
@@ -263,9 +273,9 @@ export default function HomePageClient() {
         className="flex flex-col items-center justify-center w-full px-8"
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center py-32 gap-5">
-          <div className="flex w-full items-stretch">
-            <div className="flex min-w-[353px] flex-col justify-between items-start flex-1 bg-[url('/images/stepsSection.svg')] bg-bottom bg-fit bg-no-repeat">
-              <h2 className="font-bold text-5xl">
+          <div className="flex flex-col gap-y-8 lg:flex-row w-full items-stretch">
+            <div className="flex min-w-[353px] flex-col justify-between items-start flex-1 lg:bg-[url('/images/stepsSection.svg')] bg-bottom bg-fit bg-no-repeat">
+              <h2 className="font-bold text-3xl sm:text-5xl">
                 {stepsHeading}
                 <div className="stepsSectionPic"></div>
               </h2>
@@ -330,9 +340,9 @@ export default function HomePageClient() {
         className="flex flex-col items-center justify-center w-full px-8 py-32 bg-slate-200"
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center gap-5">
-          <h2 className="font-bold text-5xl">{reviewsHeading}</h2>
+          <h2 className="font-bold text-3xl sm:text-5xl">{reviewsHeading}</h2>
 
-          <div className="flex w-full px-3 py-16 justify-center gap-6">
+          <div className="flex flex-col md:flex-row w-full px-3 py-16 items-center justify-center gap-6">
             <ReviewCard />
             <ReviewCard />
           </div>
@@ -346,9 +356,9 @@ export default function HomePageClient() {
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center py-32 gap-12">
           {/* Heading */}
-          <h2 className="font-bold text-5xl">{faqSection.heading}</h2>
+          <h2 className="font-bold text-3xl sm:text-5xl">{faqSection.heading}</h2>
 
-          <div className="flex w-full">
+          <div className="flex flex-col-reverse gap-y-5 items-center lg:flex-row w-full">
             {/* FAQ Questions */}
             <div className="w-full flex-1 justify-center flex flex-col gap-4">
               {faqSection.faqItems.map((faq: FAQItem, index: number) => (
@@ -367,7 +377,7 @@ export default function HomePageClient() {
                 alt="FAQ Illustration"
                 width={300}
                 height={300}
-                className="h-auto w-[300px]"
+                className="h-auto w-[150px] sm:w-[200px] lg:w-[300px]"
               />
             </div>
           </div>

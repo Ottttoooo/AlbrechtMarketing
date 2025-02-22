@@ -9,7 +9,7 @@ type ButtonsProps = {
 
 const Buttons: React.FC<ButtonsProps> = ({ color = "dark", primary, secondary}) => {
   return (
-    <div className="flex gap-5 w-max">
+    <div className="flex gap-5 w-full max-w-max flex-wrap">
       <PrimaryButton text={primary}/>
       <SecondaryButton color={color} text={secondary}/>
     </div>

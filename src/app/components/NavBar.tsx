@@ -147,6 +147,49 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
+       {/* ✅ Mobile Navigation Menu */}
+       {isOpen && (
+        <div className="md:hidden bg-lightNeutral shadow-lg absolute w-full top-20 left-0">
+          <ul className="py-2 text-center space-y-4">
+            <li>
+              <Link href={"/services/web-design"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.webDesign')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/services/online-ads"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.onlineAds')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/services/content-creation"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.contentCreation')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/services/social-media"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.socialMedia')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/pricing"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.pricing')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/about"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.about')}
+              </Link>
+            </li>
+            <li>
+              <Link href={"/contact"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                {t('links.contact')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

@@ -19,28 +19,28 @@ const InfoBox: React.FC<InfoBoxProps> = ({
   textDirection = "left", // default is left
 }) => {
   const containerClasses =
-    imagePosition === "left" ? "flex-row" : "flex-row-reverse";
+    imagePosition === "left" ? "sm:flex-row" : "sm:flex-row-reverse";
 
   const textClasses = 
-  textDirection === 'left' ? "text-left" : "text-right";
+  textDirection === 'left' ? "sm:text-left" : "sm:text-right";
 
   return (
-    <section className={`flex ${containerClasses} gap-12 p-4 align-middle`}>
-      <div className="min-w-[33%]">
+    <section className={`flex flex-col ${containerClasses} gap-12 p-4 align-middle`}>
+      <div className="min-w-[33%] flex justify-center">
         {/* You can use next/image or a plain img tag here */}
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={400}
           height={400}
-          className="w-full"
+          className="w-[200px] md:w-full"
         />
       </div>
 
       {/* Text on the right */}
       <div className={`flex flex-col w-full justify-center`}>
-        <h2 className={`text-4xl font-black mb-2 ${textClasses}`}>{title}</h2>
-        <p className={`${textClasses} text-base`}>{description}</p>
+        <h2 className={`text-2xl sm:text-4xl font-extrabold mb-2 ${textClasses}`}>{title}</h2>
+        <p className={`${textClasses} text-sm sm:text-base`}>{description}</p>
       </div>
     </section>
   );
