@@ -12,7 +12,7 @@ const NavBar = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-lightNeutral py-3 absolute w-full">
+    <nav className="bg-lightNeutral py-3 sticky top-0 w-full">
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
