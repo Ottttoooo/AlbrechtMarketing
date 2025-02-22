@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-lightNeutral py-3 absolute w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">

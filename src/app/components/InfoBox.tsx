@@ -25,7 +25,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
   textDirection === 'left' ? "sm:text-left" : "sm:text-right";
 
   return (
-    <section className={`flex flex-col ${containerClasses} gap-12 p-4 align-middle`}>
+    <section className={`flex flex-col ${containerClasses} gap-12 align-middle`}>
       <div className="min-w-[33%] flex justify-center">
         {/* You can use next/image or a plain img tag here */}
         <Image

@@ -10,9 +10,9 @@ type CTACardProps = {
 
 const CTACard: React.FC<CTACardProps> = ({ color = "light", heading, primary, secondary }) => {
   return (
-    <div className="w-full flex flex-col items-center bg-darkNeutral py-12 gap-9">
-      <h2 className="text-lightNeutral font-semibold text-3xl sm:text-4xl md:text-5xl">{heading}</h2>
-      <Buttons color={color} primary={primary} secondary={secondary}/>
+    <div className="w-full flex flex-col items-center justify-center bg-darkNeutral px-8 py-12 gap-9">
+      <h2 className="text-lightNeutral font-semibold text-2xl sm:text-4xl md:text-5xl">{heading}</h2>
+      <Buttons color={color} primary={primary} secondary={secondary} center="yes"/>
     </div>
   );
 };
