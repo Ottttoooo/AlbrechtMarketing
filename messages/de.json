@@ -38,7 +38,11 @@
     },
     "services": {
       "heading": "Unsere Dienstleistungen",
-      "subheading": "Für jedes Unternehmen die richtige Lösung."
+      "subheading": "Für jedes Unternehmen die richtige Lösung.",
+      "web": "Webdesign & Entwicklung",
+      "ads": "Digitale Werbung",
+      "content": "Content Creation",
+      "social": "Social Media Management"
     },
     "stepsSection": {
       "heading": "Dein Weg zum Erfolg",
@@ -68,16 +72,24 @@
       "heading": "FAQ - Häufig Gestellte Fragen",
       "faqItems": {
         "0": {
-          "question": "Über unser Profil?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          "question": "Welche Unternehmen profitieren von euren Dienstleistungen?",
+          "answer": "Wir arbeiten hauptsächlich mit kleinen bis mittelständischen Unternehmen, die ihre Online-Präsenz ausbauen möchten. Ob Dienstleister, Einzelhändler, Startups oder etablierte Unternehmen – wir haben die passende Lösung."
         },
         "1": {
-          "question": "Neuigkeiten und Themen?",
-          "answer": "Hier erfahren Sie alles über die neuesten Themen und Neuigkeiten."
+          "question": "Warum sollte ich Albrecht Marketing wählen?",
+          "answer": "Wir bieten maßgeschneiderte Marketinglösungen, transparente Preisgestaltung und datengetriebene Strategien. Unser Ziel ist dein Wachstum – und das mit messbaren Ergebnissen."
         },
         "2": {
-          "question": "Wie benutzt man es?",
-          "answer": "Eine einfache Anleitung, um loszulegen."
+          "question": "Wie lange dauert es, bis meine Website fertig ist?",
+          "answer": "Das hängt vom Umfang des Projekts ab. Eine einfache Website kann innerhalb von 2-4 Wochen fertig sein, während komplexere Projekte bis zu 6-8 Wochen dauern können. Wir geben dir nach dem ersten Gespräch eine genauere Einschätzung."
+        },
+        "3": {
+          "question": "Wie viel Budget brauche ich für Online-Werbung?",
+          "answer": "Das Werbebudget hängt von deinen Zielen ab. Wir empfehlen ein Mindestbudget von €300 pro Monat für kleinere Kampagnen. Unser Team erstellt eine Strategie, die dein Budget optimal nutzt."
+        },
+        "4": {
+          "question": "Wie lange dauert es, bis SEO-Ergebnisse sichtbar sind?",
+          "answer": "SEO ist eine langfristige Strategie. Erste Verbesserungen können nach 3-6 Monaten sichtbar sein, nachhaltige Erfolge dauern oft länger. Wir sorgen mit regelmäßigen Analysen für kontinuierliche Optimierungen."
         }
       }
     }

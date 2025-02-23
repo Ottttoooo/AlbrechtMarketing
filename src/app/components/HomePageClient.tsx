@@ -87,7 +87,7 @@ export default function HomePageClient() {
     k++;
   }
 
-  // Packages heading
+  // Servcies heading
   const servicesHeading = tHomepage("services.heading");
   const servicesSubheading = tHomepage("services.subheading");
 
@@ -178,7 +178,7 @@ export default function HomePageClient() {
           {infoBoxes.map((box: InfoBoxItem, i: number) => {
             // Alternate left/right positioning
             const imagePosition = i % 2 === 0 ? "left" : "right";
-            const textDirection = i % 2 === 0 ? "right" : "left";
+            const textDirection = "left";
 
             return (
               <InfoBox
@@ -237,9 +237,11 @@ export default function HomePageClient() {
                   alt={""}
                   width={200}
                   height={200}
-                  className="w-[100px] md:w-[250px] h-auto mb-5"
+                  className="w-[100px] md:w-[200px] h-auto mb-5"
                 ></Image>
-                <h2 className="font-bold text-lg sm:text-2xl text-center">Web Design</h2>
+                <h2 className="font-bold text-lg sm:text-2xl text-center">
+                  {tHomepage("services.web")}
+                </h2>
               </div>
             </Link>
 
@@ -250,9 +252,11 @@ export default function HomePageClient() {
                   alt={""}
                   width={200}
                   height={200}
-                  className="h-[80px] md:h-[250px] w-auto mb-5"
+                  className="h-[80px] md:h-[200px] w-auto mb-5"
                 ></Image>
-                <h2 className="font-bold text-lg sm:text-2xl text-center">Digital Ads</h2>
+                <h2 className="font-bold text-lg sm:text-2xl text-center">
+                  {tHomepage("services.ads")}
+                </h2>
               </div>
             </Link>
 
@@ -263,9 +267,11 @@ export default function HomePageClient() {
                   alt={""}
                   width={200}
                   height={200}
-                  className="w-[100px] md:w-[250px] h-auto mb-5"
+                  className="w-[100px] md:w-[200px] h-auto mb-5"
                 ></Image>
-                <h2 className="font-bold text-lg sm:text-2xl text-center">Content Creation</h2>
+                <h2 className="font-bold text-lg sm:text-2xl text-center">
+                  {tHomepage("services.content")}
+                </h2>
               </div>
             </Link>
 
@@ -276,9 +282,11 @@ export default function HomePageClient() {
                   alt={""}
                   width={200}
                   height={200}
-                  className="w-[100px] md:w-[250px] h-auto mb-5"
+                  className="w-[100px] md:w-[200px] h-auto mb-5"
                 ></Image>
-                <h2 className="font-bold text-lg sm:text-2xl text-center">Social Media Management</h2>
+                <h2 className="font-bold text-lg sm:text-2xl text-center">
+                  {tHomepage("services.social")}
+                </h2>
               </div>
             </Link>
           </div>
@@ -378,8 +386,22 @@ export default function HomePageClient() {
           <h2 className="font-bold text-3xl sm:text-5xl">{reviewsHeading}</h2>
 
           <div className="flex flex-col md:flex-row w-full sm:px-3 py-16 items-center justify-center gap-6">
-            <ReviewCard />
-            <ReviewCard />
+            <ReviewCard
+              rating={"⭐️⭐️⭐️⭐️⭐️"}
+              text={
+                "Working with Albrecht Marketing was one of the best decisions we made for our business. Our old website was outdated and barely brought in any leads. They completely revamped it with a sleek, modern design that truly represents our brand. Within just a few months, we noticed a significant increase in website traffic and inquiries, thanks to their SEO strategy. The team was professional, responsive, and really took the time to understand our needs. Highly recommend them to any business looking to step up their online presence!"
+              }
+              name={"Lisa M."}
+              position={"Founder of GreenWell Naturals"}
+            />
+            <ReviewCard
+              rating={"⭐️⭐️⭐️⭐️⭐️"}
+              text={
+                "Before working with Albrecht Marketing, we struggled to get real results from social media and online ads. Their team helped us refine our messaging, create engaging content, and run ad campaigns that actually convert. Within the first three months, we saw a 40% increase in engagement and our online sales nearly doubled. What I love most is their transparency—every decision is backed by data, and they always keep us in the loop. If you're looking for a marketing team that actually delivers results, look no further!"
+              }
+              name={"Mark S."}
+              position={"Owner of FitZone Gym"}
+            />
           </div>
         </div>
       </section>

@@ -38,7 +38,11 @@
     },
     "services": {
       "heading": "Our Services",
-      "subheading": "The perfect solution for every business."
+      "subheading": "The perfect solution for every business.",
+      "web": "Web Design & Development",
+      "ads": "Digital Advertising",
+      "content": "Content Creation",
+      "social": "Social Media Management"
     },
     "stepsSection": {
       "heading": "Your Path to Success",
@@ -68,17 +72,26 @@
       "heading": "Frequently Asked Questions",
       "faqItems": {
         "0": {
-          "question": "About our profile?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          "question": "What types of businesses benefit from your services?",
+          "answer": "We primarily work with small to medium-sized businesses looking to grow their online presence. Whether you're a service provider, retailer, startup, or an established company, we have the right solution for you."
         },
         "1": {
-          "question": "News and topics?",
-          "answer": "Here you'll find the latest topics and news."
+          "question": "Why should I choose Albrecht Marketing?",
+          "answer": "We offer customized marketing solutions, transparent pricing, and data-driven strategies. Our goal is to help you grow—with measurable results."
         },
         "2": {
-          "question": "How to use?",
-          "answer": "A simple guide to get started."
+          "question": "How long does it take to complete my website?",
+          "answer": "The timeline depends on the complexity of the project. A simple website can be completed within 2-4 weeks, while more complex projects can take 6-8 weeks. After our initial consultation, we’ll provide a precise estimate."
+        },
+        "3": {
+          "question": "How much budget do I need for online advertising?",
+          "answer": "The budget depends on your goals. We recommend a minimum of €300 per month for smaller campaigns. Our team will create a strategy that makes the most of your budget."
+        },
+        "4": {
+          "question": "How long does it take to see SEO results?",
+          "answer": "SEO is a long-term strategy. Initial improvements may be visible within 3-6 months, but sustainable success takes longer. We ensure continuous optimizations through regular analysis."
         }
+        
     }
     }
   },
