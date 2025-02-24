@@ -132,7 +132,7 @@ export default function HomePageClient() {
       {/* HERO SECTION */}
       <section
         id="Hero"
-        className="flex flex-col items-center w-full sm:min-h-screen px-8 pt-44 pb-48 bg-lightNeutral bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-100px_bottom_0px] bg-no-repeat
+        className="flex flex-col items-center w-full sm:min-h-screen px-8 pt-24 pb-36 bg-lightNeutral bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-150px_bottom_0px] bg-no-repeat
         sm:bg-[url('/images/hero-bg.svg')] sm:bg-[length:1300px_auto] sm:bg-[position:right_-200px_bottom_0px]
         md:bg-bottom md:bg-[1600px_auto]"
       >
@@ -393,6 +393,7 @@ export default function HomePageClient() {
               }
               name={"Lisa M."}
               position={"Founder of GreenWell Naturals"}
+              image={"/images/Ellipse 1.jpg"}
             />
             <ReviewCard
               rating={"⭐️⭐️⭐️⭐️⭐️"}
@@ -401,6 +402,7 @@ export default function HomePageClient() {
               }
               name={"Mark S."}
               position={"Owner of FitZone Gym"}
+              image={"/images/guy.jpg"}
             />
           </div>
         </div>

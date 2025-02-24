@@ -6,6 +6,7 @@ type ReviewProps = {
   name: string;
   position: string;
   rating: string;
+  image: string;
 };
 
 const ReviewCard: React.FC<ReviewProps> = ({
@@ -13,6 +14,7 @@ const ReviewCard: React.FC<ReviewProps> = ({
   text,
   name,
   position,
+  image,
 }) => {
   return (
     <div className="flex flex-col w-auto sm:w-[470px] px-2 py-5 rounded-2xl bg-slate-100">
@@ -24,10 +26,10 @@ const ReviewCard: React.FC<ReviewProps> = ({
         </div>
       </div>
       <div className="flex px-7 gap-3">
-        <div className="">
+        <div className="h-20 w-20">
           <Image
-            src={"/images/Ellipse 1.jpg"}
-            alt={""}
+            src={image}
+            alt={"profile picture"}
             width={90}
             height={90}
             className="rounded-full"
