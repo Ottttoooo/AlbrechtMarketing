@@ -144,12 +144,12 @@ export default function HomePageClient() {
                 {heroHeading}
               </h1>
 
-              <h2 className="mb-4 w-3/4 text-lg italic sm:text-xl ">
+              <h2 className="mb-4 w-3/4 text-lg  sm:text-xl ">
                 {heroSubHeading}
               </h2>
 
               {/* List of bullet points */}
-              <ul className="mb-4 text-lg font-normal">
+              <ul className="mb-4 text-lg">
                 {listItems.map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
