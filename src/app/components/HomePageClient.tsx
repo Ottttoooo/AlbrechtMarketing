@@ -140,7 +140,7 @@ export default function HomePageClient() {
           <div className="flex Hero-content w-full lg:w-2/3 items-center ">
             <div className="flex flex-col max-w-max mr-5">
               {/* Heading */}
-              <h1 className="mb-1 text-4xl sm:text-5xl font-eras_itc_demi">
+              <h1 className="mb-1 text-3xl sm:text-5xl font-eras_itc_demi">
                 {heroHeading}
               </h1>
 
