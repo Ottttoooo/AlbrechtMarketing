@@ -25,6 +25,12 @@ export default {
         // darkNeutral: "hsl(212,80,8)",
         // lightNeutral: "hsl(218,80,98)",
       },
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
+        playfair: ["var(--font-playfair)", "serif"],
+        bebasNeue: ["var(--font-bebas_neue)", "sans-serif"],
+        eras_itc_demi: ["eras-itc-demi", "sans-serif"],
+      },
     },
   },
   plugins: [],

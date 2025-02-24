@@ -6,6 +6,18 @@ import { ReactNode } from "react";
 import "../globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  variable: "--font-bebas_neue",
+  weight: "400",
+});
 
 export default async function LocaleLayout({
   children,
@@ -30,12 +42,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.variable} ${playfair.variable} ${bebasNeue.variable}`}>
       <body className="bg-lightNeutral">
         <NextIntlClientProvider messages={messages}>
-          <NavBar/>
+          <NavBar />
           {children}
-          <Footer/>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

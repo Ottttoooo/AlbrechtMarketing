@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "eras-itc-demi";
+  src: url("/fonts/eras-itc-demi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --background: #F6F9FE;
+  --background: #f6f9fe;
   --foreground: #041324;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F6F9FE;
+    --background: #f6f9fe;
     --foreground: #041324;
   }
 }
@@ -17,5 +24,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
