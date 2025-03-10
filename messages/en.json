@@ -91,8 +91,7 @@
           "question": "How long does it take to see SEO results?",
           "answer": "SEO is a long-term strategy. Initial improvements may be visible within 3-6 months, but sustainable success takes longer. We ensure continuous optimizations through regular analysis."
         }
-        
-    }
+      }
     }
   },
 
@@ -167,43 +166,318 @@
       "MetaData": {
         "title": "Digital Advertising"
       },
-      "title": "Digital Advertising"
+      "Hero": {
+        "title": "Digital Advertising",
+        "subTitle": "Reach and Visibility for Your Business"
+      },
+      "Intro": {
+        "title": "Digital Advertising That Delivers Results",
+        "text": "In today’s competitive digital landscape, advertising is essential to stand out and reach your target audience. At Albrecht Marketing, we specialize in creating data-driven ad campaigns that deliver measurable results. Whether you’re looking to increase brand awareness, drive website traffic, or boost conversions, we tailor our strategies to fit your goals. From Google Ads to social media platforms like Instagram, Facebook, and YouTube, we handle every aspect of your campaign—so you can focus on running your business."
+      },
+      "OfferCardSection": {
+        "title": "What We Offer",
+        "1": {
+          "title": "Facebook & Instagram Ads",
+          "text": "Story & Reel Ads – Mobile-first, engaging ads on Instagram and Facebook. \n\nE-Commerce Ads – Promote products directly in the shopping feed. \nLead Generation Ads – Capture customer interest with forms and interactive content."
+        },
+        "2": {
+          "title": "Google Ads",
+          "text": "Search Ads – Text-based ads targeting specific keywords. Performance Max – AI-driven campaigns that maximize conversions across Google’s ecosystem. Local Ads – Promote your business in specific geographic areas. Display & YouTube Ads – Visual and video ads reaching potential customers on millions of sites."
+        },
+        "3": {
+          "title": "YouTube Ads",
+          "text": "Video ads placed before or during relevant content, great for brand awareness and engagement."
+        },
+        "4": {
+          "title": "Analytics & Optimization",
+          "text": "We don’t just launch campaigns—we monitor and optimize them. Using real-time data, we refine your ads to ensure they’re performing at their best."
+        }
+      },
+      "StepsSection": {
+        "title": "Step by Step to Success",
+        "subTitle": "This is how our process works:",
+        "steps": {
+          "1": {
+            "title": "Target Audience Analysis & Campaign Planning",
+            "text": "We begin with a detailed analysis of your target audience and develop a tailored campaign strategy. Together, we determine the best platforms—whether Google, Facebook, or Instagram—to maximize your reach and impact."
+          },
+          "2": {
+            "title": "Ad Creation & Deployment",
+            "text": "Our team designs compelling ads that perfectly align with your brand and capture your audience’s interest. We professionally set up the campaigns, ensuring your budget is used efficiently. Throughout the campaign, we closely monitor performance to drive the best possible results."
+          },
+          "3": {
+            "title": "Performance Analysis & Optimization",
+            "text": "Once the campaign is live, we continuously track its performance and make adjustments as needed. Regular reports provide insights into campaign success, helping you see how your investment is delivering results."
+          }
+        }
+      },
+      "Why": {
+        "title": "Why Choose Us",
+        "list": {
+          "1": {
+            "title": "Custom Strategies: ",
+            "text": "We don’t believe in cookie-cutter solutions. Every campaign is tailored to your unique goals and audience."
+          },
+          "2": {
+            "title": "Full-Service Approach: ",
+            "text": "From strategy to execution, we handle every aspect of your digital advertising, so you don’t have to."
+          },
+          "3": {
+            "title": "Data-Driven Decisions: ",
+            "text": "We use advanced analytics to track performance and make informed adjustments, ensuring maximum ROI."
+          },
+          "4": {
+            "title": "Creative Excellence: ",
+            "text": "Our team of copywriters, designers, and strategists work together to create ads that stand out and drive results."
+          }
+        }
+      }
     },
+
     "content": {
       "MetaData": {
         "title": "Content Creation"
       },
-      "title": "Content Creation"
+      "Hero": {
+        "title": "Content Creation",
+        "subTitle": "Content That Engages Your Audience"
+      },
+      "Intro": {
+        "title": "Content That Captivates and Converts",
+        "text": "In today’s digital world, content is king. It’s how you connect with your audience, build trust, and stand out from the competition. At Albrecht Marketing, we specialize in crafting high-quality content that not only looks amazing but also resonates with your target audience. Whether it’s through photography, videography, copywriting, or graphic design, we bring your brand’s story to life in a way that inspires action."
+      },
+      "OfferCardSection": {
+        "title": "What We Offer",
+        "1": {
+          "title": "Photography",
+          "text": "A picture is worth a thousand words—and we make sure every image tells the right story. From product shots to lifestyle photography, we capture the essence of your brand in every frame."
+        },
+        "2": {
+          "title": "Videography",
+          "text": "Video is one of the most powerful ways to engage your audience. We produce professional videos, from promotional clips to behind-the-scenes content, that captivate and convert."
+        },
+        "3": {
+          "title": "Copywriting",
+          "text": "Words matter. Our expert copywriters craft compelling, SEO-optimized content that speaks directly to your audience—whether it’s website copy, blog posts, or social media captions."
+        },
+        "4": {
+          "title": "Graphic Design",
+          "text": "Great design grabs attention and leaves a lasting impression. We create visually stunning graphics, from logos and branding materials to social media posts and infographics, that align with your brand identity."
+        }
+      },
+      "StepsSection": {
+        "title": "Step by Step to Success",
+        "subTitle": "Here’s how our process works:",
+        "steps": {
+          "1": {
+            "title": "Strategy & Concept Development",
+            "text": "First, we discuss what type of content resonates with your target audience and the value you want to communicate. Together, we craft a content strategy that authentically represents your brand while effectively engaging your audience."
+          },
+          "2": {
+            "title": "Content Creation",
+            "text": "Our team produces high-quality content—including text, images, and videos—tailored to your audience's needs. We prioritize originality, quality, and a clear brand message. You’ll receive drafts for approval, allowing you to provide feedback and ensure everything aligns with your expectations."
+          },
+          "3": {
+            "title": "Publishing & Performance Monitoring",
+            "text": "Once approved, we publish the content across the selected channels and monitor audience engagement. If needed, we refine the content strategy to continuously increase engagement and maximize your reach."
+          }
+        }
+      },
+      "Why": {
+        "title": "Why Choose Us",
+        "list": {
+          "1": {
+            "title": "Holistic Approach: ",
+            "text": "We don’t just create content—we create experiences. Every piece of content is designed to work together, telling a cohesive story that strengthens your brand."
+          },
+          "2": {
+            "title": "Tailored to Your Brand: ",
+            "text": "Your brand is unique, and so is our approach. We take the time to understand your vision and deliver content that reflects your values and goals."
+          },
+          "3": {
+            "title": "High-Quality Results: ",
+            "text": "We use state-of-the-art equipment and proven techniques to ensure every photo, video, and design is polished and professional."
+          },
+          "4": {
+            "title": "Results-Driven: ",
+            "text": "Our content isn’t just pretty—it’s purposeful. We create with your business goals in mind, whether it’s driving traffic, generating leads, or boosting sales."
+          }
+        }
+      }
     },
+
     "web": {
       "MetaData": {
         "title": "Web Design & Development"
       },
-      "title": "Web Design & Development"
+      "Hero": {
+        "title": "Web Design & Development",
+        "subTitle": "Your Digital Presence, Perfectly Executed"
+      },
+      "Intro": {
+        "title": "Your Digital Success Starts Here",
+        "text": "Your website is the digital face of your business—a platform that can either capture the attention of potential customers or leave them unengaged. At Albrecht Marketing, we do more than design visually stunning sites; we build tailored platforms that boost your visibility, engage your audience, and drive real growth. Whether you need an e-commerce store, a blog, or an informational site, we craft websites that not only impress but also inspire action. \n\nWe understand that turning visitors into loyal customers is both an art and a science. That’s why our team combines the latest insights from psychology, behavioral science, and innovative design to create a website that reflects your brand identity and works as hard as you do. Let’s take the first step toward your digital success together."
+      },
+      "OfferCardSection": {
+        "title": "What We Offer",
+        "1": {
+          "title": "Custom Website Design",
+          "text": "We design websites that reflect your brand’s personality and resonate with your audience. Every pixel is crafted to ensure your site looks professional, modern, and inviting."
+        },
+        "2": {
+          "title": "Responsive Development",
+          "text": "Your website will look and perform flawlessly on any device — desktop, tablet, or mobile. We build with responsiveness in mind, so your site always makes a great impression."
+        },
+        "3": {
+          "title": "E-Commerce Solutions",
+          "text": "Ready to sell online? We create secure, user-friendly e-commerce platforms that make it easy for your customers to browse, shop, and checkout."
+        },
+        "4": {
+          "title": "Web Applications",
+          "text": "Need more than a website? We develop custom web applications to streamline your business processes, from customer portals to internal tools."
+        },
+        "5": {
+          "title": "Ongoing Support & Maintenance",
+          "text": "We’re here for the long haul. From updates to troubleshooting, we ensure your website stays fast, secure, and up-to-date."
+        }
+      },
+      "StepsSection": {
+        "title": "Step by Step to Success",
+        "subTitle": "Here’s how our process works:",
+        "steps": {
+          "1": {
+            "title": "Create an Account & Choose a Package",
+            "text": "To get started, simply create an account with us and select the web design package that best fits your needs. This ensures a structured and transparent process from the very beginning."
+          },
+          "2": {
+            "title": "Understanding Your Needs & Planning",
+            "text": "After selecting your package, you'll fill out a short form providing key details about your business, goals, and design preferences. We'll then schedule a Microsoft Teams meeting to go over everything together and ensure we align with your vision."
+          },
+          "3": {
+            "title": "First Draft & Feedback",
+            "text": "Based on our discussion, we’ll create the first draft of your website. You'll have the chance to review it and share any changes or improvements you'd like. Your feedback is crucial in refining the design to perfectly match your expectations."
+          },
+          "4": {
+            "title": "Final Version & Going Live",
+            "text": "Once you approve the draft, we’ll finalize your website and, if needed, assist with launching it—including domain setup and hosting.\n\nAfter launch, you can take advantage of our extended maintenance and optimization package to keep your website up-to-date and performing at its best:\n\n- SEO Optimization: We continuously refine your website’s search engine ranking so more customers can find you online.\n- Flexible Content Updates: For the first three months after launch, we offer free minor adjustments to ensure your website stays fresh and relevant.\n- Technical Maintenance: We handle updates and ensure your site runs smoothly, so you can focus on your business.\n\nInterested in ongoing support? Let’s talk, and we’ll tailor a package to fit your needs."
+          }
+        }
+      },
+      "Why": {
+        "title": "Why Choose Us",
+        "list": {
+          "1": {
+            "title": "Holistic Approach: ",
+            "text": "We don’t just create content—we create experiences. Every piece of content is designed to work together, telling a cohesive story that strengthens your brand."
+          },
+          "2": {
+            "title": "Tailored to Your Brand: ",
+            "text": "our brand is unique, and so is our approach. We take the time to understand your vision and deliver content that reflects your values and goals."
+          },
+          "3": {
+            "title": "High-Quality Results: ",
+            "text": "We use state-of-the-art equipment and proven techniques to ensure every photo, video, and design is polished and professional."
+          },
+          "4": {
+            "title": "Results-Driven: ",
+            "text": "Our content isn’t just pretty—it’s purposeful. We create with your business goals in mind, whether it’s driving traffic, generating leads, or boosting sales."
+          }
+        }
+      }
     },
+
     "social": {
       "MetaData": {
         "title": "Social Media Management"
       },
-      "title": "Social Media Management"
+      "Hero": {
+        "title": "Social Media Managment",
+        "subTitle": "Your Brand in the Digital Conversation"
+      },
+      "Intro": {
+        "title": "Your Social Media, Managed to Perfection",
+        "text": "Social media is more than just a platform—it’s a gateway to your brand’s story. At Albrecht Marketing, we specialize in managing your social media accounts to ensure they’re not just active, but impactful. From establishing a cohesive theme to scheduling strategic posts, we help you maximize engagement, build a loyal following, and drive natural marketing results. Whether it’s Instagram, TikTok, Facebook, YouTube, or X, we tailor our approach to fit your brand and goals."
+      },
+      "OfferCardSection": {
+        "title": "What We Offer",
+        "1": {
+          "title": "Account Setup & Optimization",
+          "text": "We set up and optimize your social media profiles to reflect your brand identity, ensuring a consistent and professional presence across all platforms."
+        },
+        "2": {
+          "title": "Content Strategy & Scheduling",
+          "text": "We develop a tailored content strategy and posting schedule to keep your audience engaged and coming back for more. From trending topics to evergreen content, we’ve got you covered."
+        },
+        "3": {
+          "title": "Visual Storytelling ",
+          "text": "Your social media should be as visually appealing as it is informative. We create stunning visuals and themes that showcase your products or services in the best light."
+        },
+        "4": {
+          "title": "Engagement & Community Building",
+          "text": "We don’t just post—we interact. From responding to comments to fostering meaningful conversations, we help you build a loyal and engaged community."
+        },
+        "5": {
+          "title": "Instagram as a Product Gallery",
+          "text": "For businesses with a visual product line, we transform your Instagram into a dynamic gallery. When customers click through from your website, they’ll see a curated catalog of images that nudge them closer to making a purchase."
+        }
+      },
+      "StepsSection": {
+        "title": "Step by Step to Success",
+        "subTitle": "Here's how we work:",
+        "steps": {
+          "1": {
+            "title": "Strategy & Content Planning",
+            "text": "We start by analyzing your target audience and developing a customized social media strategy. During this step, we create a content calendar that outlines key topics and themes that will engage your audience and authentically represent your brand."
+          },
+          "2": {
+            "title": "Content Creation & Publishing",
+            "text": "Based on the content plan, we produce high-quality content—including graphics, copy, and short videos—designed to perform well on each platform. We handle the regular posting schedule and adjust content based on trends and audience preferences."
+          },
+          "3": {
+            "title": "Community Management & Performance Analysis",
+            "text": "After publishing, we stay engaged—responding to comments and messages, fostering a community, and monitoring your content’s performance. We provide regular reports and continuously refine your strategy to maximize reach and engagement."
+          }
+        }
+      },
+      "Why": {
+        "title": "Why Choose Us",
+        "list": {
+          "1": {
+            "title": "Tailored Strategies: ",
+            "text": "We don’t believe in one-size-fits-all. Every strategy is customized to fit your brand, audience, and goals."
+          },
+          "2": {
+            "title": "Consistent Branding: ",
+            "text": "We ensure your social media presence aligns seamlessly with your overall brand identity, from visuals to tone of voice."
+          },
+          "3": {
+            "title": "Data-Driven Approach: ",
+            "text": "We use analytics to track performance and refine our strategies, ensuring continuous improvement and maximum ROI."
+          },
+          "4": {
+            "title": "Creative Excellence: ",
+            "text": "Our team of designers, writers, and strategists work together to create content that stands out and drives results."
+          }
+        }
+      }
     }
   },
   "Pricing": {
     "MetaData": {
-        "title": "Our Prices"
-      },
+      "title": "Our Prices"
+    },
     "title": "Our Prices"
   },
   "About": {
     "MetaData": {
-        "title": "About Us"
-      },
+      "title": "About Us"
+    },
     "title": "About Us"
   },
   "Contact": {
     "MetaData": {
-        "title": "Contact Us"
-      },
+      "title": "Contact Us"
+    },
     "title": "Contact Us"
   }
 }

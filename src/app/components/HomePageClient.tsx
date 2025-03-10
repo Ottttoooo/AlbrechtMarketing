@@ -8,6 +8,7 @@ import CTACard from "./CTACard";
 import FAQItem from "./FAQItem";
 import ReviewCard from "./ReviewCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface InfoBoxItem {
   title: string;
@@ -179,7 +180,6 @@ export default function HomePageClient() {
             // Alternate left/right positioning
             const imagePosition = i % 2 === 0 ? "left" : "right";
             const textDirection = "left";
-
             return (
               <InfoBox
                 key={i}
@@ -220,9 +220,13 @@ export default function HomePageClient() {
       </section>
 
       {/* Services Section */}
-      <section
+      <motion.section
         id="packages"
         className="flex flex-col items-center justify-center w-full px-8"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center py-32 gap-5">
           <h2 className="font-bold text-3xl sm:text-5xl">{servicesHeading}</h2>
@@ -233,7 +237,7 @@ export default function HomePageClient() {
             <Link href={"/services/web-design"}>
               <div className="flex flex-col items-center justify-end h-full hover:bg-slate-200 rounded-xl">
                 <Image
-                  src="/images/webDesign.png"
+                  src="/images/web/webDesign.png"
                   alt={""}
                   width={200}
                   height={200}
@@ -263,7 +267,7 @@ export default function HomePageClient() {
             <Link href={"/services/content-creation"}>
               <div className="flex flex-col items-center justify-end h-full hover:bg-slate-200 rounded-xl">
                 <Image
-                  src="/images/contentCreation.png"
+                  src="/images/content/contentCreation.png"
                   alt={""}
                   width={200}
                   height={200}
@@ -291,7 +295,7 @@ export default function HomePageClient() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Steps Section */}
       <section
@@ -306,9 +310,15 @@ export default function HomePageClient() {
                 <div className="stepsSectionPic"></div>
               </h2>
             </div>
-            <div className="flex w-full sm:w-auto flex-col justify-between sm:pl-5">
+            <div className="flex w-full sm:w-auto flex-col justify-between sm:pl-5 overflow-hidden">
               {/* Step 1 */}
-              <div className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6">
+              <motion.div
+                className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
                     1
@@ -320,9 +330,15 @@ export default function HomePageClient() {
                     {steps[0].text}
                   </p>
                 </div>
-              </div>
+              </motion.div>
               {/* Step 2 */}
-              <div className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6">
+              <motion.div
+                className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6"
+                initial={{ opacity: 0, x: 70 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+              >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
                     2
@@ -334,9 +350,15 @@ export default function HomePageClient() {
                     {steps[1].text}
                   </p>
                 </div>
-              </div>
+              </motion.div>
               {/* Step 3 */}
-              <div className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6">
+              <motion.div
+                className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6"
+                initial={{ opacity: 0, x: 90 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
                     3
@@ -348,9 +370,15 @@ export default function HomePageClient() {
                     {steps[2].text}
                   </p>
                 </div>
-              </div>
+              </motion.div>
               {/* Step 4 */}
-              <div className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3">
+              <motion.div
+                className="step1 flex w-full sm:w-auto sm:items-center gap-5 sm:p-3 mb-6"
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, ease: "easeOut" }}
+              >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
                     4
@@ -362,7 +390,7 @@ export default function HomePageClient() {
                     {steps[3].text}
                   </p>
                 </div>
-              </div>
+              </motion.div>
               {/* Buttons */}
               <div className="flex w-auto items-center gap-5 pl-3 pt-12">
                 <Buttons
@@ -385,7 +413,7 @@ export default function HomePageClient() {
         <div className="w-full max-w-[1200px] flex flex-col items-center gap-5">
           <h2 className="font-bold text-3xl sm:text-5xl">{reviewsHeading}</h2>
 
-          <div className="flex flex-col md:flex-row w-full sm:px-3 py-16 items-center justify-center gap-6">
+          <div className="flex flex-col md:flex-row w-full sm:px-3 py-16 justify-center gap-6 min-h-0">
             <ReviewCard
               rating={"⭐️⭐️⭐️⭐️⭐️"}
               text={
@@ -421,7 +449,13 @@ export default function HomePageClient() {
 
           <div className="flex flex-col-reverse gap-y-5 items-center lg:flex-row w-full">
             {/* FAQ Questions */}
-            <div className="w-full flex-1 justify-center flex flex-col gap-4">
+            <motion.div
+              className="w-full flex-1 justify-center flex flex-col gap-4"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               {faqSection.faqItems.map((faq: FAQItem, index: number) => (
                 <FAQItem
                   key={index}
@@ -429,7 +463,7 @@ export default function HomePageClient() {
                   answer={faq.answer}
                 />
               ))}
-            </div>
+            </motion.div>
 
             {/* Illustration */}
             <div className="ml-12">

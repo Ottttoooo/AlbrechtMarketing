@@ -28,7 +28,7 @@ export default function LanguageSwitcher() {
       {/* The Button: shows only the current locale’s flag */}
       <button
         type="button"
-        className="flex items-center gap-2 rounded-md px-2 py-1 bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="flex items-center gap-2 rounded-md px-2 py-1  hover:bg-gray-200 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image

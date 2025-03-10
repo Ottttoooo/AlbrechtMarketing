@@ -164,45 +164,320 @@
   "Services": {
     "ads": {
       "MetaData": {
-        "title": "Online Werbung"
+        "title": "Digital Advertising"
       },
-      "title": "Online Werbung"
+      "Hero": {
+        "title": "Digitale Werbung",
+        "subTitle": "Reichweite und Sichtbarkeit für dein Geschäft"
+      },
+      "Intro": {
+        "title": "Digitale Werbung, die Ergebnisse liefert",
+        "text": "In der heutigen digitalen Wettbewerbslandschaft ist Werbung unerlässlich, um sich abzuheben und deine Zielgruppe zu erreichen. Bei Albrecht Marketing sind wir darauf spezialisiert, datengesteuerte Werbekampagnen zu erstellen, die messbare Ergebnisse liefern. Egal, ob du deine Markenbekanntheit steigern, mehr Website-Traffic generieren oder die Conversion-Rate erhöhen möchtest – wir passen unsere Strategien individuell an deine Ziele an. Von Google Ads bis hin zu Social-Media-Plattformen wie Instagram, Facebook und YouTube übernehmen wir alle Aspekte deiner Kampagne, damit du dich voll und ganz auf dein Geschäft konzentrieren kannst."
+      },
+      "OfferCardSection": {
+        "title": "Unser Angebot",
+        "1": {
+          "title": "Facebook- & Instagram-Werbung",
+          "text": "Story- & Reel-Anzeigen – Mobile-optimierte, ansprechende Ads auf Instagram und Facebook.\n\nE-Commerce-Anzeigen – Bewirb Produkte direkt im Shopping-Feed.\n\nLead-Generierung – Erfasse Kundeninteresse mit Formularen und interaktiven Inhalten."
+        },
+        "2": {
+          "title": "Google Ads",
+          "text": "Suchanzeigen – Textbasierte Anzeigen, die gezielt auf relevante Keywords ausgerichtet sind.\n\nPerformance Max – KI-gesteuerte Kampagnen, die Conversions über das gesamte Google-Netzwerk maximieren.\n\nLokale Anzeigen – Präsentiere dein Unternehmen gezielt in bestimmten geografischen Regionen.\n\nDisplay- & YouTube-Werbung – Visuelle und Video-Anzeigen, die potenzielle Kunden auf Millionen von Websites erreichen."
+        },
+        "3": {
+          "title": "YouTube-Werbung",
+          "text": "Videoanzeigen, die vor oder während relevanter Inhalte ausgespielt werden – ideal zur Steigerung von Markenbekanntheit und Engagement."
+        },
+        "4": {
+          "title": "Analyse & Optimierung",
+          "text": "Wir starten nicht nur Kampagnen – wir überwachen und optimieren sie kontinuierlich. Mithilfe von Echtzeitdaten verfeinern wir deine Anzeigen, um die bestmögliche Performance sicherzustellen."
+        }
+      },
+      "StepsSection": {
+        "title": "Schritt für Schritt zum Ziel",
+        "subTitle": "So läuft unser Prozess ab:",
+        "steps": {
+          "1": {
+            "title": "Zielgruppenanalyse und Kampagnenplanung",
+            "text": "Wir starten mit einer detaillierten Analyse deiner Zielgruppe und entwickeln darauf basierend eine Kampagnenstrategie. Gemeinsam legen wir fest, auf welchen Plattformen – sei es Google, Facebook oder Instagram – wir deine Werbung schalten, um die größtmögliche Reichweite zu erzielen."
+          },
+          "2": {
+            "title": "Anzeigenerstellung und Schaltung",
+            "text": "Unser Team gestaltet ansprechende Anzeigen, die perfekt zu deinem Angebot passen und das Interesse deiner Zielgruppe wecken. Wir setzen die Kampagnen professionell auf und achten darauf, dass dein Budget effizient eingesetzt wird. Während der Laufzeit überwachen wir die Leistung, um die besten Ergebnisse zu erzielen."
+          },
+          "3": {
+            "title": "Analyse und Optimierung",
+            "text": "Nach Start der Kampagne beobachten wir die Performance kontinuierlich und nehmen bei Bedarf Anpassungen vor. Regelmäßige Auswertungen und Berichte geben dir Einblick in den Erfolg der Kampagne und zeigen, wie sich deine Investition auszahlt."
+          }
+        }
+      },
+      "Why": {
+        "title": "Warum wir?",
+        "list": {
+          "1": {
+            "title": "Individuelle Strategien: ",
+            "text": "Bei uns gibt es keine Lösungen von der Stange. Jede Kampagne wird speziell auf deine Ziele und Zielgruppe zugeschnitten."
+          },
+          "2": {
+            "title": "Ganzheitlicher Ansatz: ",
+            "text": "Von der Strategie bis zur Umsetzung übernehmen wir alle Aspekte deiner digitalen Werbung – damit du dich auf dein Kerngeschäft konzentrieren kannst."
+          },
+          "3": {
+            "title": "Datengetriebene Entscheidungen: ",
+            "text": "Wir nutzen fortschrittliche Analysen, um die Performance zu überwachen und gezielt anzupassen – für den bestmöglichen ROI."
+          },
+          "4": {
+            "title": "Kreative Exzellenz: ",
+            "text": "Unser Team aus Textern, Designern und Strategen arbeitet zusammen, um auffällige und wirkungsvolle Anzeigen zu erstellen."
+          }
+        }
+      }
     },
+
     "content": {
       "MetaData": {
-        "title": "Content Erstellung"
+        "title": "Content Creation"
       },
-      "title": "Content Erstellung"
+      "Hero": {
+        "title": "Content Creation",
+        "subTitle": "Inhalte, die deine Zielgruppe begeistern"
+      },
+      "Intro": {
+        "title": "Content, der fesselt und konvertiert",
+        "text": "In der heutigen digitalen Welt ist Content der Schlüssel zum Erfolg. Er verbindet dich mit deiner Zielgruppe, schafft Vertrauen und hebt dich von der Konkurrenz ab. Bei Albrecht Marketing sind wir darauf spezialisiert, hochwertigen Content zu erstellen, der nicht nur gut aussieht, sondern auch bei deiner Zielgruppe ankommt. Ob Fotografie, Videografie, Copywriting oder Grafikdesign – wir erzählen die Geschichte deiner Marke auf eine Weise, die zum Handeln inspiriert."
+      },
+      "OfferCardSection": {
+        "title": "Unser Angebot",
+        "1": {
+          "title": "Fotografie",
+          "text": "Ein Bild sagt mehr als tausend Worte – und wir sorgen dafür, dass jedes Bild die richtige Botschaft vermittelt. Von Produktaufnahmen bis hin zu Lifestyle-Fotografie fangen wir die Essenz deiner Marke in jedem Frame ein."
+        },
+        "2": {
+          "title": "Videografie",
+          "text": "Videos gehören zu den wirkungsvollsten Formaten, um deine Zielgruppe zu begeistern. Wir produzieren professionelle Videos – von Werbeclips bis hin zu Behind-the-Scenes-Inhalten –, die fesseln und überzeugen."
+        },
+        "3": {
+          "title": "Copywriting",
+          "text": "Worte haben Macht. Unsere erfahrenen Texter erstellen überzeugende, SEO-optimierte Inhalte, die deine Zielgruppe direkt ansprechen – sei es für deine Website, Blogartikel oder Social-Media-Posts."
+        },
+        "4": {
+          "title": "Grafikdesign",
+          "text": "Gutes Design zieht Aufmerksamkeit auf sich und hinterlässt einen bleibenden Eindruck. Wir gestalten beeindruckende visuelle Inhalte – von Logos und Branding-Materialien bis hin zu Social-Media-Posts und Infografiken –, die perfekt zu deiner Marke passen."
+        }
+      },
+      "StepsSection": {
+        "title": "Schritt für Schritt zum Ziel",
+        "subTitle": "So läuft unser Prozess ab:",
+        "steps": {
+          "1": {
+            "title": "Strategie und Ideenentwicklung",
+            "text": "Zunächst besprechen wir, welche Art von Inhalten deine Zielgruppe anspricht und welchen Mehrwert du vermitteln möchtest. Gemeinsam entwickeln wir eine Content-Strategie, die deine Marke authentisch und ansprechend repräsentiert und gleichzeitig dein Publikum anspricht."
+          },
+          "2": {
+            "title": "Content-Erstellung",
+            "text": "Unser Team erstellt hochwertige Inhalte – sei es Text, Bild oder Video – die genau auf die Bedürfnisse deiner Zielgruppe zugeschnitten sind. Wir achten dabei auf Qualität, Originalität und eine klare Markenbotschaft. Du erhältst Entwürfe zur Freigabe und kannst Feedback geben, um sicherzustellen, dass alles deinen Erwartungen entspricht."
+          },
+          "3": {
+            "title": "Veröffentlichung und Monitoring",
+            "text": "Nach der Freigabe veröffentlichen wir die Inhalte auf den festgelegten Kanälen und analysieren die Reaktionen deines Publikums. Bei Bedarf passen wir die Content-Strategie an, um kontinuierlich das Interesse deiner Zielgruppe zu steigern und die Reichweite zu maximieren."
+          }
+        }
+      },
+      "Why": {
+        "title": "Warum wir?",
+        "list": {
+          "1": {
+            "title": "Ganzheitlicher Ansatz: ",
+            "text": "Wir erstellen nicht nur Content – wir schaffen Erlebnisse. Jedes einzelne Element ist darauf ausgelegt, eine stimmige Geschichte zu erzählen und deine Marke nachhaltig zu stärken."
+          },
+          "2": {
+            "title": "Individuell auf deine Marke zugeschnitten: ",
+            "text": "Deine Marke ist einzigartig – und unser Ansatz ist es auch. Wir nehmen uns die Zeit, deine Vision zu verstehen, und liefern Inhalte, die deine Werte und Ziele widerspiegeln."
+          },
+          "3": {
+            "title": "Hochwertige Ergebnisse: ",
+            "text": "Mit modernster Technik und bewährten Methoden sorgen wir dafür, dass jedes Foto, Video und Design professionell und hochwertig ist."
+          },
+          "4": {
+            "title": "Erfolgsorientiert: ",
+            "text": "Unser Content sieht nicht nur gut aus – er erfüllt einen Zweck. Ob mehr Website-Traffic, Leadgenerierung oder Umsatzsteigerung, wir erstellen Inhalte mit messbarem Mehrwert."
+          }
+        }
+      }
     },
+
     "web": {
       "MetaData": {
         "title": "Webdesign & Entwicklung"
       },
-      "title": "Webdesign & Entwicklung"
+      "Hero": {
+        "title": "Webdesign & Entwicklung",
+        "subTitle": "Dein digitaler Auftritt auf den Punkt gebracht"
+      },
+      "Intro": {
+        "title": "Dein digitaler Erfolg beginnt hier",
+        "text": "Deine Website ist das digitale Aushängeschild deines Unternehmens – eine Plattform, die entweder Kunden begeistert oder sie verliert. Bei Albrecht Marketing gestalten wir nicht nur ästhetisch ansprechende Websites, sondern entwickeln maßgeschneiderte Lösungen, die deine Sichtbarkeit erhöhen, deine Zielgruppe ansprechen und echtes Wachstum fördern. Egal, ob du einen Onlineshop, einen Blog oder eine Unternehmensseite benötigst – wir kreieren Websites, die nicht nur beeindrucken, sondern auch zum Handeln anregen. \n\nWir wissen, dass die Umwandlung von Besuchern in treue Kunden sowohl Kunst als auch Wissenschaft ist. Deshalb kombiniert unser Team neueste Erkenntnisse aus Psychologie, Verhaltenswissenschaften und innovativem Design, um eine Website zu entwickeln, die deine Marke perfekt widerspiegelt und für deinen Erfolg arbeitet. Lass uns gemeinsam den ersten Schritt in Richtung digitale Exzellenz gehen."
+      },
+      "OfferCardSection": {
+        "title": "Unser Angebot",
+        "1": {
+          "title": "Individuelles Webdesign",
+          "text": "Wir gestalten Websites, die deine Markenidentität widerspiegeln und deine Zielgruppe gezielt ansprechen. Jedes Detail wird so entworfen, dass dein Webauftritt professionell, modern und einladend wirkt."
+        },
+        "2": {
+          "title": "Responsives Design",
+          "text": "Egal ob Desktop, Tablet oder Smartphone – deine Website wird auf jedem Gerät perfekt aussehen und funktionieren. Wir sorgen dafür, dass dein Online-Auftritt stets überzeugt."
+        },
+        "3": {
+          "title": "E-Commerce-Lösungen",
+          "text": "Bereit für den Online-Handel? Wir entwickeln sichere und benutzerfreundliche E-Commerce-Plattformen, die deinen Kunden ein reibungsloses Einkaufserlebnis bieten."
+        },
+        "4": {
+          "title": "Webanwendungen",
+          "text": "Braucht dein Unternehmen mehr als eine einfache Website? Wir entwickeln maßgeschneiderte Webanwendungen, die deine Geschäftsprozesse optimieren – von Kundenportalen bis hin zu internen Tools."
+        },
+        "5": {
+          "title": "Fortlaufender Support & Wartung",
+          "text": "Wir begleiten dich langfristig. Von regelmäßigen Updates bis zur Fehlerbehebung sorgen wir dafür, dass deine Website sicher, schnell und immer auf dem neuesten Stand bleibt."
+        }
+      },
+      "StepsSection": {
+        "title": "Schritt für Schritt zum Ziel",
+        "subTitle": "So läuft unser Prozess ab:",
+        "steps": {
+          "1": {
+            "title": "Konto erstellen und Paket auswählen",
+            "text": "Um den Prozess zu starten, erstellst du ein Konto bei uns und wählst das Webdesign-Paket aus, das am besten zu deinen Anforderungen passt. Damit stellen wir sicher, dass alle Schritte von Anfang an strukturiert und transparent ablaufen."
+          },
+          "2": {
+            "title": "Bedarfserfassung und Planung",
+            "text": "Nachdem du das Paket ausgewählt hast, füllst du ein kurzes Formular aus, das uns wichtige Informationen über dein Unternehmen, deine Ziele und Designvorstellungen gibt. Anschließend erhältst du eine Einladung zu einem MS-Teams-Meeting, in dem wir alle Details zur Website und zu deinen Wünschen gemeinsam besprechen."
+          },
+          "3": {
+            "title": "Entwurf und Feedback",
+            "text": "Basierend auf unseren Erkenntnissen gestalten wir den ersten Entwurf deiner Website. Du bekommst die Möglichkeit, diesen zu prüfen und uns Änderungswünsche mitzuteilen. Dein Feedback fließt direkt in die Optimierung ein, damit das Ergebnis deinen Vorstellungen entspricht."
+          },
+          "4": {
+            "title": "Finale Version und Veröffentlichung",
+            "text": "Sobald du den Entwurf freigegeben hast, erstellen wir die finale Version deiner Website. Auf Wunsch unterstützen wir dich bei der Veröffentlichung, inklusive Domain- und Hosting-Setup.\n\nDanach hast du die Möglichkeit, unser erweitertes Wartungs- und Optimierungspaket zu nutzen. Damit sorgen wir dafür, dass deine Website immer topaktuell und sichtbar bleibt:\n\n- SEO-Optimierung: Durch kontinuierliche Suchmaschinenoptimierung verbessern wir Monat für Monat die Sichtbarkeit deiner Website, damit deine Kunden dich leichter finden.\n- Flexibler Änderungsservice: Für die ersten drei Monate nach dem Launch bieten wir dir die Möglichkeit, Anpassungen oder kleine Änderungen an der Website vorzunehmen – ganz flexibel und ohne zusätzliche Kosten.\n- Technische Wartung: Wir stellen sicher, dass deine Website technisch einwandfrei läuft und alle Updates zeitnah erfolgen, damit du dich voll und ganz auf dein Geschäft konzentrieren kannst.\n\nWenn du Interesse an unserer laufenden Betreuung hast, sprich uns einfach an, und wir stellen dir ein maßgeschneidertes Angebot zusammen."
+          }
+        }
+      },
+      "Why": {
+        "title": "Warum wir?",
+        "list": {
+          "1": {
+            "title": "Ganzheitlicher Ansatz: ",
+            "text": "Wir erschaffen nicht nur Inhalte – wir kreieren Erlebnisse. Jedes einzelne Element ist darauf abgestimmt, eine zusammenhängende Geschichte zu erzählen, die deine Marke stärkt."
+          },
+          "2": {
+            "title": "Individuell auf deine Marke zugeschnitten: ",
+            "text": "Deine Marke ist einzigartig – und genauso individuell ist unser Ansatz. Wir nehmen uns die Zeit, deine Vision zu verstehen, und liefern Inhalte, die deine Werte und Ziele widerspiegeln."
+          },
+          "3": {
+            "title": "Hochwertige Ergebnisse: ",
+            "text": "Wir setzen modernste Technologien und bewährte Methoden ein, um sicherzustellen, dass jedes Foto, Video und Design professionell und hochwertig ist."
+          },
+          "4": {
+            "title": "Ergebnisorientiert: ",
+            "text": "Unsere Inhalte sehen nicht nur gut aus – sie haben auch eine klare Wirkung. Wir gestalten mit deinem Geschäftserfolg im Fokus, sei es zur Steigerung des Traffics, zur Lead-Generierung oder zur Umsatzsteigerung."
+          }
+        }
+      }
     },
+
     "social": {
       "MetaData": {
         "title": "Social Media Management"
       },
-      "title": "Social Media Management"
+      "Hero": {
+        "title": "Social Media Management",
+        "subTitle": "Deine Marke im digitalen Gespräch"
+      },
+      "Intro": {
+        "title": "Deine Social-Media-Präsenz, professionell verwaltet",
+        "text": "Social Media ist mehr als nur eine Plattform – es ist das Tor zu deiner Markenwelt. Bei Albrecht Marketing übernehmen wir das Management deiner Social-Media-Kanäle, damit sie nicht nur aktiv, sondern auch wirkungsvoll sind. Von der Erstellung eines einheitlichen Markenauftritts bis hin zur strategischen Planung von Posts helfen wir dir, Interaktionen zu maximieren, eine treue Community aufzubauen und organische Marketingeffekte zu erzielen. Ob Instagram, TikTok, Facebook, YouTube oder X – wir passen unsere Strategie genau an deine Marke und Ziele an."
+      },
+      "OfferCardSection": {
+        "title": "Unsere Leistungen",
+        "1": {
+          "title": "Kontoerstellung & Optimierung",
+          "text": "Wir richten deine Social-Media-Profile professionell ein und optimieren sie, damit deine Marke überall konsistent und ansprechend vertreten ist."
+        },
+        "2": {
+          "title": "Content-Strategie & Posting-Plan",
+          "text": "Wir entwickeln eine maßgeschneiderte Content-Strategie und einen Posting-Plan, um dein Publikum kontinuierlich zu begeistern. Von Trendthemen bis hin zu zeitlosem Content – wir kümmern uns darum."
+        },
+        "3": {
+          "title": "Visuelles Storytelling",
+          "text": "Dein Social-Media-Auftritt sollte nicht nur informativ, sondern auch visuell ansprechend sein. Wir erstellen beeindruckende Grafiken und Themenwelten, die deine Produkte oder Dienstleistungen perfekt in Szene setzen."
+        },
+        "4": {
+          "title": "Community-Management & Interaktion",
+          "text": "Wir posten nicht nur – wir interagieren! Durch das Beantworten von Kommentaren und den Aufbau echter Gespräche helfen wir dir, eine engagierte und loyale Community aufzubauen."
+        },
+        "5": {
+          "title": "Instagram als Produktgalerie",
+          "text": "Für Unternehmen mit einer visuellen Produktlinie verwandeln wir dein Instagram-Profil in eine dynamische Galerie. Besucher, die von deiner Website kommen, sehen eine kuratierte Auswahl an Bildern, die sie gezielt zum Kauf inspirieren."
+        }
+      },
+      "StepsSection": {
+        "title": "Schritt für Schritt zum Ziel",
+        "subTitle": "So läuft unser Prozess ab:",
+        "steps": {
+          "1": {
+            "title": "Strategie und Content-Planung",
+            "text": "Wir beginnen mit einer Analyse deiner Zielgruppe und entwickeln eine maßgeschneiderte Social-Media-Strategie. In diesem Schritt erstellen wir einen Redaktionsplan, der die Inhalte und Themen abdeckt, die deine Zielgruppe interessieren und deine Marke authentisch präsentieren."
+          },
+          "2": {
+            "title": "Content-Erstellung und Veröffentlichung",
+            "text": "Basierend auf dem Content-Plan erstellen wir hochwertigen Content – von Grafiken über Texte bis hin zu kurzen Videos, die auf den jeweiligen Plattformen optimal zur Geltung kommen. Wir kümmern uns um die regelmäßige Veröffentlichung und passen die Inhalte an die Trends und Bedürfnisse deiner Zielgruppe an."
+          },
+          "3": {
+            "title": "Community-Management und Analyse",
+            "text": "Nach der Veröffentlichung bleiben wir aktiv – wir beantworten Kommentare und Nachrichten, bauen eine Community auf und analysieren die Performance deiner Posts. Mit regelmäßigen Reports halten wir dich auf dem Laufenden und optimieren die Inhalte kontinuierlich, um maximale Reichweite und Engagement zu erzielen."
+          }
+        }
+      },
+      "Why": {
+        "title": "Warum wir?",
+        "list": {
+          "1": {
+            "title": "Individuelle Strategien: ",
+            "text": "Wir glauben nicht an Standardlösungen. Jede Strategie wird speziell auf deine Marke, deine Zielgruppe und deine Ziele zugeschnitten."
+          },
+          "2": {
+            "title": "Konsistente Markenpräsenz: ",
+            "text": "Wir sorgen dafür, dass dein Social-Media-Auftritt nahtlos mit deiner Markenidentität übereinstimmt – von der visuellen Gestaltung bis hin zum Tonfall."
+          },
+          "3": {
+            "title": "Datenbasierte Optimierung: ",
+            "text": "Wir nutzen Analysen, um die Performance zu verfolgen und unsere Strategien kontinuierlich zu optimieren – für maximale Effizienz und Rendite."
+          },
+          "4": {
+            "title": "Kreative Exzellenz: ",
+            "text": "Unser Team aus Designern, Textern und Strategen arbeitet Hand in Hand, um Inhalte zu erstellen, die auffallen und echte Ergebnisse liefern."
+          }
+        }
+      }
     }
   },
   "Pricing": {
     "MetaData": {
-        "title": "Unsere Preise"
-      },
+      "title": "Unsere Preise"
+    },
     "title": "Unsere Preise"
   },
   "About": {
     "MetaData": {
-        "title": "Über Uns"
-      },
+      "title": "Über Uns"
+    },
     "title": "Über Uns"
   },
   "Contact": {
     "MetaData": {
-        "title": "Kontaktiere Uns"
-      },
+      "title": "Kontaktiere Uns"
+    },
     "title": "Kontaktiere Uns"
   }
 }

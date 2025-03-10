@@ -5,14 +5,20 @@ import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
-const NavBar = () => {
-  const t = useTranslations('NavBar');
+type NavProps = {
+  bgColor: string;
+};
+
+const NavBar: React.FC<NavProps> = (bgColor) => {
+  const t = useTranslations("NavBar");
 
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  const bgcolor = bgColor;
+
   return (
-    <nav className="bg-lightNeutral py-3 sticky top-0 w-full">
+    <nav className={`${bgcolor.bgColor} py-3 sticky top-0 w-full`}>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
@@ -37,7 +43,7 @@ const NavBar = () => {
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                {t('links.services')}
+                {t("links.services")}
               </span>
               {isServicesDropdownOpen && (
                 <div className="absolute left-1/2 w-48  transform -translate-x-1/2 z-10">
@@ -48,7 +54,7 @@ const NavBar = () => {
                           href={"/services/web-design"}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                         >
-                          {t('links.webDesign')}
+                          {t("links.webDesign")}
                         </Link>
                       </li>
                       <li>
@@ -56,7 +62,7 @@ const NavBar = () => {
                           href={"/services/online-ads"}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                         >
-                          {t('links.onlineAds')}
+                          {t("links.onlineAds")}
                         </Link>
                       </li>
                       <li>
@@ -64,7 +70,7 @@ const NavBar = () => {
                           href={"/services/content-creation"}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                         >
-                          {t('links.contentCreation')}
+                          {t("links.contentCreation")}
                         </Link>
                       </li>
                       <li>
@@ -72,7 +78,7 @@ const NavBar = () => {
                           href={"/services/social-media"}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                         >
-                          {t('links.socialMedia')}
+                          {t("links.socialMedia")}
                         </Link>
                       </li>
                     </ul>
@@ -83,18 +89,18 @@ const NavBar = () => {
 
             <Link href={"/pricing"}>
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                {t('links.pricing')}
+                {t("links.pricing")}
               </span>
             </Link>
 
             <Link href={"about"}>
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
-              {t('links.about')}
+                {t("links.about")}
               </span>
             </Link>
             <Link href={"/contact"}>
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
-              {t('links.contact')}
+                {t("links.contact")}
               </span>
             </Link>
 
@@ -148,43 +154,64 @@ const NavBar = () => {
         </div>
       </div>
 
-       {/* ✅ Mobile Navigation Menu */}
-       {isOpen && (
+      {/* ✅ Mobile Navigation Menu */}
+      {isOpen && (
         <div className="md:hidden bg-lightNeutral shadow-lg absolute w-full top-20 left-0">
           <ul className="py-2 text-center space-y-4">
             <li>
-              <Link href={"/services/web-design"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.webDesign')}
+              <Link
+                href={"/services/web-design"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.webDesign")}
               </Link>
             </li>
             <li>
-              <Link href={"/services/online-ads"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.onlineAds')}
+              <Link
+                href={"/services/online-ads"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.onlineAds")}
               </Link>
             </li>
             <li>
-              <Link href={"/services/content-creation"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.contentCreation')}
+              <Link
+                href={"/services/content-creation"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.contentCreation")}
               </Link>
             </li>
             <li>
-              <Link href={"/services/social-media"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.socialMedia')}
+              <Link
+                href={"/services/social-media"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.socialMedia")}
               </Link>
             </li>
             <li>
-              <Link href={"/pricing"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.pricing')}
+              <Link
+                href={"/pricing"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.pricing")}
               </Link>
             </li>
             <li>
-              <Link href={"/about"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.about')}
+              <Link
+                href={"/about"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.about")}
               </Link>
             </li>
             <li>
-              <Link href={"/contact"} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                {t('links.contact')}
+              <Link
+                href={"/contact"}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                {t("links.contact")}
               </Link>
             </li>
           </ul>

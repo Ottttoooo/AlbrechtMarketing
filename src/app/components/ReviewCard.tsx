@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 type ReviewProps = {
   text: string;
@@ -17,15 +21,23 @@ const ReviewCard: React.FC<ReviewProps> = ({
   image,
 }) => {
   return (
-    <div className="flex flex-col w-auto sm:w-[470px] px-2 py-5 rounded-2xl bg-slate-100">
-      <div className="flex flex-col w-full px-7">
-        <p className="text-5xl md:text-7xl m-0 mb-[-20px] md:mb-[-40px]">&quot;</p>
-        <div className="flex py-3 flex-col">
+    <motion.div
+      className="flex flex-col w-auto sm:w-[470px] px-2 py-5 rounded-2xl bg-slate-100 md:flex-1"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <div className="flex flex-col w-full px-7 flex-grow">
+        <p className="text-5xl md:text-7xl m-0 mb-[-20px] md:mb-[-40px]">
+          &quot;
+        </p>
+        <div className="flex flex-col py-3 flex-grow">
           <p className="mb-2">{rating}</p>
-          <p className="italic">{text}</p>
+          <p className="italic flex-grow">{text}</p>
         </div>
       </div>
-      <div className="flex px-7 gap-3">
+      <div className="flex px-7 gap-3 mt-auto">
         <div className="h-20 w-20">
           <Image
             src={image}
@@ -40,7 +52,7 @@ const ReviewCard: React.FC<ReviewProps> = ({
           <p className="text-base">{position}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

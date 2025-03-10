@@ -17,6 +17,8 @@ export default {
         accent: "#E39629",
         darkNeutral: "#071A2B",
         lightNeutral: "#F0F7FF",
+        accentLow: "#E7EBFD",
+        subTextLight: "#BDCEF4",
 
         // primary: "hsl(215,84,62)",
         // secondary: "hsl(270,80,71)",

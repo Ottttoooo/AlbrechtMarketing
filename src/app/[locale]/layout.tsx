@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ReactNode } from "react";
 import "../globals.css";
-import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
+import NavBarWrapper from "../components/NavBarWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -45,7 +45,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${playfair.variable} ${bebasNeue.variable}`}>
       <body className="bg-lightNeutral">
         <NextIntlClientProvider messages={messages}>
-          <NavBar />
+        <NavBarWrapper />
           {children}
           <Footer />
         </NextIntlClientProvider>
