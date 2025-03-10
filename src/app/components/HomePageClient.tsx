@@ -252,7 +252,7 @@ export default function HomePageClient() {
             <Link href={"/services/online-ads"}>
               <div className="flex flex-col items-center justify-end w-full h-full hover:bg-slate-200 rounded-xl">
                 <Image
-                  src="/images/ads.png"
+                  src="/images/ads/ads.png"
                   alt={""}
                   width={200}
                   height={200}
@@ -282,7 +282,7 @@ export default function HomePageClient() {
             <Link href={"/services/social-media"}>
               <div className="flex flex-col items-center justify-end h-full hover:bg-slate-200 rounded-xl">
                 <Image
-                  src="/images/socialMedia.png"
+                  src="/images/social/socialMedia.png"
                   alt={""}
                   width={200}
                   height={200}
