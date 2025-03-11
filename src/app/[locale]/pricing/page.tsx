@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { withLocale } from "@/utils/withLocale";
 import { getTranslations } from "next-intl/server";
+import PricingSection from "@/app/components/prices/PricingSection";
 
 export async function generateMetadata({
   params,
@@ -21,15 +22,26 @@ function PricingPage() {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center w-full px-8 py-56 bg-slate-300">
-        <div className="flex flex-col max-w-[1200px] w-full ">
-          <h1 className="font-bold text-5xl">{t("title")}</h1>
+      <section className="flex w-full justify-center bg-accentLow">
+        <div className="flex w-full max-w-[1200px] px-8 justify-center gap-8 flex-col sm:flex-row mb-9">
+          <div className="flex flex-col sm:max-w-[700px] min-h-[350px] items-center justify-center">
+            <h1 className="font-bold text-2xl mt-4 sm:mt-0 md:text-5xl sm:text-4xl text-center sm:text-left">
+              {t("title")}
+            </h1>
+            <p className="text-base text-center sm:text-left">
+              Für jedes Unternehmen die richtige Lösung.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-full px-8 pt-56">
-        <div className="flex flex-col max-w-[1200px] w-full h-[400px] ">
-          <h1 className="font-bold text-5xl">details</h1>
+      <section className="flex flex-col items-center justify-center w-full px-8 py-20">
+        <div className="flex flex-col w-full max-w-[1200px] overflow-hidden">
+          <h2 className="font-bold text-3xl sm:text-5xl text-center">
+            Combination Packages
+          </h2>
+
+          <PricingSection />
         </div>
       </section>
     </>

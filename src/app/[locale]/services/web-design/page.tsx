@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Intro from "@/app/components/services/Intro";
 import StepsSection from "@/app/components/services/StepsSection";
 import Why from "@/app/components/services/Why";
-import CTACard from "@/app/components/CTACard";
+import CTACard from "@/app/components/common/CTACard";
 
 export async function generateMetadata({
   params,

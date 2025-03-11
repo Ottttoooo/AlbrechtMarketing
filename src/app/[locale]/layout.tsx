@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ReactNode } from "react";
 import "../globals.css";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
-import NavBarWrapper from "../components/NavBarWrapper";
+import NavBarWrapper from "../components/common/NavBarWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({

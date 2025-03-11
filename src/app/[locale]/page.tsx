@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import HomePageClient from "../components/HomePageClient";
+import HomePageClient from "../components/homepage/HomePageClient";
 import { withLocale } from "@/utils/withLocale";
 
 export async function generateMetadata({

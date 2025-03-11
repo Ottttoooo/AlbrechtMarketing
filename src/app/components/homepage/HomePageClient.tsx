@@ -2,9 +2,9 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Buttons from "./Buttons";
+import Buttons from "../common/Buttons";
 import InfoBox from "./InfoBox";
-import CTACard from "./CTACard";
+import CTACard from "../common/CTACard";
 import FAQItem from "./FAQItem";
 import ReviewCard from "./ReviewCard";
 import Link from "next/link";
@@ -124,6 +124,8 @@ export default function HomePageClient() {
   const stepsNumberClasses =
     "flex items-center justify-center min-w-[50px] w-[50px] min-h-[50px] h-[50px] sm:w-[100px] sm:h-[100px] max-w-[100px] max-h-[100px] rounded-lg bg-darkNeutral";
 
+ 
+
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
@@ -133,9 +135,9 @@ export default function HomePageClient() {
       {/* HERO SECTION */}
       <section
         id="Hero"
-        className="flex flex-col items-center w-full sm:min-h-screen px-8 pt-24 pb-36 bg-lightNeutral bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-150px_bottom_0px] bg-no-repeat
+        className={`"box-border flex flex-col items-center w-full sm:min-h-screen px-8 pt-24 pb-36 bg-lightNeutral bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-150px_bottom_0px] bg-no-repeat
         sm:bg-[url('/images/hero-bg.svg')] sm:bg-[length:1300px_auto] sm:bg-[position:right_-200px_bottom_0px]
-        md:bg-bottom md:bg-[1600px_auto]"
+        md:bg-bottom md:bg-[1600px_auto]"`}
       >
         <div className="w-full max-w-[1200px]">
           <div className="flex Hero-content w-full lg:w-2/3 items-center ">
