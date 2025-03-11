@@ -504,79 +504,80 @@
           }
         }
       },
-    
-    "grow": {
-      "title": "Grow Package",
-      "description": "For businesses looking to expand their online reach.",
-      "tiers": {
-        "Basic": {
-          "title": "Basic",
-          "price": "€300/month",
-          "applicableFor": "Small businesses wanting to test online ads.",
-          "features": {
-            "feature1": "1 social channel",
-            "feature2": "Basic ad campaigns",
-            "feature3": "Performance report"
+
+      "grow": {
+        "title": "Grow Package",
+        "description": "For businesses looking to expand their online reach.",
+        "tiers": {
+          "Basic": {
+            "title": "Basic",
+            "price": "€300/month",
+            "applicableFor": "Small businesses wanting to test online ads.",
+            "features": {
+              "feature1": "1 social channel",
+              "feature2": "Basic ad campaigns",
+              "feature3": "Performance report"
+            }
+          },
+          "Advanced": {
+            "title": "Advanced",
+            "price": "€600/month",
+            "applicableFor": "Businesses aiming for multi-platform growth.",
+            "features": {
+              "feature1": "Multi-channel ads",
+              "feature2": "A/B Testing",
+              "feature3": "Bi-weekly reports"
+            }
+          },
+          "Custom": {
+            "title": "Custom",
+            "price": "Price on request",
+            "applicableFor": "Companies needing a custom ad strategy.",
+            "features": {
+              "feature1": "Custom strategy",
+              "feature2": "Omnichannel campaigns",
+              "feature3": "Video ads"
+            }
           }
-        },
-        "Advanced": {
-          "title": "Advanced",
-          "price": "€600/month",
-          "applicableFor": "Businesses aiming for multi-platform growth.",
-          "features": {
-            "feature1": "Multi-channel ads",
-            "feature2": "A/B Testing",
-            "feature3": "Bi-weekly reports"
-          }
-        },
-        "Custom": {
-          "title": "Custom",
-          "price": "Price on request",
-          "applicableFor": "Companies needing a custom ad strategy.",
-          "features": {
-            "feature1": "Custom strategy",
-            "feature2": "Omnichannel campaigns",
-            "feature3": "Video ads"
+        }
+      },
+      "maintain": {
+        "title": "Maintain Package",
+        "description": "For businesses needing long-term support & optimization.",
+        "tiers": {
+          "Basic": {
+            "title": "Basic",
+            "price": "€100/month",
+            "applicableFor": "Businesses wanting essential site maintenance.",
+            "features": {
+              "feature1": "Regular backups",
+              "feature2": "Technical updates",
+              "feature3": "Site health check"
+            }
+          },
+          "Advanced": {
+            "title": "Advanced",
+            "price": "€300/month",
+            "applicableFor": "Businesses needing ongoing SEO & maintenance.",
+            "features": {
+              "feature1": "On-page SEO",
+              "feature2": "2 minor website edits",
+              "feature3": "Performance tracking"
+            }
+          },
+          "Custom": {
+            "title": "Custom",
+            "price": "Price on request",
+            "applicableFor": "Companies with advanced SEO & maintenance needs.",
+            "features": {
+              "feature1": "Full SEO campaign",
+              "feature2": "Custom optimizations",
+              "feature3": "Monthly strategy calls"
+            }
           }
         }
       }
     },
-    "maintain": {
-      "title": "Maintain Package",
-      "description": "For businesses needing long-term support & optimization.",
-      "tiers": {
-        "Basic": {
-          "title": "Basic",
-          "price": "€100/month",
-          "applicableFor": "Businesses wanting essential site maintenance.",
-          "features": {
-            "feature1": "Regular backups",
-            "feature2": "Technical updates",
-            "feature3":  "Site health check"
-          }
-        },
-        "Advanced": {
-          "title": "Advanced",
-          "price": "€300/month",
-          "applicableFor": "Businesses needing ongoing SEO & maintenance.",
-          "features": {
-            "feature1": "On-page SEO",
-            "feature2": "2 minor website edits",
-            "feature3": "Performance tracking"
-          }
-        },
-        "Custom": {
-          "title": "Custom",
-          "price": "Price on request",
-          "applicableFor": "Companies with advanced SEO & maintenance needs.",
-          "features": {
-            "feature1": "Full SEO campaign",
-            "feature2":  "Custom optimizations",
-            "feature3": "Monthly strategy calls"
-          }
-        }
-      }
-    }},
     "cta": {
       "select": "Select"
     }
