@@ -466,120 +466,173 @@
     "MetaData": {
       "title": "Unsere Preise"
     },
-    "title": "Unsere Preise",
     "packages": {
+      "title": "Kombi-Pakete",
+      "3months": "3 Monate",
+      "6months": "6 Monate (Spare 10%)",
+      "popular": "AM BELIEBTESTEN",
       "start": {
-        "title": "Start Package",
-        "description": "Perfect for businesses starting their online journey.",
+        "title": "Start",
+        "description": "Perfekt für Unternehmen, die ihre Online-Reise beginnen.",
         "tiers": {
           "Basic": {
-            "title": "Basic",
+            "title": "Basis",
             "price": "€980+",
-            "applicableFor": "Small businesses needing a simple web presence.",
+            "applicableFor": "Kleine Unternehmen, die eine einfache Online-Präsenz benötigen.",
             "features": {
-              "feature1": "1-3 pages",
-              "feature2": "Mobile-friendly",
-              "feature3": "Basic SEO"
+              "feature1": "Einrichtung von Domain und Hosting",
+              "feature2": "Professionelle E-Mail-Adresse (z. B. info@deinefirma.de)",
+              "feature3": "1–3-seitige responsive Website (vorlagenbasiert)",
+              "feature4": "Kontaktformular-Integration",
+              "feature5": "Einbindung von Google Maps",
+              "feature6": "Grundlegendes On-Page-SEO",
+              "feature7": "Einrichtung eines Social-Media-Profils (Instagram oder Facebook)",
+              "feature8": "Einfaches Logo-Design (ein Konzept)"
             }
           },
           "Advanced": {
-            "title": "Advanced",
+            "title": "Erweitert",
             "price": "€1,960+",
-            "applicableFor": "Growing businesses that need a custom website.",
+            "applicableFor": "Wachsende Unternehmen, die eine maßgeschneiderte Website benötigen.",
             "features": {
-              "feature1": "Up to 5 pages",
-              "feature2": "Custom design",
-              "feature3": "Enhanced SEO"
+              "feature1": "Enthält alle Funktionen des Basic-Tiers",
+              "feature2": "Bis zu 5 Seiten mit individuellem Design",
+              "feature3": "Erweitertes SEO (Keywords, interne Verlinkung, Alt-Texte)",
+              "feature4": "Einrichtung von zwei Social-Media-Plattformen",
+              "feature5": "Blog- oder News-Bereich",
+              "feature6": "Professionelles Logo-Design (mehrere Konzepte und Überarbeitungen)",
+              "feature7": "Grundlegendes Corporate Design (Farben, Schriftarten, Bildsprache)",
+              "feature8": "Einfache Animationen (Hover-Effekte, Einblendungen)"
             }
           },
           "Custom": {
-            "title": "Custom",
-            "price": "Price on request",
-            "applicableFor": "Businesses requiring fully tailored solutions.",
+            "title": "Individuell",
+            "price": "Preis auf Anfrage",
+            "applicableFor": "Unternehmen, die eine vollständig maßgeschneiderte Lösung benötigen.",
             "features": {
-              "feature1": "E-commerce",
-              "feature2": "Fully tailored",
-              "feature3": "SEO strategy"
+              "feature1": "Enthält alle Funktionen des Advanced-Tiers",
+              "feature2": "Unbegrenzte Seiten oder dynamische Inhalte",
+              "feature3": "Individuelle Animationen und Interaktionen",
+              "feature4": "Umfassende SEO-Strategie (technisch, inhaltlich, Tools)",
+              "feature5": "Mehrsprachigkeit (bis zu 2 zusätzliche Sprachen)",
+              "feature8": "Komplettes Corporate Design inkl. Markenrichtlinien",
+              "feature9": "Einrichtung und Branding aller relevanten Social-Media-Plattformen",
+              "feature10": "Website-Performance-Optimierung"
             }
           }
         }
       },
-
       "grow": {
-        "title": "Grow Package",
-        "description": "For businesses looking to expand their online reach.",
+        "title": "Wachstum",
+        "description": "Für Unternehmen, die ihre Online-Reichweite erweitern möchten.",
         "tiers": {
           "Basic": {
-            "title": "Basic",
-            "price": "€300/month",
-            "applicableFor": "Small businesses wanting to test online ads.",
+            "title": "Basis",
+            "threeMonthPrice": "€300/Monat (3 Monate)",
+            "sixMonthPrice": "€270/Monat (6 Monate)",
+            "applicableFor": "Kleine Unternehmen, die Online-Werbung testen möchten.",
             "features": {
-              "feature1": "1 social channel",
-              "feature2": "Basic ad campaigns",
-              "feature3": "Performance report"
+              "feature1": "Einrichtung und Verwaltung einer Google Ads-Kampagne",
+              "feature2": "Einrichtung und Verwaltung einer Meta Ads-Kampagne (Facebook/Instagram)",
+              "feature3": "Grundlegendes Targeting (Standort, Alter, Interessen)",
+              "feature4": "Leistungsbericht (monatlich)",
+              "feature5": "Social-Media-Betreuung für 1 Plattform",
+              "feature6": "4 gestaltete Beiträge pro Monat (inkl. Text)",
+              "feature7": "2 Story-Vorlagen pro Monat",
+              "feature8": "1 Planungsgespräch pro Monat"
             }
           },
           "Advanced": {
-            "title": "Advanced",
-            "price": "€600/month",
-            "applicableFor": "Businesses aiming for multi-platform growth.",
+            "title": "Erweitert",
+            "threeMonthPrice": "€600/Monat (3 Monate)",
+            "sixMonthPrice": "€540/Monat (6 Monate)",
+            "applicableFor": "Unternehmen, die auf mehreren Plattformen wachsen möchten.",
             "features": {
-              "feature1": "Multi-channel ads",
-              "feature2": "A/B Testing",
-              "feature3": "Bi-weekly reports"
+              "feature1": "Enthält alle Funktionen des Basic-Tiers",
+              "feature2": "Mehrkampagnen-Setup und Management (Google + Meta Ads)",
+              "feature3": "A/B-Tests von Werbemitteln",
+              "feature4": "Erweitertes Targeting (Lookalikes, Ausschlüsse, Retargeting)",
+              "feature5": "Leistungsberichte (alle zwei Wochen mit Insights)",
+              "feature6": "Social-Media-Betreuung für 2 Plattformen",
+              "feature7": "8 gestaltete Beiträge + 4 Story-Beiträge pro Monat",
+              "feature8": "2 Kurzvideos pro Monat (z. B. Reels/Shorts)"
             }
           },
           "Custom": {
-            "title": "Custom",
-            "price": "Price on request",
-            "applicableFor": "Companies needing a custom ad strategy.",
+            "title": "Individuell",
+            "threeMonthPrice": "Preis auf Anfrage",
+            "sixMonthPrice": "Preis auf Anfrage",
+            "applicableFor": "Unternehmen, die eine individuelle Werbestrategie benötigen.",
             "features": {
-              "feature1": "Custom strategy",
-              "feature2": "Omnichannel campaigns",
-              "feature3": "Video ads"
+              "feature1": "Enthält alle Funktionen des Advanced-Tiers",
+              "feature2": "Omnichannel-Werbestrategie (Google Search, Display, YouTube, Meta, TikTok)",
+              "feature3": "Retargeting-Funnel mit benutzerdefinierten Zielgruppen",
+              "feature4": "Wöchentliche Berichte mit ROI-Analysen und Strategieanpassung",
+              "feature5": "Social-Media-Betreuung für bis zu 3 Plattformen",
+              "feature6": "Komplette Videoproduktion (Skript, Schnitt, Veröffentlichung)*",
+              "feature7": "Individuelle Kampagnenassets (Grafiken + Werbetexte)",
+              "feature8": "Strategischer Kampagnenkalender mit saisonalen Aktionen"
             }
           }
         }
       },
       "maintain": {
-        "title": "Maintain Package",
-        "description": "For businesses needing long-term support & optimization.",
+        "title": "Pflege",
+        "description": "Für Unternehmen, die langfristige Unterstützung & Optimierung benötigen.",
         "tiers": {
           "Basic": {
-            "title": "Basic",
-            "price": "€100/month",
-            "applicableFor": "Businesses wanting essential site maintenance.",
+            "title": "Basis",
+            "threeMonthPrice": "€100/Monat (3 Monate)",
+            "sixMonthPrice": "€90/Monat (6 Monate)",
+            "applicableFor": "Unternehmen, die grundlegende Website-Wartung benötigen.",
             "features": {
-              "feature1": "Regular backups",
-              "feature2": "Technical updates",
-              "feature3": "Site health check"
+              "feature1": "Monatliches Website-Backup",
+              "feature2": "Monatliche CMS- und Plugin-Updates",
+              "feature3": "Technischer SEO-Check (Geschwindigkeit, Mobilfreundlichkeit, Indexierung)",
+              "feature4": "Website-Gesundheitsbericht (nur Hauptprobleme)",
+              "feature5": "Bis zu 1 kleine Website-Änderung pro Monat",
+              "feature6": "Google Search Console Überblick",
+              "feature7": "Uptime-Überwachung",
+              "feature8": "Support per E-Mail"
             }
           },
           "Advanced": {
-            "title": "Advanced",
-            "price": "€300/month",
-            "applicableFor": "Businesses needing ongoing SEO & maintenance.",
+            "title": "Erweitert",
+            "threeMonthPrice": "€200/Monat (3 Monate)",
+            "sixMonthPrice": "€180/Monat (6 Monate)",
+            "applicableFor": "Unternehmen, die kontinuierliche SEO & Wartung benötigen.",
             "features": {
-              "feature1": "On-page SEO",
-              "feature2": "2 minor website edits",
-              "feature3": "Performance tracking"
+              "feature1": "Enthält alle Funktionen des Basic-Tiers",
+              "feature2": "Zweiwöchentliche Gesundheits- & Performance-Checks",
+              "feature3": "Bis zu 3 Website-Änderungen pro Monat",
+              "feature4": "Monatliches Keyword- & Ranking-Tracking",
+              "feature5": "Pagespeed-Optimierung (Lazy Loading, Bildkomprimierung)",
+              "feature6": "Google Analytics Bericht mit Auswertung",
+              "feature7": "Aktualisierung von Inhalten (1 Element/Monat)",
+              "feature8": "On-Page-SEO-Verbesserungen (Meta-Tags, Überschriften)"
             }
           },
           "Custom": {
-            "title": "Custom",
-            "price": "Price on request",
-            "applicableFor": "Companies with advanced SEO & maintenance needs.",
+            "title": "Individuell",
+            "threeMonthPrice": "Preis auf Anfrage",
+            "sixMonthPrice": "Preis auf Anfrage",
+            "applicableFor": "Unternehmen mit erweiterten SEO- & Wartungsanforderungen.",
             "features": {
-              "feature1": "Full SEO campaign",
-              "feature2": "Custom optimizations",
-              "feature3": "Monthly strategy calls"
+              "feature1": "Enthält alle Funktionen des Advanced-Tiers",
+              "feature2": "Wöchentliche technische & SEO-Audits",
+              "feature3": "Unbegrenzte Website-Änderungen (im Rahmen des Pakets)",
+              "feature4": "Proaktive UX-Optimierungsvorschläge",
+              "feature5": "Zugriff auf individuelles Performance-Dashboard",
+              "feature6": "Sicherheitsüberwachung & Notfallreaktion",
+              "feature7": "Mehrsprachige SEO-Unterstützung",
+              "feature8": "Wettbewerbsbeobachtung & Benchmarking"
             }
           }
         }
       }
     },
     "cta": {
-      "select": "Select"
+      "select": "Auswählen"
     }
   },
   "About": {

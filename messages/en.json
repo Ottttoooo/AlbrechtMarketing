@@ -466,10 +466,13 @@
     "MetaData": {
       "title": "Our Prices"
     },
-    "title": "Our Prices",
     "packages": {
+      "title": "Combination Packages",
+      "3months": "3 Months",
+      "6months": "6 Months (Save 10%)",
+      "popular": "MOST POPULAR",
       "start": {
-        "title": "Start Package",
+        "title": "Start",
         "description": "Perfect for businesses starting their online journey.",
         "tiers": {
           "Basic": {
@@ -477,9 +480,14 @@
             "price": "€980+",
             "applicableFor": "Small businesses needing a simple web presence.",
             "features": {
-              "feature1": "1-3 pages",
-              "feature2": "Mobile-friendly",
-              "feature3": "Basic SEO"
+              "feature1": "Domain and hosting setup",
+              "feature2": "Professional email address (e.g., info@yourcompany.de)",
+              "feature3": "1–3 page responsive website (template-based)",
+              "feature4": "Contact form integration",
+              "feature5": "Google Maps embedding",
+              "feature6": "Basic on-page SEO",
+              "feature7": "Setup of one social media profile (Instagram or Facebook)",
+              "feature8": "Basic logo design (single concept)"
             }
           },
           "Advanced": {
@@ -487,9 +495,14 @@
             "price": "€1,960+",
             "applicableFor": "Growing businesses that need a custom website.",
             "features": {
-              "feature1": "Up to 5 pages",
-              "feature2": "Custom design",
-              "feature3": "Enhanced SEO"
+              "feature1": "Everything in the Basic tier included",
+              "feature2": "Up to 5 pages with custom design",
+              "feature3": "Enhanced SEO (keywords, internal links, alt texts)",
+              "feature4": "Setup of two social media platforms",
+              "feature5": "Blog or news section",
+              "feature6": "Professional logo design (multiple concepts and revisions)",
+              "feature7": "Basic corporate identity design (colors, fonts, brand visuals)",
+              "feature8": "Basic animations (hover effects, fade-ins)"
             }
           },
           "Custom": {
@@ -497,82 +510,122 @@
             "price": "Price on request",
             "applicableFor": "Businesses requiring fully tailored solutions.",
             "features": {
-              "feature1": "E-commerce",
-              "feature2": "Fully tailored",
-              "feature3": "SEO strategy"
+              "feature1": "Everything in the Advanced tier included",
+              "feature2": "Unlimited pages or dynamic content",
+              "feature3": "Custom animations and interactions",
+              "feature4": "Full SEO strategy (technical, content, tools)",
+              "feature5": "Multilingual support (up to 2 additional languages)",
+              "feature8": "Complete corporate identity design with guidelines",
+              "feature9": "Setup and branding of all relevant social media platforms",
+              "feature10": "Website performance optimization"
             }
           }
         }
       },
-
       "grow": {
-        "title": "Grow Package",
+        "title": "Grow",
         "description": "For businesses looking to expand their online reach.",
         "tiers": {
           "Basic": {
             "title": "Basic",
-            "price": "€300/month",
+            "threeMonthPrice": "€300/Mo (3 months)",
+            "sixMonthPrice": "€270/Mo (6 months)",
             "applicableFor": "Small businesses wanting to test online ads.",
             "features": {
-              "feature1": "1 social channel",
-              "feature2": "Basic ad campaigns",
-              "feature3": "Performance report"
+              "feature1": "Google Ads campaign setup and management (1 campaign)",
+              "feature2": "Meta Ads (Facebook/Instagram) setup and management (1 campaign)",
+              "feature3": "Basic targeting (location, age, interests)",
+              "feature4": "Performance report (monthly)",
+              "feature5": "Social media management for 1 platform",
+              "feature6": "4 designed posts per month (including captions)",
+              "feature7": "2 story templates per month",
+              "feature8": "1 planning call per month"
             }
           },
           "Advanced": {
             "title": "Advanced",
-            "price": "€600/month",
+            "threeMonthPrice": "€600/Mo (3 months)",
+            "sixMonthPrice": "€540/Mo (6 months)",
             "applicableFor": "Businesses aiming for multi-platform growth.",
             "features": {
-              "feature1": "Multi-channel ads",
-              "feature2": "A/B Testing",
-              "feature3": "Bi-weekly reports"
+              "feature1": "Everything in the Basic tier included",
+              "feature2": "Google + Meta Ads (multi-campaign setup & management)",
+              "feature3": "A/B testing of ad creatives",
+              "feature4": "Advanced targeting (lookalikes, exclusions, retargeting)",
+              "feature5": "Performance reports (bi-weekly with insights)",
+              "feature6": "Social media management for 2 platforms",
+              "feature7": "8 designed posts + 4 story posts per month",
+              "feature8": "2 short-form videos per month (Reels/Shorts style)"
             }
           },
           "Custom": {
             "title": "Custom",
-            "price": "Price on request",
+            "threeMonthPrice": "Price on request",
+            "sixMonthPrice": "Price on request",
             "applicableFor": "Companies needing a custom ad strategy.",
             "features": {
-              "feature1": "Custom strategy",
-              "feature2": "Omnichannel campaigns",
-              "feature3": "Video ads"
+              "feature1": "Everything in the Advanced tier included",
+              "feature2": "Omnichannel ad strategy (Google Search, Display, YouTube, Meta, TikTok Ads)",
+              "feature3": "Retargeting funnel setup with custom audiences",
+              "feature4": "Weekly reporting with ROI & strategy adjustments",
+              "feature5": "Social media management for up to 3 platforms",
+              "feature6": "Full video production support (script, edit, publish)*",
+              "feature7": "Custom campaign assets (graphics & copy per promotion)",
+              "feature8": "Strategic campaign calendar with seasonal campaigns"
             }
           }
         }
       },
       "maintain": {
-        "title": "Maintain Package",
+        "title": "Maintain",
         "description": "For businesses needing long-term support & optimization.",
         "tiers": {
           "Basic": {
             "title": "Basic",
-            "price": "€100/month",
+            "threeMonthPrice": "€100/Mo (3 months)",
+            "sixMonthPrice": "€90/Mo (6 months)",
             "applicableFor": "Businesses wanting essential site maintenance.",
             "features": {
-              "feature1": "Regular backups",
-              "feature2": "Technical updates",
-              "feature3": "Site health check"
+              "feature1": "Monthly website backup",
+              "feature2": "Monthly CMS & plugin updates",
+              "feature3": "Basic technical SEO check (speed, mobile, indexing)",
+              "feature4": "Site health report (core issues only)",
+              "feature5": "Up to 1 small website edit per month",
+              "feature6": "Google Search Console overview",
+              "feature7": "Uptime monitoring",
+              "feature8": "Email support"
             }
           },
           "Advanced": {
             "title": "Advanced",
-            "price": "€300/month",
+            "threeMonthPrice": "€200/Mo (3 months)",
+            "sixMonthPrice": "€180/Mo (6 months)",
             "applicableFor": "Businesses needing ongoing SEO & maintenance.",
             "features": {
-              "feature1": "On-page SEO",
-              "feature2": "2 minor website edits",
-              "feature3": "Performance tracking"
+              "feature1": "Everything in the Basic tier included",
+              "feature2": "Bi-weekly site health & performance checks",
+              "feature3": "Up to 3 website edits per month",
+              "feature4": "Monthly keyword and ranking tracking",
+              "feature5": "Page speed optimization (lazy loading, image compression)",
+              "feature6": "Google Analytics report with key takeaways",
+              "feature7": "Blog or page content refresh (1 item/month)",
+              "feature8": "On-page SEO improvements (meta tags, headings)"
             }
           },
           "Custom": {
             "title": "Custom",
-            "price": "Price on request",
+            "threeMonthPrice": "Price on request",
+            "sixMonthPrice": "Price on request",
             "applicableFor": "Companies with advanced SEO & maintenance needs.",
             "features": {
-              "feature1": "Full SEO campaign",
-              "feature2": "Custom optimizations",
-              "feature3": "Monthly strategy calls"
+              "feature1": "Everything in the Advanced tier included",
+              "feature2": "Weekly technical and SEO audits",
+              "feature3": "Unlimited website edits (within scope)",
+              "feature4": "Proactive suggestions & UX improvements",
+              "feature5": "Custom performance dashboard access",
+              "feature6": "Security monitoring & incident response",
+              "feature7": "Multilingual SEO support",
+              "feature8": "Competitor monitoring and benchmarking"
             }
           }
         }

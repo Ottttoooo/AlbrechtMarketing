@@ -1,7 +1,9 @@
 import React from "react";
-import { useTranslations } from "next-intl";
 import { withLocale } from "@/utils/withLocale";
 import { getTranslations } from "next-intl/server";
+import MultiStepForm from "@/app/components/contact/multi-step-form";
+import ConsultationForm from "@/app/components/contact/consultaion-form";
+import ContactForm from "@/app/components/contact/contact-form";
 
 export async function generateMetadata({
   params,
@@ -17,22 +19,21 @@ export async function generateMetadata({
 }
 
 function ContactPage() {
-  const t = useTranslations("Contact");
 
   return (
-    <>
-      <section className="flex flex-col items-center justify-center w-full px-8 py-56 bg-slate-300">
-        <div className="flex flex-col max-w-[1200px] w-full ">
-          <h1 className="font-bold text-5xl">{t('title')}</h1>
-        </div>
-      </section>
-
-      <section className="flex flex-col items-center justify-center w-full px-8 pt-56">
-        <div className="flex flex-col max-w-[1200px] w-full h-[400px] ">
-          <h1 className="font-bold text-5xl">{t('title')}</h1>
-        </div>
-      </section>
-    </>
+    <main className="container mx-auto py-10 px-4 md:px-6">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
+        <MultiStepForm />
+      </div>
+      <div className="max-w-[1200px] mx-auto">
+        <ConsultationForm />
+      </div>
+      <div className="max-w-[1200px] mx-auto">
+        <ContactForm />
+      </div>
+      
+    </main>
   );
 }
 

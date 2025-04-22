@@ -22,7 +22,7 @@ function PricingPage() {
 
   return (
     <>
-      <section className="flex w-full justify-center bg-accentLow">
+      {/* <section className="flex w-full justify-center bg-accentLow">
         <div className="flex w-full max-w-[1200px] px-8 justify-center gap-8 flex-col sm:flex-row mb-9">
           <div className="flex flex-col sm:max-w-[700px] min-h-[350px] items-center justify-center">
             <h1 className="font-bold text-2xl mt-4 sm:mt-0 md:text-5xl sm:text-4xl text-center sm:text-left">
@@ -33,12 +33,12 @@ function PricingPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="flex flex-col items-center justify-center w-full px-8 py-20">
         <div className="flex flex-col w-full max-w-[1200px] overflow-hidden">
           <h2 className="font-bold text-3xl sm:text-5xl text-center">
-            Combination Packages
+            {t("packages.title")}
           </h2>
 
           <PricingSection />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Transition } from "@headlessui/react"; // For smooth enter/leave animations
+import { usePathname } from "next/navigation";
 import { useParams } from "next/navigation";
 
 // Suppose we track the user's current locale in local state,
@@ -14,6 +15,8 @@ const AVAILABLE_LANGUAGES = [
 ];
 
 export default function LanguageSwitcher() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const { locale } = useParams(); // "de" or "en", etc.
@@ -60,7 +63,7 @@ export default function LanguageSwitcher() {
             {AVAILABLE_LANGUAGES.map((lang) => (
               <li key={lang.code}>
                 <Link
-                  href={`/${lang.code}`}
+                  href={`/${lang.code}${pathname.replace(/^\/(de|en)/, "")}`}
                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   onClick={() => setIsOpen(false)}
                 >
