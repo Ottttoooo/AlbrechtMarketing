@@ -35,6 +35,18 @@ export const routing = defineRouting({
       en: "/contact",
       de: "/kontaktiere-uns",
     },
+    "/contact/general": {
+      en: "/contact/general",
+      de: "/kontaktiere-uns/allgemein",
+    },
+    "/contact/pricing": {
+      en: "/contact/pricing",
+      de: "/kontaktiere-uns/preise",
+    },
+    "/contact/consultation": {
+      en: "/contact/consultation",
+      de: "/kontaktiere-uns/beratung",
+    },
     "/pricing": {
       en: "/pricing",
       de: "/preise",

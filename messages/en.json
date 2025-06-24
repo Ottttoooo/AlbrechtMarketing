@@ -645,6 +645,121 @@
     "MetaData": {
       "title": "Contact Us"
     },
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "pricing": {
+      "MetaData": {
+        "title": "Contact Us"
+      },
+      "title": "Contact Us",
+      "multiStepForm": {
+        "step1": "Package Selection",
+        "step2": "About You / Your Business",
+        "step3": "Goals & Priorities",
+        "step4": "Budget & Timeline",
+        "step5": "Final Comments",
+        "package": "Select Package",
+        "packagePlaceholder": "Choose a package",
+        "packages": {
+          "start": "Start",
+          "grow": "Grow",
+          "maintain": "Maintain"
+        },
+        "tier": "Select Tier",
+        "tierPlaceholder": "Choose a tier",
+        "tiers": {
+          "basic": "Basic",
+          "advanced": "Advanced",
+          "custom": "Custom"
+        },
+        "comparePackages": "Compare packages on our pricing page",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number (optional)",
+        "company": "Company or Project name",
+        "businessDescription": "What does your business do?",
+        "website": "Website URL (optional)",
+        "goals": "What do you want to achieve with this project?",
+        "goalsOptions": {
+          "Build a new website": "Build a new website",
+          "Improve visibility": "Improve visibility",
+          "Attract new customers": "Attract new customers",
+          "Launch a product": "Launch a product",
+          "Look more professional": "Look more professional",
+          "Get social media working": "Get social media working"
+        },
+        "services": "Which services are you interested in?",
+        "servicesOptions": {
+          "Web design & development": "Web design & development",
+          "Content creation": "Content creation",
+          "Social media management": "Social media management",
+          "Online ads": "Online ads"
+        },
+        "branding": "Do you have existing branding?",
+        "brandingOptions": {
+          "Logo and colors": "Logo and colors",
+          "Only a logo": "Only a logo",
+          "Logo, but want to upgrade": "Logo, but want to upgrade",
+          "Nothing yet": "Nothing yet",
+          "Not sure": "Not sure"
+        },
+        "budget": "What is your approximate budget?",
+        "budgetOptions": {
+          "Under €1,000": "Under €1,000",
+          "€1,000–€2,000": "€1,000–€2,000",
+          "€2,000–€5,000": "€2,000–€5,000",
+          "€5,000+": "€5,000+",
+          "Not sure yet": "Not sure yet"
+        },
+        "timeline": "When would you like to get started?",
+        "timelineOptions": {
+          "ASAP": "ASAP",
+          "In 1–2 months": "In 1–2 months",
+          "Flexible": "Flexible",
+          "Just exploring": "Just exploring"
+        },
+        "additionalNotes": "Any other notes you want us to know?",
+        "previous": "Previous",
+        "next": "Next",
+        "submit": "Submit",
+        "submitSuccess": "Form submitted successfully!",
+        "submitError": "Please fix the errors in the form before submitting.",
+        "errors": {
+          "package": {
+            "required": "Please select a package"
+          },
+          "tier": {
+            "required": "Please select a tier"
+          },
+          "name": {
+            "required": "Name is required"
+          },
+          "email": {
+            "required": "Email is required",
+            "invalid": "Please enter a valid email"
+          },
+          "company": {
+            "required": "Company or project name is required"
+          },
+          "businessDescription": {
+            "required": "Business description is required"
+          },
+          "goals": {
+            "required": "Please select at least one goal"
+          },
+          "services": {
+            "required": "Please select at least one service"
+          },
+          "branding": {
+            "required": "Please select a branding option"
+          },
+          "budget": {
+            "required": "Please select a budget option"
+          },
+          "timeline": {
+            "required": "Please select a timeline option"
+          }
+        }
+      }
+    }
   }
 }

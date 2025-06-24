@@ -13,11 +13,11 @@ export default {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+  				DEFAULT: '#4D91EF',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
+  				DEFAULT: '#B57BF0',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			secondaryHover: '#9711FF',

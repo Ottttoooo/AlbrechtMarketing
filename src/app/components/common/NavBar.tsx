@@ -98,7 +98,7 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
                 {t("links.about")}
               </span>
             </Link>
-            <Link href={"/contact"}>
+            <Link href={"/contact/general"}>
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 {t("links.contact")}
               </span>

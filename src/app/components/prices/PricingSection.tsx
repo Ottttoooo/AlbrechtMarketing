@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function PricingSection() {
   const t = useTranslations("Pricing");
@@ -112,9 +113,11 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <button className="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-700 transition">
-                {t("cta.select")}
-              </button>
+              <Link href={'/contact/pricing'}>
+                <button className="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-700 transition">
+                  {t("cta.select")}
+                </button>
+              </Link>
             </motion.div>
           ))}
         </AnimatePresence>

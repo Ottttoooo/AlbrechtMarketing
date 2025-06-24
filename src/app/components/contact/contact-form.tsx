@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Clock, Mail, MapPin, Phone } from "lucide-react"
+import { Mail } from "lucide-react"
 
 export default function ContactForm() {
   return (
@@ -52,41 +52,32 @@ export default function ContactForm() {
               <CardDescription>Here&apos;s how you can reach us</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-muted-foreground mt-0.5" />
-                <div>
-                  <h3 className="font-medium">Working Hours</h3>
-                  <p className="text-sm text-muted-foreground">Monday - Friday: 9AM - 5PM</p>
-                  <p className="text-sm text-muted-foreground">Saturday: 10AM - 2PM</p>
-                  <p className="text-sm text-muted-foreground">Sunday: Closed</p>
-                </div>
-              </div>
+              
 
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-muted-foreground mt-0.5" />
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-sm text-muted-foreground">contact@example.com</p>
-                  <p className="text-sm text-muted-foreground">support@example.com</p>
+                  <p className="text-sm text-muted-foreground">info@albrecht-marketing.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-muted-foreground mt-0.5" />
                 <div>
                   <h3 className="font-medium">Phone</h3>
                   <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-muted-foreground mt-0.5" />
                 <div>
                   <h3 className="font-medium">Address</h3>
                   <p className="text-sm text-muted-foreground">123 Business Street</p>
                   <p className="text-sm text-muted-foreground">San Francisco, CA 94103</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-6 rounded-lg bg-muted p-4">
                 <h3 className="font-medium">Response Time</h3>

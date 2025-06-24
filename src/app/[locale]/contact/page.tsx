@@ -1,7 +1,7 @@
 import React from "react";
 import { withLocale } from "@/utils/withLocale";
 import { getTranslations } from "next-intl/server";
-import MultiStepForm from "@/app/components/contact/multi-step-form";
+import MultiStepForm from "@/app/components/contact/pricing-form";
 import ConsultationForm from "@/app/components/contact/consultaion-form";
 import ContactForm from "@/app/components/contact/contact-form";
 
@@ -32,7 +32,6 @@ function ContactPage() {
       <div className="max-w-[1200px] mx-auto">
         <ContactForm />
       </div>
-      
     </main>
   );
 }
