@@ -2,7 +2,9 @@
 import { AccountForm } from "@/app/components/contact/AccountForm";
 import { AddressForm } from "@/app/components/contact/AddressForm";
 import { UserFrom } from "@/app/components/contact/UserForm";
+import { Button } from "@/components/ui/button";
 import { useMultistepForm } from "@/hooks/useMultistepForm";
+import { useTranslations } from "next-intl";
 import React, { FormEvent, useState } from "react";
 
 type FormData = {
@@ -30,6 +32,7 @@ const INITIAL_DATA: FormData = {
 };
 
 function ConsultationContactPage() {
+  const t = useTranslations("Contact.pricing.priceContactForm");
   const [data, setData] = useState(INITIAL_DATA);
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => {
@@ -37,17 +40,7 @@ function ConsultationContactPage() {
     });
   }
 
-  const {
-    steps,
-    currentStepIndex,
-    step,
-    isFirstStep,
-    isLastStep,
-    next,
-    back,
-    goTo,
-  } =
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { steps, step, isFirstStep, isLastStep, next, back, goTo } =
     useMultistepForm([
       <UserFrom {...data} updateFields={updateFields} key={0} />,
       <AddressForm {...data} updateFields={updateFields} key={1} />,
@@ -64,43 +57,52 @@ function ConsultationContactPage() {
     return goTo(index);
   }
   return (
-    <div className="w-full flex justify-center py-20">
-      <div className="relative  border-solid-1 border-black p-8 m-4 max-w-max">
-        <form onSubmit={onSubmit}>
-          {/* Step Counter */}
-          <div className="absolute top-2 right-2">
-            {currentStepIndex + 1} / {steps.length}
-          </div>
-
-          <div className="flex justify-around flex-row">
-            {steps.map((step, index) => {
-              return (
-                <button
-                  key={step.key}
-                  type="button"
-                  onClick={() => handleGoTo(index)}
-                >
-                  <div className="flex justify-center align-middle p-4 bg-slate-400 rounded-full">
-                    {index + 1}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Step Content */}
-          {step}
-
-          {/* Step Navigation */}
-          <div className="mt-4 flex gap-6 justify-end">
-            {!isFirstStep && (
-              <button type="button" onClick={back}>
-                Back
+    <div className="container mx-auto py-10 px-4 md:px-6">
+      <div className="space-y-8">
+        {/* steps buttons */}
+        <div className="flex justify-between mb-8">
+          {steps.map((step, index) => {
+            return (
+              <button
+                key={step.key}
+                type="button"
+                onClick={() => handleGoTo(index)}
+                className="flex flex-col items-center focus:outline-none"
+              >
+                <div className="w-10 h-10 rounded-full flex items-center justify-center border-2 cursor-pointer border-gray-300 text-gray-400">
+                  {index + 1}
+                </div>
+                <span className="text-xs mt-2 text-gray-400">
+                  {t(`step${index + 1}`)}
+                </span>
               </button>
-            )}
-            <button type="submit">{isLastStep ? "Finish" : "Next"}</button>
+            );
+          })}
+        </div>
+
+        {/* Form Card */}
+        <div className="rounded-xl border bg-card text-card-foreground shadow">
+          <div className="p-6 pt-6">
+            <form onSubmit={onSubmit}>
+              {/* Step Content */}
+              {step}
+
+              {/* next/prev/submit */}
+              <div className="flex justify-between mt-8">
+                {!isFirstStep && (
+                  <Button type="button" variant="outline" onClick={back}>
+                    {t("previous")}
+                  </Button>
+                )}
+                <div className="ml-auto space-x-2">
+                  <Button type="submit">
+                    {isLastStep ? t("submit") : t("next")}
+                  </Button>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

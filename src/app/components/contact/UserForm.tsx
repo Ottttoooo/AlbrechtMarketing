@@ -27,6 +27,7 @@ export function UserFrom({
         type="text"
         value={firstName}
         onChange={(e) => updateFields({ firstName: e.target.value })}
+
       />
       <Label>Last Name</Label>
       <Input
