@@ -1,7 +1,26 @@
-'use client'
-import { ReactElement, useState } from "react";
+"use client";
+import { JSX, useState } from "react";
+import { FieldValues, UseFormReturn } from "react-hook-form";
 
-export function useMultistepForm(steps: ReactElement[]) {
+interface Step<T extends FieldValues> {
+  component: (form: UseFormReturn<T>) => JSX.Element;
+}
+
+interface MultistepFormReturn<T extends FieldValues> {
+  currentStepIndex: number;
+  steps: Step<T>[];
+  isFirstStep: boolean;
+  isLastStep: boolean;
+  next: () => void;
+  back: () => void;
+  goTo: (index: number) => void;
+}
+
+export function useMultistepForm<T extends FieldValues>({
+  steps,
+}: {
+  steps: Step<T>[];
+}): MultistepFormReturn<T> {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   function next() {
@@ -24,7 +43,6 @@ export function useMultistepForm(steps: ReactElement[]) {
 
   return {
     currentStepIndex,
-    step: steps[currentStepIndex],
     isFirstStep: currentStepIndex === 0,
     isLastStep: currentStepIndex === steps.length - 1,
     goTo,
