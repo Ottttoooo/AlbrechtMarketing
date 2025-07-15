@@ -1,9 +1,10 @@
 "use client";
-import { JSX, useState } from "react";
+import { ConsultationFormData } from "@/app/[locale]/contact/consultation/page";
+import { ComponentType, useState } from "react";
 import { FieldValues, UseFormReturn } from "react-hook-form";
 
 interface Step<T extends FieldValues> {
-  component: (form: UseFormReturn<T>) => JSX.Element;
+  component: ComponentType<{ form: UseFormReturn<T> }>;
 }
 
 interface MultistepFormReturn<T extends FieldValues> {
@@ -16,7 +17,7 @@ interface MultistepFormReturn<T extends FieldValues> {
   goTo: (index: number) => void;
 }
 
-export function useMultistepForm<T extends FieldValues>({
+export function useMultistepForm<T extends FieldValues = ConsultationFormData>({
   steps,
 }: {
   steps: Step<T>[];

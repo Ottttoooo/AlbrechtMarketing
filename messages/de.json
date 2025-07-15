@@ -762,11 +762,11 @@
         }
       }
     },
-    "consultation":{
+    "consultation": {
       "MetaData": {
         "title": "Kostenlose Beratung"
       },
-      "consultationContactForm": {
+      "multiStepForm": {
         "step1": "Über Sie / Ihr Unternehmen",
         "step2": "Ziele & Prioritäten",
         "step3": "Budget & Zeitplan",
@@ -872,6 +872,13 @@
           "timeline": {
             "required": "Bitte wählen Sie eine Zeitplan-Option aus"
           }
+        },
+        "emailFormat": {
+          "subject": "Eintrag aus dem Beratung-Kontaktformular",
+          "step1": "Allgemeine Infos",
+          "step2": "Links",
+          "step3": "Herrausforderungen",
+          "step4": "Budget"
         }
       }
     }
