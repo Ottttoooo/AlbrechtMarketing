@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
+import { Variants } from "framer-motion";
 
 type why = {
   title: string;
@@ -15,7 +16,7 @@ type whyProps = {
   whyList: whyList;
 };
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
@@ -25,7 +26,7 @@ const containerVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,

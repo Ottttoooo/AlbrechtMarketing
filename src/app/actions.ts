@@ -7,14 +7,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendConsultationEmail(data: {
   step1?: {
-    firstName: string;
-    lastName: string;
-    companyName: string;
-    industry: string;
-    companyAge: string;
-    country: string;
-    state: string;
-    email: string;
+    firstName?: string;
+    lastName?: string;
+    companyName?: string;
+    industry?: string;
+    companyAge?: string;
+    country?: string;
+    state?: string;
+    email?: string;
     phone?: string;
   };
   step2?: {
@@ -26,12 +26,12 @@ export async function sendConsultationEmail(data: {
     x?: string;
   };
   step3?: {
-    phase: string[];
-    challenges: string[];
+    phase?: string[];
+    challenges?: string[];
   };
   step4?: {
-    launchBudget: "all" | "mentions" | "none";
-    runningBudget: string;
+    launchBudget?: "all" | "mentions" | "none";
+    runningBudget?: string;
   };
 }) {
   const t = await getTranslations("Contact.consultation.multiStepForm"); // Use i18n on server

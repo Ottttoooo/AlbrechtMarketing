@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Variants } from "framer-motion";
 
 type introProps = {
   title: string;
   text: string;
 };
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
@@ -17,7 +18,7 @@ const containerVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,
