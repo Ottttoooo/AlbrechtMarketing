@@ -1,5 +1,5 @@
 "use client";
-import { ConsultationFormData } from "@/app/[locale]/contact/consultation/page";
+import { ConsultationFormData } from "@/app/components/contact/consultation/consultaionPageClient";
 import { ComponentType, useState } from "react";
 import { FieldValues, UseFormReturn } from "react-hook-form";
 

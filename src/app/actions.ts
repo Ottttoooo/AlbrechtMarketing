@@ -26,11 +26,11 @@ export async function sendConsultationEmail(data: {
     x?: string;
   };
   step3?: {
-    phase: string;
-    challenges: string;
+    phase: string[];
+    challenges: string[];
   };
   step4?: {
-    launchBudget: string;
+    launchBudget: "all" | "mentions" | "none";
     runningBudget: string;
   };
 }) {
