@@ -1,0 +1,219 @@
+{
+  "MetaData": {
+    "title": "Free Consultation"
+  },
+
+  "multiStepForm": {
+    "intro": {
+      "heading": "Consultation Form",
+      "subHeading1": "This survey will help us get to know you better so we can provide you with useful consultation and tips on how to improve your online presence.",
+      "subHeading2": "For best result we suggest filling as many fields as possible so we have more information to work with."
+    },
+    "step1": {
+      "title": "About You / Your Company",
+      "subtitle": "Please enter your contact and company information",
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "companyName": {
+        "label": "Company Name",
+        "placeholder": "Enter your company name"
+      },
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Enter your industry"
+      },
+      "companyAge": {
+        "label": "Company Age",
+        "placeholder": "Enter your company's age"
+      },
+      "companyDescription": {
+        "label": "What does your company do?",
+        "placeholder": "Enter a brief description of your company"
+      },
+      "country": { "label": "Country", "placeholder": "Enter your country" },
+      "state": {
+        "label": "State",
+        "placeholder": "Enter your state"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      }
+    },
+    "step2": {
+      "title": "Links",
+      "description": "We will review your existing website and/or social media channels and evaluate them based on our experience so we can tell you if and how you can improve them.",
+      "website": {
+        "label": "Website",
+        "placeholder": "Enter the website URL"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "placeholder": "Enter the Instagram URL"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "placeholder": "Enter the Facebook URL"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "placeholder": "Enter the TikTok URL"
+      },
+      "youtube": {
+        "label": "YouTube",
+        "placeholder": "Enter the YouTube URL"
+      },
+      "x": { "label": "X (Twitter)", "placeholder": "Enter the X URL" }
+    },
+    "step3": {
+      "title": "Phase & Challenges",
+      "description": "Please select the phases and challenges relevant to your project",
+      "phase": {
+        "label": "What phase is your project in?",
+        "description": "Select one or more phases that best describe your current progress",
+        "options": {
+          "1": "Launching my online presence for the first time",
+          "2": "I already have an online presence but want to improve/add to it",
+          "3": "I want to optimize and maintain what I have",
+          "4": "I'm not sure"
+        }
+      },
+      "challenges": {
+        "label": "Which challenges do you want to address?",
+        "description": "Select one or more statements that best describe your current marketing challenges",
+        "options": {
+          "1": "I have no or very little online presence",
+          "2": "I don't have a strong brand identity (logo, colors, font, etc.)",
+          "3": "The website doesn't work as desired",
+          "4": "Social media channels are struggling to gain traction",
+          "5": "Google Ads are performing poorly",
+          "6": "Instagram/Facebook ads are performing poorly",
+          "7": "Location is hard to find on Google Maps",
+          "8": "Website does not appear at the top of Google search",
+          "9": "I don't have enough time to manage my online presence",
+          "10": "My content (photos, videos, texts) could be more professional",
+          "11": "Other"
+        }
+      }
+    },
+    "step4": {
+      "title": "Budget",
+      "launchBudget": {
+        "label": "Launch Budget",
+        "description": "Budget for launching your online presence, including web design and development, branding, content creation, and online advertising campaigns",
+        "options": {
+          "1": "Under €1,000",
+          "2": "€1,000–€2,000",
+          "3": "€2,000–€5,000",
+          "4": "Over €5,000"
+        }
+      },
+      "runningBudget": {
+        "label": "Ongoing Budget",
+        "description": "Ongoing payments for maintaining and/or improving your online presence, such as advertising, social media management, or search engine optimization (SEO)",
+        "options": {
+          "1": "Under €300 per month",
+          "2": "€300–€600 per month",
+          "3": "€600–€1,000 per month",
+          "4": "Over €1,000 per month"
+        }
+      }
+    },
+    "step5": {
+      "title": "Additional Information",
+      "description": "Please provide any additional information that may help us understand your needs better",
+      "additionalInfo": {
+        "label": "Additional Information",
+        "placeholder": "Enter any additional information or comments"
+      },
+      "errors": {
+        "captcha": {
+          "required": "Please complete the CAPTCHA verification"
+        }
+      }
+    },
+    "emailFormat": {
+      "subject": "New Consultation Request",
+      "step1": "About You / Your Company",
+      "step2": "Links",
+      "step3": "Phase & Challenges",
+      "step4": "Budget",
+      "step5": "Additional Information"
+    },
+    "previous": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "submitSuccess": "Form submitted successfully!",
+    "submitError": "Please correct the errors in the form before submitting.",
+    "errors": {
+      "firstName": {
+        "required": "First name is required"
+      },
+      "lastName": {
+        "required": "Last name is required"
+      },
+      "companyName": {
+        "required": "Company name is required"
+      },
+      "industry": {
+        "required": "Industry is required"
+      },
+      "companyAge": {
+        "required": "Company age is required"
+      },
+      "country": {
+        "required": "Country is required"
+      },
+      "state": {
+        "required": "State is required"
+      },
+      "email": {
+        "invalid": "Please enter a valid email address"
+      },
+      "website": {
+        "url": "Please enter a valid website URL"
+      },
+      "instagram": {
+        "url": "Please enter a valid Instagram URL"
+      },
+      "facebook": {
+        "url": "Please enter a valid Facebook URL"
+      },
+      "tiktok": {
+        "url": "Please enter a valid TikTok URL"
+      },
+      "youtube": {
+        "url": "Please enter a valid YouTube URL"
+      },
+      "x": {
+        "url": "Please enter a valid X (Twitter) URL"
+      },
+      "phase": {
+        "required": "Please select at least one phase"
+      },
+      "challenges": {
+        "required": "Please select at least one challenge"
+      },
+      "launchBudget": {
+        "required": "Please select a launch budget"
+      },
+      "runningBudget": {
+        "required": "Please enter a running budget"
+      },
+      "captcha": {
+        "required": "Please complete the CAPTCHA verification"
+      }
+    }
+  }
+}

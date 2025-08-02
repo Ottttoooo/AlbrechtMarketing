@@ -1,0 +1,95 @@
+{
+  "MetaData": {
+    "title": "Albrecht Marketing"
+  },
+  "hero": {
+    "heading": "Reach New Heights",
+    "subHeading": "Based in Germany, serving businesses worldwide with top-tier digital marketing.",
+    "listItems": {
+      "0": "- Webdesign & Development",
+      "1": "- Digital Advertising",
+      "2": "- Content Creation",
+      "3": "- Social Media Managment"
+    }
+  },
+  "infoBoxes": {
+    "0": {
+      "title": "Unleash Your Potential – Reach Your Customers",
+      "description1": "You have a great product or service that truly benefits your customers. But without the right visibility, that potential goes to waste. Many companies assume their offering will somehow reach people, but that’s a risky gamble.",
+      "descriptionBold": "At Albrecht Marketing, we know: Marketing success is no accident. ",
+      "description2": "Our team understands how to present your business authentically and effectively—and how to place it where your customers are. With proven strategies and a clear plan, we make sure your offering isn’t just seen but truly convinces.",
+      "description3": "Let us help you achieve the success your business deserves. Don’t miss out on opportunities—secure your income and show the world what your business can do."
+    },
+    "1": {
+      "title": "More Time for What Really Matters",
+      "description1": "As a business owner, you know the pressure of managing everything yourself—from product development to customer care. Marketing often becomes an extra burden. This is where we step in.",
+      "descriptionBold": "At Albrecht Marketing, we get your daily challenges and take the marketing stress off your shoulders. ",
+      "description2": "Our experienced team assumes responsibility for your online presence, crafting tailored strategies that get your business noticed. You can focus on what truly matters while we ensure your online growth.",
+      "description3": "And the best part: you remain fully informed at all times. Our dashboard makes all progress and results transparent and easy to view—everything in one place, with minimal effort on your part."
+    },
+    "2": {
+      "title": "Success Is No Accident – We Guarantee Results",
+      "description1": "At Albrecht Marketing, we believe in the quality of our work. Our goal is clear: Your success is our success. That’s why we offer a ",
+      "descriptionBold": "money-back guarantee ",
+      "description2": "—we only profit if you profit. Our strategies are geared toward results, whether that’s more visitors, new leads, or higher revenue. If your project doesn’t meet the agreed goals, you get your money back. With this guarantee, we ensure you’re in good hands and in full control of your investment.",
+      "description3": "Choose marketing that delivers—risk-free."
+    }
+  },
+  "services": {
+    "heading": "Our Services",
+    "subheading": "The perfect solution for every business.",
+    "web": "Web Design & Development",
+    "ads": "Digital Advertising",
+    "content": "Content Creation",
+    "social": "Social Media Management"
+  },
+  "stepsSection": {
+    "heading": "Your Path to Success",
+    "steps": {
+      "0": {
+        "heading": "Strategy Consultation",
+        "text": "First, we want to understand your business and your goals. In a personal meeting, we’ll evaluate your current situation, identify challenges, and explore opportunities. This helps us develop targeted initiatives tailored to your specific needs—whether that’s web design, social media, or online advertising."
+      },
+      "1": {
+        "heading": "Customized Planning",
+        "text": "Building on our findings, we create a bespoke strategy for you. We’ll determine which channels, content, and designs work best, and craft a clear plan to effectively reach your target audience."
+      },
+      "2": {
+        "heading": "Implementation & Adaptation",
+        "text": "Next comes the execution phase. Our experienced team ensures every measure is carried out with precision and quality—from building your website to optimizing your social media presence. Throughout the process, we keep you informed and stay flexible so we can adjust quickly based on your feedback."
+      },
+      "3": {
+        "heading": "Results & Ongoing Optimization",
+        "text": "After launch, we continuously analyze the results of our efforts. Through regular updates and optimizations, we make sure your digital presence stays on track and delivers the best possible outcomes. And with our dashboard, you always have a clear view of every milestone and progression."
+      }
+    }
+  },
+  "reviewsSection": {
+    "heading": "What Our Clients Say"
+  },
+  "faqSection": {
+    "heading": "Frequently Asked Questions",
+    "faqItems": {
+      "0": {
+        "question": "What types of businesses benefit from your services?",
+        "answer": "We primarily work with small to medium-sized businesses looking to grow their online presence. Whether you're a service provider, retailer, startup, or an established company, we have the right solution for you."
+      },
+      "1": {
+        "question": "Why should I choose Albrecht Marketing?",
+        "answer": "We offer customized marketing solutions, transparent pricing, and data-driven strategies. Our goal is to help you grow—with measurable results."
+      },
+      "2": {
+        "question": "How long does it take to complete my website?",
+        "answer": "The timeline depends on the complexity of the project. A simple website can be completed within 2-4 weeks, while more complex projects can take 6-8 weeks. After our initial consultation, we’ll provide a precise estimate."
+      },
+      "3": {
+        "question": "How much budget do I need for online advertising?",
+        "answer": "The budget depends on your goals. We recommend a minimum of €300 per month for smaller campaigns. Our team will create a strategy that makes the most of your budget."
+      },
+      "4": {
+        "question": "How long does it take to see SEO results?",
+        "answer": "SEO is a long-term strategy. Initial improvements may be visible within 3-6 months, but sustainable success takes longer. We ensure continuous optimizations through regular analysis."
+      }
+    }
+  }
+}

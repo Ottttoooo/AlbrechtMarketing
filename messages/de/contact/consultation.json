@@ -1,0 +1,218 @@
+{
+  "MetaData": {
+    "title": "Kostenlose Beratung"
+  },
+  "multiStepForm": {
+    "intro": {
+      "heading": "Beratung Formular",
+      "subHeading1": "Diese Umfrage hilft uns, Sie besser kennenzulernen, damit wir Ihnen nützliche Beratung und Tipps zur Verbesserung Ihrer Online-Präsenz geben können.",
+      "subHeading2": "Für die besten Ergebnisse empfehlen wir, so viele Felder wie möglich auszufüllen, damit wir mehr Informationen zur Verfügung haben."
+    },
+    "step1": {
+      "title": "Über Sie / Ihr Unternehmen",
+      "subtitle": "Bitte geben Sie Ihre Kontaktdaten und Unternehmensinformationen ein",
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
+      },
+      "companyName": {
+        "label": "Firmenname",
+        "placeholder": "Geben Sie den Firmennamen ein"
+      },
+      "industry": {
+        "label": "Branche",
+        "placeholder": "Geben Sie die Branche ein"
+      },
+      "companyAge": {
+        "label": "Unternehmensalter",
+        "placeholder": "Geben Sie das Unternehmensalter ein"
+      },
+      "companyDescription": {
+        "label": "Was macht Ihr Unternehmen?",
+        "placeholder": "Geben Sie eine kurze Beschreibung Ihres Unternehmens ein"
+      },
+      "country": { "label": "Land", "placeholder": "Geben Sie Ihr Land ein" },
+      "state": {
+        "label": "Bundesland",
+        "placeholder": "Geben Sie Ihr Bundesland ein"
+      },
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein"
+      }
+    },
+    "step2": {
+      "title": "Links",
+      "description": "Wir werden Ihre bestehende Website und/oder Social-Media-Kanäle überprüfen und sie auf Basis unserer Erfahrung bewerten, damit wir Ihnen sagen können, ob und wie Sie diese verbessern können",
+      "website": {
+        "label": "Website",
+        "placeholder": "Geben Sie die Website-URL ein"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "placeholder": "Geben Sie die Instagram-URL ein"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "placeholder": "Geben Sie die Facebook-URL ein"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "placeholder": "Geben Sie die TikTok-URL ein"
+      },
+      "youtube": {
+        "label": "YouTube",
+        "placeholder": "Geben Sie die YouTube-URL ein"
+      },
+      "x": { "label": "X (Twitter)", "placeholder": "Geben Sie die X-URL ein" }
+    },
+    "step3": {
+      "title": "Phase & Herausforderungen",
+      "description": "Bitte wählen Sie die Phasen und Herausforderungen aus, die für Ihr Projekt relevant sind",
+      "phase": {
+        "label": "In welcher Phase befindet sich Ihr Projekt?",
+        "description": "Wählen Sie eine oder mehrere Phasen aus, die Ihren aktuellen Fortschritt am besten beschreiben",
+        "options": {
+          "1": "Meine Online-Präsenz zum ersten Mal launchen",
+          "2": "Ich habe bereits eine Online-Präsenz, möchte sie aber verbessern/hinzufügen",
+          "3": "Ich möchte das, was ich habe, optimieren und pflegen",
+          "4": "Ich bin mir nicht sicher"
+        }
+      },
+      "challenges": {
+        "label": "Welche Herausforderungen möchten Sie angehen?",
+        "description": "Wählen Sie eine oder mehrere Aussagen aus, die Ihre aktuellen Marketing-Herausforderungen am besten beschreiben",
+        "options": {
+          "1": "Ich habe keine / sehr wenig Internetpräsenz",
+          "2": "Ich habe keine starke Unternehmensidentität (Logo, Farben, Schriftart usw.)",
+          "3": "Die Website funktioniert nicht wie gewünscht",
+          "4": "Social-Media-Kanäle haben Schwierigkeiten, an Fahrt zu gewinnen",
+          "5": "Google Ads funktionieren schlecht",
+          "6": "Instagram/Facebook-Anzeigen funktionieren schlecht",
+          "7": "Standort ist schwer auf Google Maps zu finden",
+          "8": "Website wird nicht an der Spitze der Google-Suche angezeigt",
+          "9": "Ich habe nicht genug Zeit, um meine Online-Präsenz zu verwalten",
+          "10": "Meine Inhalte (Fotos, Videos, Texte) könnten professioneller sein",
+          "11": "Andere"
+        }
+      }
+    },
+    "step4": {
+      "title": "Budget",
+      "launchBudget": {
+        "label": "Launch-Budget",
+        "description": "Budget für den Launch deiner Online-Präsenz, einschließlich Webdesign und -Entwicklung, Branding, Content-Erstellung und Online-Werbung-Kampagnen",
+        "options": {
+          "1": "Unter €1.000",
+          "2": "€1.000–€2.000",
+          "3": "€2.000–€5.000",
+          "4": "Über €5.000"
+        }
+      },
+      "runningBudget": {
+        "label": "Laufendes Budget",
+        "description": "Laufende Zahlungen für die Pflege und/oder Verbesserung der Online-Präsenz, wie z.B. Werbung, Social Media Management oder Suchmaschinenoptimierung (SEO)",
+        "options": {
+          "1": "Unter €300 pro Monat",
+          "2": "€300–€600 pro Monat",
+          "3": "€600–€1.000 pro Monat",
+          "4": "Über €1.000 pro Monat"
+        }
+      }
+    },
+    "step5": {
+      "title": "Zusätzliche Informationen",
+      "description": "Bitte geben Sie zusätzliche Informationen an, die uns helfen können, Ihre Bedürfnisse besser zu verstehen",
+      "additionalInfo": {
+        "label": "Zusätzliche Informationen",
+        "placeholder": "Geben Sie zusätzliche Informationen oder Kommentare ein"
+      },
+      "errors": {
+        "captcha": {
+          "required": "Bitte schließen Sie die CAPTCHA-Überprüfung ab"
+        }
+      }
+    },
+    "emailFormat": {
+      "subject": "Neue Beratungsanfrage",
+      "step1": "Über Sie / Ihr Unternehmen",
+      "step2": "Links",
+      "step3": "Phase & Herausforderungen",
+      "step4": "Budget",
+      "step5": "Zusätzliche Informationen"
+    },
+    "previous": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "submitting": "Wird gesendet...",
+    "submitSuccess": "Formular erfolgreich gesendet!",
+    "submitError": "Bitte korrigieren Sie die Fehler im Formular, bevor Sie es absenden.",
+    "errors": {
+      "firstName": {
+        "required": "Vorname ist erforderlich"
+      },
+      "lastName": {
+        "required": "Nachname ist erforderlich"
+      },
+      "companyName": {
+        "required": "Firmenname ist erforderlich"
+      },
+      "industry": {
+        "required": "Branche ist erforderlich"
+      },
+      "companyAge": {
+        "required": "Unternehmensalter ist erforderlich"
+      },
+      "country": {
+        "required": "Land ist erforderlich"
+      },
+      "state": {
+        "required": "Bundesland ist erforderlich"
+      },
+      "email": {
+        "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "website": {
+        "url": "Bitte geben Sie eine gültige Website-URL ein"
+      },
+      "instagram": {
+        "url": "Bitte geben Sie eine gültige Instagram-URL ein"
+      },
+      "facebook": {
+        "url": "Bitte geben Sie eine gültige Facebook-URL ein"
+      },
+      "tiktok": {
+        "url": "Bitte geben Sie eine gültige TikTok-URL ein"
+      },
+      "youtube": {
+        "url": "Bitte geben Sie eine gültige YouTube-URL ein"
+      },
+      "x": {
+        "url": "Bitte geben Sie eine gültige X (Twitter)-URL ein"
+      },
+      "phase": {
+        "required": "Bitte wählen Sie mindestens eine Phase aus"
+      },
+      "challenges": {
+        "required": "Bitte wählen Sie mindestens eine Herausforderung aus"
+      },
+      "launchBudget": {
+        "required": "Bitte wählen Sie ein Start-Budget aus"
+      },
+      "runningBudget": {
+        "required": "Bitte geben Sie ein laufendes Budget ein"
+      },
+      "captcha": {
+          "required": "Bitte schließen Sie die CAPTCHA-Überprüfung ab"
+        }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export default function PricingSection() {
-  const t = useTranslations("Pricing");
+  const t = useTranslations("pricing");
   const [selectedPackage, setSelectedPackage] = useState<
     "start" | "grow" | "maintain"
   >("start");

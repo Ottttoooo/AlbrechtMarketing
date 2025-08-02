@@ -45,7 +45,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function PricingContactForm() {
-  const t = useTranslations("Contact.pricing.priceContactForm");
+  const t = useTranslations("contact.pricing.priceContactForm");
   const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [submitError, setSubmitError] = useState(false); // Add state for submission error

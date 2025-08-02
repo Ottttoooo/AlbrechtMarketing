@@ -1,0 +1,75 @@
+{
+  "MetaData": {
+    "title": "Social Media Management"
+  },
+  "Hero": {
+    "title": "Social Media Management",
+    "subTitle": "Deine Marke im digitalen Gespräch"
+  },
+  "Intro": {
+    "title": "Deine Social-Media-Präsenz, professionell verwaltet",
+    "text": "Social Media ist mehr als nur eine Plattform – es ist das Tor zu deiner Markenwelt. Bei Albrecht Marketing übernehmen wir das Management deiner Social-Media-Kanäle, damit sie nicht nur aktiv, sondern auch wirkungsvoll sind. Von der Erstellung eines einheitlichen Markenauftritts bis hin zur strategischen Planung von Posts helfen wir dir, Interaktionen zu maximieren, eine treue Community aufzubauen und organische Marketingeffekte zu erzielen. Ob Instagram, TikTok, Facebook, YouTube oder X – wir passen unsere Strategie genau an deine Marke und Ziele an."
+  },
+  "OfferCardSection": {
+    "title": "Unsere Leistungen",
+    "1": {
+      "title": "Kontoerstellung & Optimierung",
+      "text": "Wir richten deine Social-Media-Profile professionell ein und optimieren sie, damit deine Marke überall konsistent und ansprechend vertreten ist."
+    },
+    "2": {
+      "title": "Content-Strategie & Posting-Plan",
+      "text": "Wir entwickeln eine maßgeschneiderte Content-Strategie und einen Posting-Plan, um dein Publikum kontinuierlich zu begeistern. Von Trendthemen bis hin zu zeitlosem Content – wir kümmern uns darum."
+    },
+    "3": {
+      "title": "Visuelles Storytelling",
+      "text": "Dein Social-Media-Auftritt sollte nicht nur informativ, sondern auch visuell ansprechend sein. Wir erstellen beeindruckende Grafiken und Themenwelten, die deine Produkte oder Dienstleistungen perfekt in Szene setzen."
+    },
+    "4": {
+      "title": "Community-Management & Interaktion",
+      "text": "Wir posten nicht nur – wir interagieren! Durch das Beantworten von Kommentaren und den Aufbau echter Gespräche helfen wir dir, eine engagierte und loyale Community aufzubauen."
+    },
+    "5": {
+      "title": "Instagram als Produktgalerie",
+      "text": "Für Unternehmen mit einer visuellen Produktlinie verwandeln wir dein Instagram-Profil in eine dynamische Galerie. Besucher, die von deiner Website kommen, sehen eine kuratierte Auswahl an Bildern, die sie gezielt zum Kauf inspirieren."
+    }
+  },
+  "StepsSection": {
+    "title": "Schritt für Schritt zum Ziel",
+    "subTitle": "So läuft unser Prozess ab:",
+    "steps": {
+      "1": {
+        "title": "Strategie und Content-Planung",
+        "text": "Wir beginnen mit einer Analyse deiner Zielgruppe und entwickeln eine maßgeschneiderte Social-Media-Strategie. In diesem Schritt erstellen wir einen Redaktionsplan, der die Inhalte und Themen abdeckt, die deine Zielgruppe interessieren und deine Marke authentisch präsentieren."
+      },
+      "2": {
+        "title": "Content-Erstellung und Veröffentlichung",
+        "text": "Basierend auf dem Content-Plan erstellen wir hochwertigen Content – von Grafiken über Texte bis hin zu kurzen Videos, die auf den jeweiligen Plattformen optimal zur Geltung kommen. Wir kümmern uns um die regelmäßige Veröffentlichung und passen die Inhalte an die Trends und Bedürfnisse deiner Zielgruppe an."
+      },
+      "3": {
+        "title": "Community-Management und Analyse",
+        "text": "Nach der Veröffentlichung bleiben wir aktiv – wir beantworten Kommentare und Nachrichten, bauen eine Community auf und analysieren die Performance deiner Posts. Mit regelmäßigen Reports halten wir dich auf dem Laufenden und optimieren die Inhalte kontinuierlich, um maximale Reichweite und Engagement zu erzielen."
+      }
+    }
+  },
+  "Why": {
+    "title": "Warum wir?",
+    "list": {
+      "1": {
+        "title": "Individuelle Strategien: ",
+        "text": "Wir glauben nicht an Standardlösungen. Jede Strategie wird speziell auf deine Marke, deine Zielgruppe und deine Ziele zugeschnitten."
+      },
+      "2": {
+        "title": "Konsistente Markenpräsenz: ",
+        "text": "Wir sorgen dafür, dass dein Social-Media-Auftritt nahtlos mit deiner Markenidentität übereinstimmt – von der visuellen Gestaltung bis hin zum Tonfall."
+      },
+      "3": {
+        "title": "Datenbasierte Optimierung: ",
+        "text": "Wir nutzen Analysen, um die Performance zu verfolgen und unsere Strategien kontinuierlich zu optimieren – für maximale Effizienz und Rendite."
+      },
+      "4": {
+        "title": "Kreative Exzellenz: ",
+        "text": "Unser Team aus Designern, Textern und Strategen arbeitet Hand in Hand, um Inhalte zu erstellen, die auffallen und echte Ergebnisse liefern."
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "MetaData": {
+    "title": "Contact Us"
+  },
+  "title": "Contact Us",
+  "priceContactForm": {
+    "step1": "Paketauswahl",
+    "step2": "Über Sie / Ihr Unternehmen",
+    "step3": "Ziele & Prioritäten",
+    "step4": "Budget & Zeitplan",
+    "step5": "Abschließende Kommentare",
+    "package": "Paket auswählen",
+    "packagePlaceholder": "Wählen Sie ein Paket",
+    "packages": {
+      "start": "Start",
+      "grow": "Wachstum",
+      "maintain": "Pflege"
+    },
+    "tier": "Stufe auswählen",
+    "tierPlaceholder": "Wählen Sie eine Stufe",
+    "tiers": {
+      "basic": "Basis",
+      "advanced": "Erweitert",
+      "custom": "Individuell"
+    },
+    "comparePackages": "Pakete auf unserer Preisseite vergleichen",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefonnummer (optional)",
+    "company": "Unternehmen oder Projektname",
+    "businessDescription": "Was macht Ihr Unternehmen?",
+    "website": "Website-URL (optional)",
+    "goals": "Was möchten Sie mit diesem Projekt erreichen?",
+    "goalsOptions": {
+      "Build a new website": "Eine neue Website erstellen",
+      "Improve visibility": "Sichtbarkeit verbessern",
+      "Attract new customers": "Neue Kunden gewinnen",
+      "Launch a product": "Ein Produkt launchen",
+      "Look more professional": "Professioneller wirken",
+      "Get social media working": "Social Media zum Laufen bringen"
+    },
+    "services": "An welchen Dienstleistungen sind Sie interessiert?",
+    "servicesOptions": {
+      "Web design & development": "Webdesign & Entwicklung",
+      "Content creation": "Content-Erstellung",
+      "Social media management": "Social-Media-Management",
+      "Online ads": "Online-Werbung"
+    },
+    "branding": "Haben Sie bereits ein Branding?",
+    "brandingOptions": {
+      "Logo and colors": "Logo und Farben",
+      "Only a logo": "Nur ein Logo",
+      "Logo, but want to upgrade": "Logo, aber möchte es verbessern",
+      "Nothing yet": "Noch nichts",
+      "Not sure": "Nicht sicher"
+    },
+    "budget": "Was ist Ihr ungefähres Budget?",
+    "budgetOptions": {
+      "Under €1,000": "Unter €1.000",
+      "€1,000–€2,000": "€1.000–€2.000",
+      "€2,000–€5,000": "€2.000–€5.000",
+      "€5,000+": "€5.000+",
+      "Not sure yet": "Noch nicht sicher"
+    },
+    "timeline": "Wann möchten Sie beginnen?",
+    "timelineOptions": {
+      "ASAP": "So bald wie möglich",
+      "In 1–2 months": "In 1–2 Monaten",
+      "Flexible": "Flexibel",
+      "Just exploring": "Nur erkunden"
+    },
+    "additionalNotes": "Gibt es weitere Anmerkungen, die wir wissen sollten?",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "submitSuccess": "Formular erfolgreich gesendet!",
+    "submitError": "Bitte korrigieren Sie die Fehler im Formular, bevor Sie es absenden.",
+    "errors": {
+      "package": {
+        "required": "Bitte wählen Sie ein Paket aus"
+      },
+      "tier": {
+        "required": "Bitte wählen Sie eine Stufe aus"
+      },
+      "name": {
+        "required": "Name ist erforderlich"
+      },
+      "email": {
+        "required": "E-Mail ist erforderlich",
+        "invalid": "Bitte geben Sie eine gültige E-Mail ein"
+      },
+      "company": {
+        "required": "Unternehmen oder Projektname ist erforderlich"
+      },
+      "businessDescription": {
+        "required": "Geschäftsbeschreibung ist erforderlich"
+      },
+      "goals": {
+        "required": "Bitte wählen Sie mindestens ein Ziel aus"
+      },
+      "services": {
+        "required": "Bitte wählen Sie mindestens eine Dienstleistung aus"
+      },
+      "branding": {
+        "required": "Bitte wählen Sie eine Branding-Option aus"
+      },
+      "budget": {
+        "required": "Bitte wählen Sie eine Budget-Option aus"
+      },
+      "timeline": {
+        "required": "Bitte wählen Sie eine Zeitplan-Option aus"
+      }
+    }
+  }
+}

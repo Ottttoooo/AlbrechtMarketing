@@ -1,5 +1,5 @@
 "use client";
-import { ConsultationFormData } from "@/app/components/contact/consultation/consultaionPageClient";
+import ConsultationFormData from "@/app/components/contact/consultation/consultaionPageClient";
 import { ComponentType, useState } from "react";
 import { FieldValues, UseFormReturn } from "react-hook-form";
 
@@ -17,7 +17,7 @@ interface MultistepFormReturn<T extends FieldValues> {
   goTo: (index: number) => void;
 }
 
-export function useMultistepForm<T extends FieldValues = ConsultationFormData>({
+export function useMultistepForm<T extends FieldValues = typeof ConsultationFormData>({
   steps,
 }: {
   steps: Step<T>[];

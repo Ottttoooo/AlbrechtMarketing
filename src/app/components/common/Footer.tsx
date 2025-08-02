@@ -10,7 +10,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
 const Footer = () => {
-  const t = useTranslations("Footer");
+  const t = useTranslations("common.Footer");
   const [hovered, setHovered] = useState<boolean>(false); // ✅ Define type explicitly
   return (
     <footer className="bg-darkNeutral text-lightNeutral">
@@ -74,23 +74,37 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/servicesAM">
+                <Link href="/services">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link2")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/aboutAM">
+                <Link href="/preise">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link3")}
                   </span>
                 </Link>
               </li>
-              <li>
-                <Link href="/contactAM">
+              {/* <li>
+                <Link href="/about">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link4")}
+                  </span>
+                </Link>
+              </li> */}
+              <li>
+                <Link href="/contact/general">
+                  <span className="text-gray-400 hover:text-white transition-colors">
+                    {t("column2.link5")}
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/imprint">
+                  <span className="text-gray-400 hover:text-white transition-colors">
+                    {t("column2.link6")}
                   </span>
                 </Link>
               </li>
@@ -102,44 +116,37 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">{t("column3.heading")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/blog">
+                <Link href="/pricing">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column3.link1")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/careers">
+                <Link href="/services/web-design">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column3.link2")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/support">
+                <Link href="/services/online-ads">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column3.link3")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy">
+                <Link href="/services/content-creation">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column3.link4")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service">
+                <Link href="/services/social-media">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column3.link5")}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq">
-                  <span className="text-gray-400 hover:text-white transition-colors">
-                    {t("column3.link6")}
                   </span>
                 </Link>
               </li>

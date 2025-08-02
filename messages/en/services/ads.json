@@ -1,0 +1,71 @@
+{
+  "MetaData": {
+    "title": "Digital Advertising"
+  },
+  "Hero": {
+    "title": "Digital Advertising",
+    "subTitle": "Reach and Visibility for Your Business"
+  },
+  "Intro": {
+    "title": "Digital Advertising That Delivers Results",
+    "text": "In today’s competitive digital landscape, advertising is essential to stand out and reach your target audience. At Albrecht Marketing, we specialize in creating data-driven ad campaigns that deliver measurable results. Whether you’re looking to increase brand awareness, drive website traffic, or boost conversions, we tailor our strategies to fit your goals. From Google Ads to social media platforms like Instagram, Facebook, and YouTube, we handle every aspect of your campaign—so you can focus on running your business."
+  },
+  "OfferCardSection": {
+    "title": "What We Offer",
+    "1": {
+      "title": "Facebook & Instagram Ads",
+      "text": "Story & Reel Ads – Mobile-first, engaging ads on Instagram and Facebook. \n\nE-Commerce Ads – Promote products directly in the shopping feed. \nLead Generation Ads – Capture customer interest with forms and interactive content."
+    },
+    "2": {
+      "title": "Google Ads",
+      "text": "Search Ads – Text-based ads targeting specific keywords. Performance Max – AI-driven campaigns that maximize conversions across Google’s ecosystem. Local Ads – Promote your business in specific geographic areas. Display & YouTube Ads – Visual and video ads reaching potential customers on millions of sites."
+    },
+    "3": {
+      "title": "YouTube Ads",
+      "text": "Video ads placed before or during relevant content, great for brand awareness and engagement."
+    },
+    "4": {
+      "title": "Analytics & Optimization",
+      "text": "We don’t just launch campaigns—we monitor and optimize them. Using real-time data, we refine your ads to ensure they’re performing at their best."
+    }
+  },
+  "StepsSection": {
+    "title": "Step by Step to Success",
+    "subTitle": "This is how our process works:",
+    "steps": {
+      "1": {
+        "title": "Target Audience Analysis & Campaign Planning",
+        "text": "We begin with a detailed analysis of your target audience and develop a tailored campaign strategy. Together, we determine the best platforms—whether Google, Facebook, or Instagram—to maximize your reach and impact."
+      },
+      "2": {
+        "title": "Ad Creation & Deployment",
+        "text": "Our team designs compelling ads that perfectly align with your brand and capture your audience’s interest. We professionally set up the campaigns, ensuring your budget is used efficiently. Throughout the campaign, we closely monitor performance to drive the best possible results."
+      },
+      "3": {
+        "title": "Performance Analysis & Optimization",
+        "text": "Once the campaign is live, we continuously track its performance and make adjustments as needed. Regular reports provide insights into campaign success, helping you see how your investment is delivering results."
+      }
+    }
+  },
+  "Why": {
+    "title": "Why Choose Us",
+    "list": {
+      "1": {
+        "title": "Custom Strategies: ",
+        "text": "We don’t believe in cookie-cutter solutions. Every campaign is tailored to your unique goals and audience."
+      },
+      "2": {
+        "title": "Full-Service Approach: ",
+        "text": "From strategy to execution, we handle every aspect of your digital advertising, so you don’t have to."
+      },
+      "3": {
+        "title": "Data-Driven Decisions: ",
+        "text": "We use advanced analytics to track performance and make informed adjustments, ensuring maximum ROI."
+      },
+      "4": {
+        "title": "Creative Excellence: ",
+        "text": "Our team of copywriters, designers, and strategists work together to create ads that stand out and drive results."
+      }
+    }
+  }
+}

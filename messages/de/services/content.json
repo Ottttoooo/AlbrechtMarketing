@@ -1,0 +1,71 @@
+{
+      "MetaData": {
+        "title": "Content Creation"
+      },
+      "Hero": {
+        "title": "Content Creation",
+        "subTitle": "Inhalte, die deine Zielgruppe begeistern"
+      },
+      "Intro": {
+        "title": "Content, der fesselt und konvertiert",
+        "text": "In der heutigen digitalen Welt ist Content der Schlüssel zum Erfolg. Er verbindet dich mit deiner Zielgruppe, schafft Vertrauen und hebt dich von der Konkurrenz ab. Bei Albrecht Marketing sind wir darauf spezialisiert, hochwertigen Content zu erstellen, der nicht nur gut aussieht, sondern auch bei deiner Zielgruppe ankommt. Ob Fotografie, Videografie, Copywriting oder Grafikdesign – wir erzählen die Geschichte deiner Marke auf eine Weise, die zum Handeln inspiriert."
+      },
+      "OfferCardSection": {
+        "title": "Unser Angebot",
+        "1": {
+          "title": "Fotografie",
+          "text": "Ein Bild sagt mehr als tausend Worte – und wir sorgen dafür, dass jedes Bild die richtige Botschaft vermittelt. Von Produktaufnahmen bis hin zu Lifestyle-Fotografie fangen wir die Essenz deiner Marke in jedem Frame ein."
+        },
+        "2": {
+          "title": "Videografie",
+          "text": "Videos gehören zu den wirkungsvollsten Formaten, um deine Zielgruppe zu begeistern. Wir produzieren professionelle Videos – von Werbeclips bis hin zu Behind-the-Scenes-Inhalten –, die fesseln und überzeugen."
+        },
+        "3": {
+          "title": "Copywriting",
+          "text": "Worte haben Macht. Unsere erfahrenen Texter erstellen überzeugende, SEO-optimierte Inhalte, die deine Zielgruppe direkt ansprechen – sei es für deine Website, Blogartikel oder Social-Media-Posts."
+        },
+        "4": {
+          "title": "Grafikdesign",
+          "text": "Gutes Design zieht Aufmerksamkeit auf sich und hinterlässt einen bleibenden Eindruck. Wir gestalten beeindruckende visuelle Inhalte – von Logos und Branding-Materialien bis hin zu Social-Media-Posts und Infografiken –, die perfekt zu deiner Marke passen."
+        }
+      },
+      "StepsSection": {
+        "title": "Schritt für Schritt zum Ziel",
+        "subTitle": "So läuft unser Prozess ab:",
+        "steps": {
+          "1": {
+            "title": "Strategie und Ideenentwicklung",
+            "text": "Zunächst besprechen wir, welche Art von Inhalten deine Zielgruppe anspricht und welchen Mehrwert du vermitteln möchtest. Gemeinsam entwickeln wir eine Content-Strategie, die deine Marke authentisch und ansprechend repräsentiert und gleichzeitig dein Publikum anspricht."
+          },
+          "2": {
+            "title": "Content-Erstellung",
+            "text": "Unser Team erstellt hochwertige Inhalte – sei es Text, Bild oder Video – die genau auf die Bedürfnisse deiner Zielgruppe zugeschnitten sind. Wir achten dabei auf Qualität, Originalität und eine klare Markenbotschaft. Du erhältst Entwürfe zur Freigabe und kannst Feedback geben, um sicherzustellen, dass alles deinen Erwartungen entspricht."
+          },
+          "3": {
+            "title": "Veröffentlichung und Monitoring",
+            "text": "Nach der Freigabe veröffentlichen wir die Inhalte auf den festgelegten Kanälen und analysieren die Reaktionen deines Publikums. Bei Bedarf passen wir die Content-Strategie an, um kontinuierlich das Interesse deiner Zielgruppe zu steigern und die Reichweite zu maximieren."
+          }
+        }
+      },
+      "Why": {
+        "title": "Warum wir?",
+        "list": {
+          "1": {
+            "title": "Ganzheitlicher Ansatz: ",
+            "text": "Wir erstellen nicht nur Content – wir schaffen Erlebnisse. Jedes einzelne Element ist darauf ausgelegt, eine stimmige Geschichte zu erzählen und deine Marke nachhaltig zu stärken."
+          },
+          "2": {
+            "title": "Individuell auf deine Marke zugeschnitten: ",
+            "text": "Deine Marke ist einzigartig – und unser Ansatz ist es auch. Wir nehmen uns die Zeit, deine Vision zu verstehen, und liefern Inhalte, die deine Werte und Ziele widerspiegeln."
+          },
+          "3": {
+            "title": "Hochwertige Ergebnisse: ",
+            "text": "Mit modernster Technik und bewährten Methoden sorgen wir dafür, dass jedes Foto, Video und Design professionell und hochwertig ist."
+          },
+          "4": {
+            "title": "Erfolgsorientiert: ",
+            "text": "Unser Content sieht nicht nur gut aus – er erfüllt einen Zweck. Ob mehr Website-Traffic, Leadgenerierung oder Umsatzsteigerung, wir erstellen Inhalte mit messbarem Mehrwert."
+          }
+        }
+      }
+    }

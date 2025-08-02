@@ -37,11 +37,11 @@ export default function LanguageSwitcher() {
         <Image
           src={selectedLang.flagSrc}
           alt={selectedLang.code}
-          width={24}
-          height={24}
+          width={16}
+          height={16}
         />
         {/* You could show the label too, if you like */}
-        {/* <span>{selectedLang.label}</span> */}
+        <span className="text-base text-gray-600">{selectedLang.label}</span>
       </button>
 
       {/* The Dropdown Menu */}

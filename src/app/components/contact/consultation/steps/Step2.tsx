@@ -9,116 +9,120 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { StepProps } from "../consultaionPageClient";
+import { useTranslations } from "next-intl";
 
-export const Step2 = ({ form }: StepProps) => (
-  <>
-    <h2 className="text-xl font-semibold mb-4">Share your links with us</h2>
-    <h3>
-      We will have a look at your existing website and/or social media channels
-      and evaluate them based on our experience so that we can tell you whether
-      and how you can improve them
-    </h3>
-    <FormField
-      control={form.control}
-      name="step2.website"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Website</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter website URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="step2.instagram"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Instagram</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter Instagram URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="step2.facebook"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Facebook</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter Facebook URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="step2.tiktok"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>TikTok</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter TikTok URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="step2.youtube"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>YouTube</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter YouTube URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="step2.x"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>X</FormLabel>
-          <FormControl>
-            <Input
-              {...field}
-              placeholder="Enter X URL"
-              value={field.value || ""}
-            />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  </>
-);
+export const Step2 = ({ form }: StepProps) => {
+  const t = useTranslations("contact.consultation.multiStepForm.step2");
+
+  return (
+    <>
+      <h2 className="text-xl font-semibold mb-4">{t("title")}</h2>
+      <h3>{t("description")}</h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <FormField
+          control={form.control}
+          name="step2.website"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("website.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("website.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="step2.instagram"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("instagram.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("instagram.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="step2.facebook"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("facebook.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("facebook.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="step2.tiktok"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("tiktok.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("tiktok.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="step2.youtube"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("youtube.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("youtube.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="step2.x"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("x.label")}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder={t("x.placeholder")}
+                  value={field.value || ""}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+    </>
+  );
+};

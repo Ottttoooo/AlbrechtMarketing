@@ -1,0 +1,67 @@
+{
+  "CTACard": {
+    "heading": "Let's Get Started Together!"
+  },
+  "primaryButton": {
+    "text": "Claim Free Consultation"
+  },
+  "secondaryButton": {
+    "text": "Our Offers"
+  },
+  "notFound": {
+    "heading": "Page Not Found",
+    "message": "Sorry, the page you are looking for does not exist.",
+    "homeButton": "Go to Home"
+  },
+  "NavBar": {
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "pricing": "Pricing",
+      "webDesign": "Web Design & Development",
+      "onlineAds": "Digital Advertising",
+      "contentCreation": "Content Creation",
+      "socialMedia": "Social Media Management",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "Footer": {
+    "column1": {
+      "text1": "For inquiries, we are available at:",
+      "text2": "info@albrecht-marketing.com"
+    },
+
+    "column2": {
+      "heading": "Quick Links",
+      "link1": "Home",
+      "link2": "Services",
+      "link3": "Pricing",
+      "link4": "About",
+      "link5": "Contact",
+      "link6": "Imprint"
+    },
+    "column3": {
+      "heading": "Solutions",
+      "link1": "Combination Packages",
+      "link2": "Web Design & Development",
+      "link3": "Digital Advertising",
+      "link4": "Content Creation",
+      "link5": "Social Media Management"
+    },
+    "column4": {
+      "heading": "Newsletter",
+      "text1": "Subscribe to our newsletter for the latest updates.",
+      "placeholder": "Enter Email",
+      "button": "Subscribe"
+    },
+    "bottomSection": {
+      "text": "Albrecht Marketing. All rights reserved."
+    },
+    "socialMedia": {
+      "facebook": "Follow us on Facebook",
+      "twitter": "Follow us on Twitter",
+      "instagram": "Follow us on Instagram"
+    }
+  }
+}

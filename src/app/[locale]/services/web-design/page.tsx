@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Services.web" });
+  const t = await getTranslations({ locale, namespace: "services.web" });
 
   return {
     title: t("MetaData.title"),
@@ -45,8 +45,8 @@ type whyList = why[];
 type OfferCardList = OfferCard[];
 
 function WebPage() {
-  const tWebPage = useTranslations("Services.web");
-  const tCommon = useTranslations("Common");
+  const tWebPage = useTranslations("services.web");
+  const tCommon = useTranslations("common");
   const ctaCardHeading = tCommon("CTACard.heading");
   const primaryButtonText = tCommon("primaryButton.text");
   const secondaryButtonText = tCommon("secondaryButton.text");

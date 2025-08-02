@@ -1,0 +1,31 @@
+{
+  "MetaData": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for support or information."
+  },
+  "emailFormat": {
+    "subject": "New contact form submission",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "newContact": "New contact form submission"
+  },
+  "submit": "Submit",
+  "submitting": "Submitting...",
+  "submitSuccess": "Form submitted successfully!",
+  "submitError": "Please correct the errors in the form before submitting.",
+  "infoBox": {
+    "title": "Contact Us",
+    "description": "Here's how you can reach us",
+    "responseTimeTitle": "Response Time",
+    "responseTime": "We typically respond to inquiries within 24-48 hours during business days."
+  },
+  "form": {
+    "title": "Get in Touch",
+    "subTitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "name": { "label": "Name", "placeholder": "Your full name" },
+    "email": { "label": "Email", "placeholder": "Your email address" },
+    "subject": { "label": "Subject (optional)", "placeholder": "What is this regarding?" },
+    "message": { "label": "Message", "placeholder": "Tell us how we can help..." }
+  }
+}

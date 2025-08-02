@@ -10,7 +10,7 @@ type NavProps = {
 };
 
 const NavBar: React.FC<NavProps> = (bgColor) => {
-  const t = useTranslations("NavBar");
+  const t = useTranslations("common.NavBar");
 
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -38,7 +38,7 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
           <div className="hidden md:flex space-x-8 font-medium items-end">
             {/* Services Dropdown */}
             <div
-              className="relative"
+              className="relative py-1"
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
@@ -87,18 +87,18 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
               )}
             </div>
 
-            <Link href={"/pricing"}>
+            <Link href={"/pricing"} className="py-1">
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 {t("links.pricing")}
               </span>
             </Link>
 
-            <Link href={"about"}>
+            {/* <Link href={"about"} className="py-1">
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 {t("links.about")}
               </span>
-            </Link>
-            <Link href={"/contact/general"}>
+            </Link> */}
+            <Link href={"/contact/general"} className="py-1">
               <span className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 {t("links.contact")}
               </span>

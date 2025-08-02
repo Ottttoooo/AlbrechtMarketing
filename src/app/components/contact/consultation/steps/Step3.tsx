@@ -10,174 +10,184 @@ import {
 } from "@/components/ui/form";
 import { StepProps } from "../consultaionPageClient";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useTranslations } from "next-intl";
 
-const challenges = [
-  {
-    id: "challenge1",
-    label: "I have no / very little internet presence",
-  },
-  {
-    id: "challenge2",
-    label:
-      "I don’t have a strong corporate identity (Logo, Colors, Font, etc...)",
-  },
-  {
-    id: "challenge3",
-    label: "website is not performing as needed",
-  },
-  {
-    id: "challenge4",
-    label: "Social Media channels are struggling to gain traction",
-  },
-  {
-    id: "challenge5",
-    label: "google Ads are performing poorly",
-  },
-  {
-    id: "challenge6",
-    label: "Instagram/Facebook ads are performing poorly",
-  },
-  {
-    id: "challenge7",
-    label: "location is hard to find on google maps",
-  },
-  {
-    id: "challenge8",
-    label: "Website is not showing at the top of google search",
-  },
-  {
-    id: "challenge9",
-    label: "I don’t have enough time to manage my online presence",
-  },
-  {
-    id: "challenge10",
-    label: "My content (photos, videos, text) could be more professional",
-  },
-] as const;
+export const Step3 = ({ form }: StepProps) => {
+  const t = useTranslations("contact.consultation.multiStepForm.step3");
+  const challengeOptions = useTranslations(
+    "contact.consultation.multiStepForm.step3.challenges.options"
+  );
+  const phaseOptions = useTranslations(
+    "contact.consultation.multiStepForm.step3.phase.options"
+  );
 
-const phases = [
-  {
-    id: "phase1",
-    label: "Launch my online presence for the first time",
-  },
-  {
-    id: "phase2",
-    label: "I already have some online presence, but I want to upgrade/add",
-  },
-  {
-    id: "phase3",
-    label: "I want to optimize and maintain what I have",
-  },
-  {
-    id: "phase4",
-    label: "I’m not sure",
-  },
-] as const;
+  const challenges = [
+    {
+      id: challengeOptions("1"),
+      label: challengeOptions("1"),
+    },
+    {
+      id: challengeOptions("2"),
+      label: challengeOptions("2"),
+    },
+    {
+      id: challengeOptions("3"),
+      label: challengeOptions("3"),
+    },
+    {
+      id: challengeOptions("4"),
+      label: challengeOptions("4"),
+    },
+    {
+      id: challengeOptions("5"),
+      label: challengeOptions("5"),
+    },
+    {
+      id: challengeOptions("6"),
+      label: challengeOptions("6"),
+    },
+    {
+      id: challengeOptions("7"),
+      label: challengeOptions("7"),
+    },
+    {
+      id: challengeOptions("8"),
+      label: challengeOptions("8"),
+    },
+    {
+      id: challengeOptions("9"),
+      label: challengeOptions("9"),
+    },
+    {
+      id: challengeOptions("10"),
+      label: challengeOptions("10"),
+    },
+  ] as const;
 
-export const Step3 = ({ form }: StepProps) => (
-  <div className="space-y-4">
-    {/* Field for Phases */}
-    <FormField
-      control={form.control}
-      name="step3.phase"
-      render={() => (
-        <FormItem>
-          <div className="mb-4">
-            <FormLabel className="text-base">
-              Your current marketing phase
-            </FormLabel>
-            <FormDescription>
-              Select one or more of the phases bellow that best describe current
-              progress.
-            </FormDescription>
-          </div>
-          {phases.map((item) => (
-            <FormField
-              key={item.id}
-              control={form.control}
-              name="step3.phase"
-              render={({ field }) => {
-                return (
-                  <FormItem
-                    key={item.id}
-                    className="flex flex-row items-center gap-2"
-                  >
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value?.includes(item.id)}
-                        onCheckedChange={(checked) => {
-                          return checked
-                            ? field.onChange([...field.value, item.id])
-                            : field.onChange(
-                                field.value?.filter(
-                                  (value) => value !== item.id
-                                )
-                              );
-                        }}
-                      />
-                    </FormControl>
-                    <FormLabel className="text-sm font-normal">
-                      {item.label}
-                    </FormLabel>
-                  </FormItem>
-                );
-              }}
-            />
-          ))}
-          <FormMessage />
-        </FormItem>
-      )}
-    />
+  const phases = [
+    {
+      id: phaseOptions("1"),
+      label: phaseOptions("1"),
+    },
+    {
+      id: phaseOptions("2"),
+      label: phaseOptions("2"),
+    },
+    {
+      id: phaseOptions("3"),
+      label: phaseOptions("3"),
+    },
+    {
+      id: phaseOptions("4"),
+      label: phaseOptions("4"),
+    },
+  ] as const;
 
-    {/*  Field for challenges */}
-    <FormField
-      control={form.control}
-      name="step3.challenges"
-      render={() => (
-        <FormItem>
-          <div className="mb-4">
-            <FormLabel className="text-base">Your current challenges</FormLabel>
-            <FormDescription>
-              Select one or more of the statements bellow that best describe
-              your marketing challenges.
-            </FormDescription>
-          </div>
-          {challenges.map((item) => (
-            <FormField
-              key={item.id}
-              control={form.control}
-              name="step3.challenges"
-              render={({ field }) => {
-                return (
-                  <FormItem
-                    key={item.id}
-                    className="flex flex-row items-center gap-2"
-                  >
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value?.includes(item.id)}
-                        onCheckedChange={(checked) => {
-                          return checked
-                            ? field.onChange([...field.value, item.id])
-                            : field.onChange(
-                                field.value?.filter(
-                                  (value) => value !== item.id
-                                )
-                              );
-                        }}
-                      />
-                    </FormControl>
-                    <FormLabel className="text-sm font-normal">
-                      {item.label}
-                    </FormLabel>
-                  </FormItem>
-                );
-              }}
-            />
-          ))}
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  </div>
-);
+  return (
+    <div className="space-y-16">
+      {/* Field for Phases */}
+      <FormField
+        control={form.control}
+        name="step3.phase"
+        render={() => (
+          <FormItem>
+            <div className="mb-4">
+              <FormLabel className="text-base">{t("phase.label")}</FormLabel>
+              <FormDescription>{t("phase.description")}</FormDescription>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {phases.map((item) => (
+                <FormField
+                  key={item.id}
+                  control={form.control}
+                  name="step3.phase"
+                  render={({ field }) => {
+                    return (
+                      <FormItem
+                        key={item.id}
+                        className="flex flex-row items-center gap-2"
+                      >
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value?.includes(item.id)}
+                            onCheckedChange={(checked) => {
+                              return checked
+                                ? field.onChange([...field.value, item.id])
+                                : field.onChange(
+                                    field.value?.filter(
+                                      (value) => value !== item.id
+                                    )
+                                  );
+                            }}
+                          />
+                        </FormControl>
+                        <FormLabel className="text-sm font-normal !mt-0">
+                          {item.label}
+                        </FormLabel>
+                      </FormItem>
+                    );
+                  }}
+                />
+              ))}
+            </div>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      {/*  Field for challenges */}
+      <FormField
+        control={form.control}
+        name="step3.challenges"
+        render={() => (
+          <FormItem>
+            <div className="mb-4">
+              <FormLabel className="text-base">
+                {t("challenges.label")}
+              </FormLabel>
+              <FormDescription>{t("challenges.description")}</FormDescription>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {challenges.map((item) => (
+                <FormField
+                  key={item.id}
+                  control={form.control}
+                  name="step3.challenges"
+                  render={({ field }) => {
+                    return (
+                      <FormItem
+                        key={item.id}
+                        className="flex flex-row items-center gap-2"
+                      >
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value?.includes(item.id)}
+                            onCheckedChange={(checked) => {
+                              return checked
+                                ? field.onChange([...field.value, item.id])
+                                : field.onChange(
+                                    field.value?.filter(
+                                      (value) => value !== item.id
+                                    )
+                                  );
+                            }}
+                          />
+                        </FormControl>
+                        <FormLabel className="text-sm font-normal !mt-0">
+                          {item.label}
+                        </FormLabel>
+                      </FormItem>
+                    );
+                  }}
+                />
+              ))}
+            </div>
+
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
+};

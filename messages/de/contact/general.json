@@ -1,0 +1,31 @@
+{
+    "MetaData": {
+    "title": "Kontaktiere uns",
+    "description": "Nehmen Sie Kontakt mit uns auf, um Unterstützung oder Informationen zu erhalten."
+  },
+  "emailFormat": {
+    "subject": "Neue Kontaktformularübermittlung",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "newContact": "Neue Kontaktformularübermittlung"
+  },
+  "submit": "Absenden",
+  "submitting": "Wird gesendet...",
+  "submitSuccess": "Formular erfolgreich übermittelt!",
+  "submitError": "Bitte korrigieren Sie die Fehler im Formular, bevor Sie es absenden.",
+  "infoBox": {
+    "title": "Kontaktiere uns",
+    "description": "So kannst du uns erreichen",
+    "responseTimeTitle": "Antwortzeit",
+    "responseTime": "Wir antworten in der Regel innerhalb von 24-48 Stunden an Werktagen."
+  },
+  "form": {
+    "title": "Nimm Kontakt auf",
+    "subTitle": "Fülle das untenstehende Formular aus und wir werden uns so schnell wie möglich bei dir melden.",
+    "name": { "label": "Name", "placeholder": "Dein vollständiger Name" },
+    "email": { "label": "E-Mail", "placeholder": "Deine E-Mail-Adresse" },
+    "subject": { "label": "Betreff (optional)", "placeholder": "Worum geht es?" },
+    "message": { "label": "Nachricht", "placeholder": "Erzähle uns, wie wir helfen können..." }
+  }
+}

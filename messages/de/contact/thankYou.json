@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "title": "Danke!",
+        "subTitle": "Ihre Anfrage wurde erfolgreich gesendet. Wir schätzen es, dass Sie sich die Zeit genommen haben, uns zu kontaktieren."
+    },
+    "content": {
+        "thankYouMessage": "Danke!",
+        "thankYouDescription": "Ihre Anfrage wurde erfolgreich gesendet. Wir schätzen es, dass Sie sich die Zeit genommen haben, uns zu kontaktieren.",
+        "nextStepsTitle": "Was passiert als Nächstes?",
+        "nextStepsDescription": "Wir werden Ihre Nachricht überprüfen und uns so schnell wie möglich bei Ihnen melden. Bitte behalten Sie Ihren Posteingang im Auge!",
+        "backToHome": "Zurück zur Startseite",
+        "sendUsMessage": "Senden Sie uns eine Nachricht",
+        "supportTitle": "Benötigen Sie sofortige Unterstützung? Schreiben Sie uns an"
+    }
+}

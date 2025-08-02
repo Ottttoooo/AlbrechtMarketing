@@ -35,10 +35,9 @@ interface FAQSection {
 
 export default function HomePageClient() {
   // Access translations from 'homepage' and 'common' namespaces
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const tHomepage = useTranslations("HomePage");
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const tCommon = useTranslations("Common");
+
+  const tHomepage = useTranslations("home");
+  const tCommon = useTranslations("common");
 
   // Hero data
   const heroHeading = tHomepage("hero.heading");
@@ -124,8 +123,6 @@ export default function HomePageClient() {
   const stepsNumberClasses =
     "flex items-center justify-center min-w-[50px] w-[50px] min-h-[50px] h-[50px] sm:w-[100px] sm:h-[100px] max-w-[100px] max-h-[100px] rounded-lg bg-darkNeutral";
 
- 
-
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
   // ----------------------------------------------------------------------------
@@ -135,31 +132,80 @@ export default function HomePageClient() {
       {/* HERO SECTION */}
       <section
         id="Hero"
-        className={`"box-border flex flex-col items-center w-full sm:min-h-screen px-8 pt-24 pb-36 bg-lightNeutral bg-[url('/images/hero-bg-sm.svg')] bg-[length:1000px_auto] bg-[position:right_-150px_bottom_0px] bg-no-repeat
-        sm:bg-[url('/images/hero-bg.svg')] sm:bg-[length:1300px_auto] sm:bg-[position:right_-200px_bottom_0px]
-        md:bg-bottom md:bg-[1600px_auto]"`}
+        className={`"
+          box-border 
+          flex 
+          flex-col 
+          items-center 
+          w-full 
+          px-8 
+          pt-24 
+          pb-36 
+          sm:min-h-screen 
+        bg-lightNeutral 
+          relative
+          "`}
       >
-        <div className="w-full max-w-[1200px]">
+        {/* Static background */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            sm:min-h-screen 
+            bg-[url('/images/hero/hero-bg-sm.svg')] 
+            bg-[length:1000px_auto] 
+            bg-[position:right_-150px_bottom_0px] 
+            bg-no-repeat
+            sm:bg-[url('/images/hero/hero-bg-final.svg')] 
+            sm:bg-[length:1300px_auto] 
+            sm:bg-[position:right_-200px_bottom_0px]
+            md:bg-bottom 
+            md:bg-cover
+            z-10
+          "
+        />
+
+        {/* Moving clouds */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            w-full
+            h-full
+            bg-no-repeat
+            bg-[url('/images/hero/aaclouds.svg')]
+            sm:bg-[url('/images/hero/movingClouds.svg')] 
+            sm:bg-[length:200%_auto] 
+            bg-center
+            sm:animate-cloudFloat
+            z-0
+            sm:will-change-transform
+          "
+        />
+
+        <div className="w-full max-w-[1200px] z-50">
           <div className="flex Hero-content w-full lg:w-2/3 items-center ">
             <div className="flex flex-col max-w-max mr-5">
               {/* Heading */}
-              <h1 className="mb-1 text-3xl sm:text-5xl font-eras_itc_demi">
+              <h1 className="mb-1 text-3xl sm:text-5xl font-eras_itc_demi [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)]">
                 {heroHeading}
               </h1>
 
-              <h2 className="mb-4 w-3/4 text-lg  sm:text-xl ">
+              <h2 className="mb-4 w-3/4 text-lg  sm:text-xl [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)]">
                 {heroSubHeading}
               </h2>
 
               {/* List of bullet points */}
               <ul className="mb-4 text-lg">
                 {listItems.map((item: string, index: number) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} className="
+                  [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)] 
+                  sm:[text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral),_-2px_-2px_0_theme(colors.lightNeutral),_2px_-2px_0_theme(colors.lightNeutral),_-2px_2px_0_theme(colors.lightNeutral),_2px_2px_0_theme(colors.lightNeutral),_-3px_-3px_0_theme(colors.lightNeutral),_3px_-3px_0_theme(colors.lightNeutral),_-3px_3px_0_theme(colors.lightNeutral),_3px_3px_0_theme(colors.lightNeutral)]">{item}</li>
                 ))}
               </ul>
 
               {/* Buttons */}
-              <div className="w-1/2 sm:w-full">
+              <div className="w-2/3 sm:w-max sm:bg-lightNeutral rounded-lg">
                 <Buttons
                   color="dark"
                   primary={primaryButtonText}

@@ -1,0 +1,71 @@
+{
+  "MetaData": {
+    "title": "Digital Advertising"
+  },
+  "Hero": {
+    "title": "Digitale Werbung",
+    "subTitle": "Reichweite und Sichtbarkeit für dein Geschäft"
+  },
+  "Intro": {
+    "title": "Digitale Werbung, die Ergebnisse liefert",
+    "text": "In der heutigen digitalen Wettbewerbslandschaft ist Werbung unerlässlich, um sich abzuheben und deine Zielgruppe zu erreichen. Bei Albrecht Marketing sind wir darauf spezialisiert, datengesteuerte Werbekampagnen zu erstellen, die messbare Ergebnisse liefern. Egal, ob du deine Markenbekanntheit steigern, mehr Website-Traffic generieren oder die Conversion-Rate erhöhen möchtest – wir passen unsere Strategien individuell an deine Ziele an. Von Google Ads bis hin zu Social-Media-Plattformen wie Instagram, Facebook und YouTube übernehmen wir alle Aspekte deiner Kampagne, damit du dich voll und ganz auf dein Geschäft konzentrieren kannst."
+  },
+  "OfferCardSection": {
+    "title": "Unser Angebot",
+    "1": {
+      "title": "Facebook- & Instagram-Werbung",
+      "text": "Story- & Reel-Anzeigen – Mobile-optimierte, ansprechende Ads auf Instagram und Facebook.\n\nE-Commerce-Anzeigen – Bewirb Produkte direkt im Shopping-Feed.\n\nLead-Generierung – Erfasse Kundeninteresse mit Formularen und interaktiven Inhalten."
+    },
+    "2": {
+      "title": "Google Ads",
+      "text": "Suchanzeigen – Textbasierte Anzeigen, die gezielt auf relevante Keywords ausgerichtet sind.\n\nPerformance Max – KI-gesteuerte Kampagnen, die Conversions über das gesamte Google-Netzwerk maximieren.\n\nLokale Anzeigen – Präsentiere dein Unternehmen gezielt in bestimmten geografischen Regionen.\n\nDisplay- & YouTube-Werbung – Visuelle und Video-Anzeigen, die potenzielle Kunden auf Millionen von Websites erreichen."
+    },
+    "3": {
+      "title": "YouTube-Werbung",
+      "text": "Videoanzeigen, die vor oder während relevanter Inhalte ausgespielt werden – ideal zur Steigerung von Markenbekanntheit und Engagement."
+    },
+    "4": {
+      "title": "Analyse & Optimierung",
+      "text": "Wir starten nicht nur Kampagnen – wir überwachen und optimieren sie kontinuierlich. Mithilfe von Echtzeitdaten verfeinern wir deine Anzeigen, um die bestmögliche Performance sicherzustellen."
+    }
+  },
+  "StepsSection": {
+    "title": "Schritt für Schritt zum Ziel",
+    "subTitle": "So läuft unser Prozess ab:",
+    "steps": {
+      "1": {
+        "title": "Zielgruppenanalyse und Kampagnenplanung",
+        "text": "Wir starten mit einer detaillierten Analyse deiner Zielgruppe und entwickeln darauf basierend eine Kampagnenstrategie. Gemeinsam legen wir fest, auf welchen Plattformen – sei es Google, Facebook oder Instagram – wir deine Werbung schalten, um die größtmögliche Reichweite zu erzielen."
+      },
+      "2": {
+        "title": "Anzeigenerstellung und Schaltung",
+        "text": "Unser Team gestaltet ansprechende Anzeigen, die perfekt zu deinem Angebot passen und das Interesse deiner Zielgruppe wecken. Wir setzen die Kampagnen professionell auf und achten darauf, dass dein Budget effizient eingesetzt wird. Während der Laufzeit überwachen wir die Leistung, um die besten Ergebnisse zu erzielen."
+      },
+      "3": {
+        "title": "Analyse und Optimierung",
+        "text": "Nach Start der Kampagne beobachten wir die Performance kontinuierlich und nehmen bei Bedarf Anpassungen vor. Regelmäßige Auswertungen und Berichte geben dir Einblick in den Erfolg der Kampagne und zeigen, wie sich deine Investition auszahlt."
+      }
+    }
+  },
+  "Why": {
+    "title": "Warum wir?",
+    "list": {
+      "1": {
+        "title": "Individuelle Strategien: ",
+        "text": "Bei uns gibt es keine Lösungen von der Stange. Jede Kampagne wird speziell auf deine Ziele und Zielgruppe zugeschnitten."
+      },
+      "2": {
+        "title": "Ganzheitlicher Ansatz: ",
+        "text": "Von der Strategie bis zur Umsetzung übernehmen wir alle Aspekte deiner digitalen Werbung – damit du dich auf dein Kerngeschäft konzentrieren kannst."
+      },
+      "3": {
+        "title": "Datengetriebene Entscheidungen: ",
+        "text": "Wir nutzen fortschrittliche Analysen, um die Performance zu überwachen und gezielt anzupassen – für den bestmöglichen ROI."
+      },
+      "4": {
+        "title": "Kreative Exzellenz: ",
+        "text": "Unser Team aus Textern, Designern und Strategen arbeitet zusammen, um auffällige und wirkungsvolle Anzeigen zu erstellen."
+      }
+    }
+  }
+}

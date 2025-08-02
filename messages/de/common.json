@@ -1,0 +1,67 @@
+{
+  "CTACard": {
+    "heading": "Lass Uns Gemeinsam Starten!"
+  },
+  "primaryButton": {
+    "text": "Kostenlose Beratung Sichern"
+  },
+  "secondaryButton": {
+    "text": "Unsere Angebote"
+  },
+  "notFound": {
+    "heading": "Seite Nicht Gefunden",
+    "message": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht.",
+    "homeButton": "Zur Startseite"
+  },
+  "NavBar": {
+    "links": {
+      "home": "Home",
+      "services": "Dienstleistungen",
+      "pricing": "Preise",
+      "webDesign": "Webdesign & Entwicklung",
+      "onlineAds": "Digitale Werbung",
+      "contentCreation": "Content Creation",
+      "socialMedia": "Social Media Management",
+      "about": "Über Uns",
+      "contact": "Kontakt"
+    }
+  },
+  "Footer": {
+    "column1": {
+      "text1": "Für Fragen stehen wir zur Verfügung unter:",
+      "text2": "info@albrecht-marketing.com"
+    },
+
+    "column2": {
+      "heading": "Quick Links",
+      "link1": "Startseite",
+      "link2": "Dienstleistungen",
+      "link3": "Preise",
+      "link4": "Über Uns",
+      "link5": "Kontakt",
+      "link6": "Impressum"
+    },
+    "column3": {
+      "heading": "Lösungen",
+      "link1": "Kombipakete",
+      "link2": "Webdesign & Entwicklung",
+      "link3": "Digitale Werbung",
+      "link4": "Content Creation",
+      "link5": "Social Media Management"
+    },
+    "column4": {
+      "heading": "Newsletter",
+      "text1": "Abonniere unseren Newsletter, um die neuesten Updates zu erhalten.",
+      "placeholder": "E-Mail Eingeben",
+      "button": "Abonnieren"
+    },
+    "bottomSection": {
+      "text": "Albrecht Marketing. Alle Rechte vorbehalten."
+    },
+    "socialMedia": {
+      "facebook": "Folge uns auf Facebook",
+      "twitter": "Folge uns auf Twitter",
+      "instagram": "Folge uns auf Instagram"
+    }
+  }
+}

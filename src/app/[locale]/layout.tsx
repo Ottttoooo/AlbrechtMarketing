@@ -7,6 +7,7 @@ import "../globals.css";
 import Footer from "../components/common/Footer";
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
 import NavBarWrapper from "../components/common/NavBarWrapper";
+import ReCaptchaProvider from "@/components/providers/ReCaptchaProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -42,12 +43,17 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${playfair.variable} ${bebasNeue.variable}`}>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${playfair.variable} ${bebasNeue.variable}`}
+    >
       <body className="bg-lightNeutral">
         <NextIntlClientProvider messages={messages}>
-        <NavBarWrapper />
-          {children}
-          <Footer />
+          <ReCaptchaProvider>
+            <NavBarWrapper />
+            {children}
+            <Footer />
+          </ReCaptchaProvider>
         </NextIntlClientProvider>
       </body>
     </html>

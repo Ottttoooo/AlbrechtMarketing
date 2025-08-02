@@ -21,48 +21,9 @@ import { Step1 } from "./steps/Step1";
 import { Step2 } from "./steps/Step2";
 import { Step3 } from "./steps/Step3";
 import { Step4 } from "./steps/Step4";
-
-const consultationSchema = z.object({
-  step1: z.object({
-    firstName: z.string().min(1, { message: "errors.firstName.required" }),
-    lastName: z.string().min(1, { message: "errors.lastName.required" }),
-    companyName: z.string().min(1, { message: "errors.companyName.required" }),
-    industry: z.string().min(1, { message: "errors.industry.required" }),
-    companyAge: z.string().min(1, { message: "errors.companyAge.required" }),
-    country: z.string().min(1, { message: "errors.country.required" }),
-    state: z.string().min(1, { message: "errors.state.required" }),
-    email: z.string().email({ message: "errors.email.invalid" }),
-    phone: z.string().optional(),
-  }),
-  step2: z.object({
-    website: z.string().url({ message: "errors.website.url" }).optional(),
-    instagram: z.string().url({ message: "errors.instagram.url" }).optional(),
-    facebook: z.string().url({ message: "errors.facebook.url" }).optional(),
-    tiktok: z.string().url({ message: "errors.tiktok.url" }).optional(),
-    youtube: z.string().url({ message: "errors.youtube.url" }).optional(),
-    x: z.string().url({ message: "errors.x.url" }).optional(),
-  }),
-  step3: z.object({
-    phase: z.array(z.string()).refine((value) => value.some((item) => item), {
-      message: "You have to select at least one item.",
-    }),
-    challenges: z
-      .array(z.string())
-      .refine((value) => value.some((item) => item), {
-        message: "You have to select at least one item.",
-      }),
-  }),
-  step4: z.object({
-    launchBudget: z.enum(["all", "mentions", "none"], {
-      required_error: "You need to select a notification type.",
-    }),
-    runningBudget: z
-      .string()
-      .min(1, { message: "errors.runningBudget.required" }),
-  }),
-});
-
-export type ConsultationFormData = z.infer<typeof consultationSchema>;
+import { Step5 } from "./steps/step5";
+import { useStepValidation } from "@/hooks/useStepValidation";
+import { ConsultationFormData } from "@/types";
 
 export interface StepProps {
   form: UseFormReturn<ConsultationFormData>;
@@ -71,9 +32,62 @@ export interface StepProps {
 type StepKey = keyof ConsultationFormData;
 
 function ConsultationContactPage() {
-  const t = useTranslations("Contact.consultation.multiStepForm");
+  const t = useTranslations("contact.consultation.multiStepForm");
   const router = useRouter();
   const [submitError, setSubmitError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const consultationSchema = z.object({
+    step1: z.object({
+      firstName: z.string().min(1, { message: t("errors.firstName.required") }),
+      lastName: z.string().min(1, { message: t("errors.lastName.required") }),
+      companyName: z
+        .string()
+        .min(1, { message: t("errors.companyName.required") }),
+      industry: z.string().min(1, { message: t("errors.industry.required") }),
+      companyAge: z
+        .string()
+        .min(1, { message: t("errors.companyAge.required") }),
+      companyDescription: z.string().optional(),
+      country: z.string().min(1, { message: t("errors.country.required") }),
+      state: z.string().min(1, { message: t("errors.state.required") }),
+      email: z
+        .string()
+        .email({ message: t("errors.email.invalid") })
+        .optional(),
+      phone: z.string().optional(),
+    }),
+    step2: z.object({
+      website: z.string().optional(),
+      instagram: z.string().optional(),
+      facebook: z.string().optional(),
+      tiktok: z.string().optional(),
+      youtube: z.string().optional(),
+      x: z.string().optional(),
+    }),
+    step3: z.object({
+      phase: z.array(z.string()).refine((value) => value.some((item) => item), {
+        message: t("errors.phase.required"),
+      }),
+      challenges: z
+        .array(z.string())
+        .refine((value) => value.some((item) => item), {
+          message: t("errors.challenges.required"),
+        }),
+    }),
+    step4: z.object({
+      launchBudget: z
+        .string()
+        .min(1, { message: t("errors.launchBudget.required") }),
+      runningBudget: z
+        .string()
+        .min(1, { message: t("errors.runningBudget.required") }),
+    }),
+    step5: z.object({
+      additionalInfo: z.string().optional(),
+      captcha: z.string().min(1, { message: t("errors.captcha.required") }),
+    }),
+  });
 
   const form = useForm<ConsultationFormData>({
     resolver: zodResolver(consultationSchema),
@@ -84,6 +98,7 @@ function ConsultationContactPage() {
         companyName: "",
         industry: "",
         companyAge: "",
+        companyDescription: "",
         country: "",
         state: "",
         email: "",
@@ -102,8 +117,11 @@ function ConsultationContactPage() {
         challenges: [],
       },
       step4: {
-        launchBudget: "none",
+        launchBudget: "",
         runningBudget: "",
+      },
+      step5: {
+        additionalInfo: "",
       },
     },
     mode: "onSubmit",
@@ -115,17 +133,37 @@ function ConsultationContactPage() {
 
   const onSubmit = async (data: ConsultationFormData) => {
     try {
+      setIsSubmitting(true);
       setSubmitError(false);
+
+      // First verify the CAPTCHA
+      const recaptchaResponse = await fetch("/api/verify-recaptcha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: data.step5.captcha }),
+      });
+
+      const recaptchaResult = await recaptchaResponse.json();
+
+      if (!recaptchaResult.success) {
+        setSubmitError(true);
+        return;
+      }
+
+      // If CAPTCHA is valid, proceed with form submission
       const result = await sendConsultationEmail(data);
       if (result.success) {
-        alert(t("submitSuccess"));
         router.push("/thank-you");
       } else {
         setSubmitError(true);
       }
     } catch (error) {
+      console.error(error);
       setSubmitError(true);
-      console.log(error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -139,6 +177,7 @@ function ConsultationContactPage() {
       { component: Step2 },
       { component: Step3 },
       { component: Step4 },
+      { component: Step5 },
     ],
     []
   );
@@ -146,22 +185,10 @@ function ConsultationContactPage() {
   const { currentStepIndex, isFirstStep, isLastStep, next, back, goTo } =
     useMultistepForm<ConsultationFormData>({ steps });
 
-  const stepIsEdited = useCallback(
-    (index: number): boolean => {
-      const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4"];
-      const stepKey = stepKeys[index];
-      const touched = form.formState.touchedFields[stepKey] || {};
-      const dirty = form.formState.dirtyFields[stepKey] || {};
-      return (
-        Object.values(touched).some((value) => value === true) ||
-        Object.values(dirty).some((value) => value === true)
-      );
-    },
-    [form]
-  );
+  const { stepIsEdited, stepHasErrors } = useStepValidation(form);
 
   const handleNext = useCallback(async () => {
-    const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4"];
+    const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4", "step5"];
     const currentStepKey = stepKeys[currentStepIndex];
     if (stepIsEdited(currentStepIndex)) {
       await form.trigger(currentStepKey);
@@ -184,12 +211,6 @@ function ConsultationContactPage() {
     [currentStepIndex, goTo, stepIsEdited, form]
   );
 
-  const stepHasErrors = (index: number): boolean => {
-    const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4"];
-    const stepKey = stepKeys[index];
-    return !!form.formState.errors[stepKey];
-  };
-
   const step = useCallback(() => {
     const CurrentStep = steps[currentStepIndex].component;
     return <CurrentStep form={form} />;
@@ -202,17 +223,13 @@ function ConsultationContactPage() {
         <div className="max-w-screen-lg w-screen-lg ">
           <div className="flex flex-col w-2/3 ">
             <h1 className="text-2xl sm:text-4xl font-extrabold mb-2 sm:text-left">
-              Consultation Form
+              {t("intro.heading")}
             </h1>
             <p className="sm:text-left text-sm sm:text-base">
-              This survery will help us get to know you better so we can provide
-              you with usefull consultation and tips on how to improve your
-              online presence
+              {t("intro.subHeading1")}
             </p>
             <p className="sm:text-left text-sm sm:text-base">
-              Most fields are optional, but for best result we suggest filling
-              as many fields as possible so we have more information to work
-              with
+              {t("intro.subHeading2")}
             </p>
           </div>
         </div>
@@ -262,7 +279,7 @@ function ConsultationContactPage() {
                         : "text-gray-400"
                   }`}
                 >
-                  {t(`step${index + 1}`)}
+                  {t(`step${index + 1}.title`)}
                 </span>
               </button>
             ))}
@@ -294,9 +311,18 @@ function ConsultationContactPage() {
                       <Button
                         type={isLastStep ? "submit" : "button"}
                         onClick={isLastStep ? undefined : handleNext}
-                        disabled={form.formState.isSubmitting}
+                        disabled={isSubmitting}
                       >
-                        {isLastStep ? t("submit") : t("next")}
+                        {isSubmitting ? (
+                          <div className="flex items-center gap-2">
+                            <span className="loading loading-spinner"></span>
+                            {t("submitting")}
+                          </div>
+                        ) : isLastStep ? (
+                          t("submit")
+                        ) : (
+                          t("next")
+                        )}
                       </Button>
                     </div>
                   </div>

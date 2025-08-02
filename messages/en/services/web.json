@@ -1,0 +1,79 @@
+{
+      "MetaData": {
+        "title": "Web Design & Development"
+      },
+      "Hero": {
+        "title": "Web Design & Development",
+        "subTitle": "Your Digital Presence, Perfectly Executed"
+      },
+      "Intro": {
+        "title": "Your Digital Success Starts Here",
+        "text": "Your website is the digital face of your business—a platform that can either capture the attention of potential customers or leave them unengaged. At Albrecht Marketing, we do more than design visually stunning sites; we build tailored platforms that boost your visibility, engage your audience, and drive real growth. Whether you need an e-commerce store, a blog, or an informational site, we craft websites that not only impress but also inspire action. \n\nWe understand that turning visitors into loyal customers is both an art and a science. That’s why our team combines the latest insights from psychology, behavioral science, and innovative design to create a website that reflects your brand identity and works as hard as you do. Let’s take the first step toward your digital success together."
+      },
+      "OfferCardSection": {
+        "title": "What We Offer",
+        "1": {
+          "title": "Custom Website Design",
+          "text": "We design websites that reflect your brand’s personality and resonate with your audience. Every pixel is crafted to ensure your site looks professional, modern, and inviting."
+        },
+        "2": {
+          "title": "Responsive Development",
+          "text": "Your website will look and perform flawlessly on any device — desktop, tablet, or mobile. We build with responsiveness in mind, so your site always makes a great impression."
+        },
+        "3": {
+          "title": "E-Commerce Solutions",
+          "text": "Ready to sell online? We create secure, user-friendly e-commerce platforms that make it easy for your customers to browse, shop, and checkout."
+        },
+        "4": {
+          "title": "Web Applications",
+          "text": "Need more than a website? We develop custom web applications to streamline your business processes, from customer portals to internal tools."
+        },
+        "5": {
+          "title": "Ongoing Support & Maintenance",
+          "text": "We’re here for the long haul. From updates to troubleshooting, we ensure your website stays fast, secure, and up-to-date."
+        }
+      },
+      "StepsSection": {
+        "title": "Step by Step to Success",
+        "subTitle": "Here’s how our process works:",
+        "steps": {
+          "1": {
+            "title": "Create an Account & Choose a Package",
+            "text": "To get started, simply create an account with us and select the web design package that best fits your needs. This ensures a structured and transparent process from the very beginning."
+          },
+          "2": {
+            "title": "Understanding Your Needs & Planning",
+            "text": "After selecting your package, you'll fill out a short form providing key details about your business, goals, and design preferences. We'll then schedule a Microsoft Teams meeting to go over everything together and ensure we align with your vision."
+          },
+          "3": {
+            "title": "First Draft & Feedback",
+            "text": "Based on our discussion, we’ll create the first draft of your website. You'll have the chance to review it and share any changes or improvements you'd like. Your feedback is crucial in refining the design to perfectly match your expectations."
+          },
+          "4": {
+            "title": "Final Version & Going Live",
+            "text": "Once you approve the draft, we’ll finalize your website and, if needed, assist with launching it—including domain setup and hosting.\n\nAfter launch, you can take advantage of our extended maintenance and optimization package to keep your website up-to-date and performing at its best:\n\n- SEO Optimization: We continuously refine your website’s search engine ranking so more customers can find you online.\n- Flexible Content Updates: For the first three months after launch, we offer free minor adjustments to ensure your website stays fresh and relevant.\n- Technical Maintenance: We handle updates and ensure your site runs smoothly, so you can focus on your business.\n\nInterested in ongoing support? Let’s talk, and we’ll tailor a package to fit your needs."
+          }
+        }
+      },
+      "Why": {
+        "title": "Why Choose Us",
+        "list": {
+          "1": {
+            "title": "Holistic Approach: ",
+            "text": "We don’t just create content—we create experiences. Every piece of content is designed to work together, telling a cohesive story that strengthens your brand."
+          },
+          "2": {
+            "title": "Tailored to Your Brand: ",
+            "text": "our brand is unique, and so is our approach. We take the time to understand your vision and deliver content that reflects your values and goals."
+          },
+          "3": {
+            "title": "High-Quality Results: ",
+            "text": "We use state-of-the-art equipment and proven techniques to ensure every photo, video, and design is polished and professional."
+          },
+          "4": {
+            "title": "Results-Driven: ",
+            "text": "Our content isn’t just pretty—it’s purposeful. We create with your business goals in mind, whether it’s driving traffic, generating leads, or boosting sales."
+          }
+        }
+      }
+    }

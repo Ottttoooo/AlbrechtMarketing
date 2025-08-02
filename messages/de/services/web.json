@@ -1,0 +1,79 @@
+{
+  "MetaData": {
+    "title": "Webdesign & Entwicklung"
+  },
+  "Hero": {
+    "title": "Webdesign & Entwicklung",
+    "subTitle": "Dein digitaler Auftritt auf den Punkt gebracht"
+  },
+  "Intro": {
+    "title": "Dein digitaler Erfolg beginnt hier",
+    "text": "Deine Website ist das digitale Aushängeschild deines Unternehmens – eine Plattform, die entweder Kunden begeistert oder sie verliert. Bei Albrecht Marketing gestalten wir nicht nur ästhetisch ansprechende Websites, sondern entwickeln maßgeschneiderte Lösungen, die deine Sichtbarkeit erhöhen, deine Zielgruppe ansprechen und echtes Wachstum fördern. Egal, ob du einen Onlineshop, einen Blog oder eine Unternehmensseite benötigst – wir kreieren Websites, die nicht nur beeindrucken, sondern auch zum Handeln anregen. \n\nWir wissen, dass die Umwandlung von Besuchern in treue Kunden sowohl Kunst als auch Wissenschaft ist. Deshalb kombiniert unser Team neueste Erkenntnisse aus Psychologie, Verhaltenswissenschaften und innovativem Design, um eine Website zu entwickeln, die deine Marke perfekt widerspiegelt und für deinen Erfolg arbeitet. Lass uns gemeinsam den ersten Schritt in Richtung digitale Exzellenz gehen."
+  },
+  "OfferCardSection": {
+    "title": "Unser Angebot",
+    "1": {
+      "title": "Individuelles Webdesign",
+      "text": "Wir gestalten Websites, die deine Markenidentität widerspiegeln und deine Zielgruppe gezielt ansprechen. Jedes Detail wird so entworfen, dass dein Webauftritt professionell, modern und einladend wirkt."
+    },
+    "2": {
+      "title": "Responsives Design",
+      "text": "Egal ob Desktop, Tablet oder Smartphone – deine Website wird auf jedem Gerät perfekt aussehen und funktionieren. Wir sorgen dafür, dass dein Online-Auftritt stets überzeugt."
+    },
+    "3": {
+      "title": "E-Commerce-Lösungen",
+      "text": "Bereit für den Online-Handel? Wir entwickeln sichere und benutzerfreundliche E-Commerce-Plattformen, die deinen Kunden ein reibungsloses Einkaufserlebnis bieten."
+    },
+    "4": {
+      "title": "Webanwendungen",
+      "text": "Braucht dein Unternehmen mehr als eine einfache Website? Wir entwickeln maßgeschneiderte Webanwendungen, die deine Geschäftsprozesse optimieren – von Kundenportalen bis hin zu internen Tools."
+    },
+    "5": {
+      "title": "Fortlaufender Support & Wartung",
+      "text": "Wir begleiten dich langfristig. Von regelmäßigen Updates bis zur Fehlerbehebung sorgen wir dafür, dass deine Website sicher, schnell und immer auf dem neuesten Stand bleibt."
+    }
+  },
+  "StepsSection": {
+    "title": "Schritt für Schritt zum Ziel",
+    "subTitle": "So läuft unser Prozess ab:",
+    "steps": {
+      "1": {
+        "title": "Konto erstellen und Paket auswählen",
+        "text": "Um den Prozess zu starten, erstellst du ein Konto bei uns und wählst das Webdesign-Paket aus, das am besten zu deinen Anforderungen passt. Damit stellen wir sicher, dass alle Schritte von Anfang an strukturiert und transparent ablaufen."
+      },
+      "2": {
+        "title": "Bedarfserfassung und Planung",
+        "text": "Nachdem du das Paket ausgewählt hast, füllst du ein kurzes Formular aus, das uns wichtige Informationen über dein Unternehmen, deine Ziele und Designvorstellungen gibt. Anschließend erhältst du eine Einladung zu einem MS-Teams-Meeting, in dem wir alle Details zur Website und zu deinen Wünschen gemeinsam besprechen."
+      },
+      "3": {
+        "title": "Entwurf und Feedback",
+        "text": "Basierend auf unseren Erkenntnissen gestalten wir den ersten Entwurf deiner Website. Du bekommst die Möglichkeit, diesen zu prüfen und uns Änderungswünsche mitzuteilen. Dein Feedback fließt direkt in die Optimierung ein, damit das Ergebnis deinen Vorstellungen entspricht."
+      },
+      "4": {
+        "title": "Finale Version und Veröffentlichung",
+        "text": "Sobald du den Entwurf freigegeben hast, erstellen wir die finale Version deiner Website. Auf Wunsch unterstützen wir dich bei der Veröffentlichung, inklusive Domain- und Hosting-Setup.\n\nDanach hast du die Möglichkeit, unser erweitertes Wartungs- und Optimierungspaket zu nutzen. Damit sorgen wir dafür, dass deine Website immer topaktuell und sichtbar bleibt:\n\n- SEO-Optimierung: Durch kontinuierliche Suchmaschinenoptimierung verbessern wir Monat für Monat die Sichtbarkeit deiner Website, damit deine Kunden dich leichter finden.\n- Flexibler Änderungsservice: Für die ersten drei Monate nach dem Launch bieten wir dir die Möglichkeit, Anpassungen oder kleine Änderungen an der Website vorzunehmen – ganz flexibel und ohne zusätzliche Kosten.\n- Technische Wartung: Wir stellen sicher, dass deine Website technisch einwandfrei läuft und alle Updates zeitnah erfolgen, damit du dich voll und ganz auf dein Geschäft konzentrieren kannst.\n\nWenn du Interesse an unserer laufenden Betreuung hast, sprich uns einfach an, und wir stellen dir ein maßgeschneidertes Angebot zusammen."
+      }
+    }
+  },
+  "Why": {
+    "title": "Warum wir?",
+    "list": {
+      "1": {
+        "title": "Ganzheitlicher Ansatz: ",
+        "text": "Wir erschaffen nicht nur Inhalte – wir kreieren Erlebnisse. Jedes einzelne Element ist darauf abgestimmt, eine zusammenhängende Geschichte zu erzählen, die deine Marke stärkt."
+      },
+      "2": {
+        "title": "Individuell auf deine Marke zugeschnitten: ",
+        "text": "Deine Marke ist einzigartig – und genauso individuell ist unser Ansatz. Wir nehmen uns die Zeit, deine Vision zu verstehen, und liefern Inhalte, die deine Werte und Ziele widerspiegeln."
+      },
+      "3": {
+        "title": "Hochwertige Ergebnisse: ",
+        "text": "Wir setzen modernste Technologien und bewährte Methoden ein, um sicherzustellen, dass jedes Foto, Video und Design professionell und hochwertig ist."
+      },
+      "4": {
+        "title": "Ergebnisorientiert: ",
+        "text": "Unsere Inhalte sehen nicht nur gut aus – sie haben auch eine klare Wirkung. Wir gestalten mit deinem Geschäftserfolg im Fokus, sei es zur Steigerung des Traffics, zur Lead-Generierung oder zur Umsatzsteigerung."
+      }
+    }
+  }
+}

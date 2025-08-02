@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "title": "Thank You!",
+        "subTitle": "Your submission has been received successfully. We appreciate you taking the time to get in touch with us."
+    },
+    "content": {
+        "thankYouMessage": "Thank You!",
+        "thankYouDescription": "Your submission has been received successfully. We appreciate you taking the time to get in touch with us.",
+        "nextStepsTitle": "What happens next?",
+        "nextStepsDescription": "We'll review your message and get back to you as soon as possible. Keep an eye on your inbox!",
+        "backToHome": "Back to Home",
+        "sendUsMessage": "Send us a Message",
+        "supportTitle": "Need immediate assistance? Email us at"
+    }
+}
