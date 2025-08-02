@@ -1,0 +1,92 @@
+{
+  "MetaData": {
+    "title": "Privacy Policy",
+    "description": "Information about how we handle and protect your personal data when you use our website."
+  },
+  "title": "Privacy Policy",
+  "overview": {
+    "title": "1. Privacy at a Glance",
+    "generalInfo": {
+      "title": "General Information",
+      "text": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data by which you can be personally identified. For detailed information on data protection, please refer to our privacy policy listed below this text."
+    },
+    "dataCollection": {
+      "title": "Data Collection on This Website",
+      "responsible": {
+        "title": "Who is responsible for data collection on this website?",
+        "text": "Data processing on this website is carried out by the website operator. You can find their contact details in the 'Information about the Responsible Party' section of this privacy policy."
+      },
+      "howWeCollect": {
+        "title": "How do we collect your data?",
+        "text": "Your data is collected in one way by you providing it to us. This might be data you enter in a contact form, for example. Other data is automatically collected by our IT systems when you visit the website. This is primarily technical data (e.g., internet browser, operating system, or time of page access). This data is collected automatically as soon as you enter our website."
+      }
+    }
+  },
+  "hosting": {
+    "title": "2. Hosting",
+    "text": "We host the contents of our website with the following provider:",
+    "externalHosting": {
+      "title": "External Hosting",
+      "text": "This website is hosted externally. The personal data collected on this website is stored on the servers of the host(s). This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website access and other data generated through a website."
+    }
+  },
+  "responsibleParty": {
+    "title": "Information about the Responsible Party",
+    "text": "The responsible party for data processing on this website is:",
+    "company": {
+      "name": "De Araújo Albrecht & Zaghloul",
+      "type": "GbR",
+      "address": "Brunnackerweg 5",
+      "city": "88299 Leutkirch im Allgäu",
+      "country": "Germany",
+      "phone": "+49 17643624719",
+      "email": "info@albrecht-marketing.com"
+    }
+  },
+  "storageDuration": {
+    "title": "Storage Duration",
+    "text": "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a justified request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data."
+  },
+  "rights": {
+    "title": "Your Rights",
+    "dataAccess": {
+      "title": "Information, Rectification, and Deletion",
+      "text": "Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipients, and the purpose of data processing and, if applicable, a right to correction or deletion of this data."
+    },
+    "revocation": {
+      "title": "Revocation of Your Consent to Data Processing",
+      "text": "Many data processing operations are only possible with your express consent. You can revoke consent that you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation."
+    },
+    "complaint": {
+      "title": "Right to Lodge a Complaint with the Competent Supervisory Authority",
+      "text": "In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority. The right to lodge a complaint exists without prejudice to any other administrative or judicial remedies."
+    }
+  },
+  "dataCollection": {
+    "title": "Data Collection on this Website",
+    "cookies": {
+      "title": "Cookies",
+      "text": "Our websites use so-called 'cookies'. Cookies are small data packages and do not cause any damage to your device. They are stored either temporarily for the duration of a session (session cookies) or permanently (permanent cookies) on your device."
+    },
+    "serverLogs": {
+      "title": "Server Log Files",
+      "text": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us.",
+      "items": "Browser type and browser version, Operating system used, Referrer URL, Host name of the accessing computer, Time of the server request, IP address"
+    },
+    "contactForm": {
+      "title": "Contact Form",
+      "text": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions."
+    }
+  },
+  "tools": {
+    "title": "Tools and Third-Party Services",
+    "googleFonts": {
+      "title": "Google Fonts",
+      "text": "This site uses so-called Google Fonts provided by Google for the uniform display of fonts. When you open a page, your browser loads the required fonts into its browser cache to display texts and fonts correctly."
+    },
+    "reCaptcha": {
+      "title": "Google reCAPTCHA",
+      "text": "We use Google reCAPTCHA on this website. reCAPTCHA checks whether data entry on this website (e.g. in a contact form) is being carried out by a human or by an automated program."
+    }
+  }
+}

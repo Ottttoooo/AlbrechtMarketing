@@ -71,11 +71,27 @@ export default {
       },
       animation: {
         cloudFloat: "cloudFloat 180s linear infinite",
+        waterBackFloat: "waterBackFloat 30s linear infinite",
+        waterMidFloat: "waterMidFloat 15s linear infinite",
       },
       keyframes: {
         cloudFloat: {
           "0%": { "background-position-x": "0%" },
           "100%": { "background-position-x": "100%" },
+        },
+        waterBackFloat: {
+          "0%": { "background-position": "0% 70%" },
+          "25%": { "background-position": "5% 75%" },
+          "50%": { "background-position": "0% 80%" },
+          "75%": { "background-position": "5% 75%" },
+          "100%": { "background-position": "0% 70%" },
+        },
+        waterMidFloat: {
+          "0%": { "background-position": "0% 100%" },
+          "25%": { "background-position": "5% 90%" },
+          "50%": { "background-position": "0% 95%" },
+          "75%": { "background-position": "5% 90%" },
+          "100%": { "background-position": "0% 100%" },
         },
       },
     },

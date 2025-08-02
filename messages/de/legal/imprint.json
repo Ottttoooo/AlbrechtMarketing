@@ -1,0 +1,46 @@
+{
+  "MetaData": {
+    "title": "Impressum",
+    "description": "Rechtliche Informationen und Kontaktdaten von Albrecht Marketing"
+  },
+  "title": "Impressum",
+  "companyInfo": {
+    "title": "Angaben gemäß § 5 TMG",
+    "name": "De Araújo Albrecht & Zaghloul",
+    "type": "GbR",
+    "address": "Brunnackerweg 5",
+    "city": "88299 Leutkirch im Allgäu",
+    "country": "Deutschland"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "phone": "Telefon: +49 17643624719",
+    "email": "E-Mail: info@albrecht-marketing.com"
+  },
+  "representatives": {
+    "title": "Vertreten durch",
+    "members": [
+      "Leonhard de Araújo Albrecht",
+      "Mohammad Zaghloul"
+    ]
+  },
+  "vatId": {
+    "title": "Umsatzsteuer-ID",
+    "text": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:",
+    "id": "DE 365 474 100"
+  },
+  "responsibility": {
+    "title": "Redaktionell verantwortlich",
+    "name": "Leonhard de Araújo Albrecht",
+    "address": "Brunnackerweg 5",
+    "city": "88299 Leutkirch im Allgäu"
+  },
+  "disputeResolution": {
+    "title": "EU-Streitschlichtung",
+    "text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/. Unsere E-Mail-Adresse finden Sie oben im Impressum."
+  },
+  "disclaimer": {
+    "title": "Haftungsausschluss",
+    "content": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+  }
+}

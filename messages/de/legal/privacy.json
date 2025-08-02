@@ -1,0 +1,92 @@
+{
+  "MetaData": {
+    "title": "Datenschutzerklärung",
+    "description": "Informationen darüber, wie wir Ihre personenbezogenen Daten bei der Nutzung unserer Website handhaben und schützen."
+  },
+  "title": "Datenschutzerklärung",
+  "overview": {
+    "title": "1. Datenschutz auf einen Blick",
+    "generalInfo": {
+      "title": "Allgemeine Hinweise",
+      "text": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung."
+    },
+    "dataCollection": {
+      "title": "Datenerfassung auf dieser Website",
+      "responsible": {
+        "title": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+        "text": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt \u201EHinweis zur Verantwortlichen Stelle\u201C in dieser Datenschutzerklärung entnehmen."
+      },
+      "howWeCollect": {
+        "title": "Wie erfassen wir Ihre Daten?",
+        "text": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten."
+      }
+    }
+  },
+  "hosting": {
+    "title": "2. Hosting",
+    "text": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter:",
+    "externalHosting": {
+      "title": "Externes Hosting",
+      "text": "Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln."
+    }
+  },
+  "responsibleParty": {
+    "title": "Hinweis zur verantwortlichen Stelle",
+    "text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+    "company": {
+      "name": "De Araújo Albrecht & Zaghloul",
+      "type": "GbR",
+      "address": "Brunnackerweg 5",
+      "city": "88299 Leutkirch im Allgäu",
+      "country": "Deutschland",
+      "phone": "+49 17643624719",
+      "email": "info@albrecht-marketing.com"
+    }
+  },
+  "storageDuration": {
+    "title": "Speicherdauer",
+    "text": "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben."
+  },
+  "rights": {
+    "title": "Ihre Rechte",
+    "dataAccess": {
+      "title": "Auskunft, Berichtigung und Löschung",
+      "text": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten."
+    },
+    "revocation": {
+      "title": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+      "text": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt."
+    },
+    "complaint": {
+      "title": "Beschwerderecht bei der zuständigen Aufsichtsbehörde",
+      "text": "Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe."
+    }
+  },
+  "dataCollection": {
+    "title": "Datenerfassung auf dieser Website",
+    "cookies": {
+      "title": "Cookies",
+      "text": "Unsere Internetseiten verwenden so genannte 'Cookies'. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert."
+    },
+    "serverLogs": {
+      "title": "Server-Log-Dateien",
+      "text": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt.",
+      "items": "Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse"
+    },
+    "contactForm": {
+      "title": "Kontaktformular",
+      "text": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert."
+    }
+  },
+  "tools": {
+    "title": "Tools und Dienste von Drittanbietern",
+    "googleFonts": {
+      "title": "Google Fonts",
+      "text": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen."
+    },
+    "reCaptcha": {
+      "title": "Google reCAPTCHA",
+      "text": "Wir nutzen Google reCAPTCHA auf dieser Website. Mit reCAPTCHA soll überprüft werden, ob die Dateneingabe auf dieser Website durch einen Menschen oder durch ein automatisiertes Programm erfolgt."
+    }
+  }
+}

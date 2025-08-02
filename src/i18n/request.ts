@@ -37,6 +37,10 @@ async function loadTranslations(locale: string) {
       thankYou: (await import(`../../messages/${locale}/contact/thankYou.json`)).default,
       general: (await import(`../../messages/${locale}/contact/general.json`)).default,
     },
+    legal: {
+      privacy: (await import(`../../messages/${locale}/legal/privacy.json`)).default,
+      imprint: (await import(`../../messages/${locale}/legal/imprint.json`)).default,
+    },
   };
 
   // Return the modules directly without merging

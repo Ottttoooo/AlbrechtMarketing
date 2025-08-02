@@ -102,9 +102,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/imprint">
+                <Link href="/legal/imprint">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link6")}
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/privacy">
+                  <span className="text-gray-400 hover:text-white transition-colors">
+                    {t("column2.link7")}
                   </span>
                 </Link>
               </li>

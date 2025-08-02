@@ -1,0 +1,46 @@
+{
+  "MetaData": {
+    "title": "Imprint",
+    "description": "Legal information and contact details of Albrecht Marketing"
+  },
+  "title": "Imprint",
+  "companyInfo": {
+    "title": "Information according to § 5 TMG",
+    "name": "De Araújo Albrecht & Zaghloul",
+    "type": "GbR",
+    "address": "Brunnackerweg 5",
+    "city": "88299 Leutkirch im Allgäu",
+    "country": "Germany"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Phone: +49 17643624719",
+    "email": "Email: info@albrecht-marketing.com"
+  },
+  "representatives": {
+    "title": "Represented by",
+    "members": [
+      "Leonhard de Araújo Albrecht",
+      "Mohammad Zaghloul"
+    ]
+  },
+  "vatId": {
+    "title": "VAT ID",
+    "text": "Value added tax identification number according to § 27 a of the Value Added Tax Act:",
+    "id": "DE 365 474 100"
+  },
+  "responsibility": {
+    "title": "Editorially responsible",
+    "name": "Leonhard de Araújo Albrecht",
+    "address": "Brunnackerweg 5",
+    "city": "88299 Leutkirch im Allgäu"
+  },
+  "disputeResolution": {
+    "title": "EU dispute resolution",
+    "text": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/. You can find our email address in the imprint above."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "content": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+  }
+}

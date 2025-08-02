@@ -156,12 +156,88 @@ export default function HomePageClient() {
             bg-[length:1000px_auto] 
             bg-[position:right_-150px_bottom_0px] 
             bg-no-repeat
-            sm:bg-[url('/images/hero/hero-bg-final.svg')] 
+            sm:bg-[url('/images/hero/man.svg')] 
             sm:bg-[length:1300px_auto] 
             sm:bg-[position:right_-200px_bottom_0px]
             md:bg-bottom 
             md:bg-cover
+            z-50
+          "
+        />
+
+        {/* Sun */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            sm:min-h-screen 
+            bg-[length:1000px_auto] 
+            bg-[position:right_-150px_bottom_0px] 
+            bg-no-repeat
+            sm:bg-[url('/images/hero/sun.svg')] 
+            sm:bg-[length:1300px_auto] 
+            sm:bg-[position:right_-200px_bottom_0px]
+            md:bg-bottom 
+            md:bg-cover
+            z-20
+            blur-[2px]
+          "
+        />
+
+        {/* WaterFront */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            sm:min-h-screen 
+            bg-[length:1000px_auto] 
+            bg-[position:right_-150px_bottom_0px] 
+            bg-no-repeat
+            sm:bg-[url('/images/hero/waterFront.svg')] 
+            sm:bg-[length:1300px_auto] 
+            sm:bg-[position:right_-200px_bottom_0px]
+            md:bg-bottom 
+            md:bg-cover
+            z-30
+          "
+        />
+
+        {/* WaterMid */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            sm:min-h-screen 
+            bg-[length:1000px_auto] 
+            bg-[position:right_-150px_bottom_0px] 
+            bg-no-repeat
+            sm:bg-[url('/images/hero/waterMid.svg')] 
+            sm:bg-[length:1300px_auto] 
+            sm:bg-[position:right_-200px_bottom_0px]
+            md:bg-bottom 
+            md:bg-cover
+            sm:animate-waterMidFloat
+            z-20
+          "
+        />
+
+        {/* WaterBack */}
+        <div
+          className="
+            absolute 
+            inset-0 
+            sm:min-h-screen 
+            bg-[length:1000px_auto] 
+            bg-[position:right_-150px_bottom_0px] 
+            sm:bg-[url('/images/hero/waterBack.svg')] 
+            sm:bg-[length:110%_auto]
+            sm:bg-center
+            sm:bg-repeat-x
             z-10
+            sm:animate-waterBackFloat
+            sm:will-change-transform
+            blur-[1px]
+            opacity-70
           "
         />
 
@@ -180,6 +256,8 @@ export default function HomePageClient() {
             sm:animate-cloudFloat
             z-0
             sm:will-change-transform
+            opacity-70
+            blur-[2px]
           "
         />
 
@@ -198,9 +276,14 @@ export default function HomePageClient() {
               {/* List of bullet points */}
               <ul className="mb-4 text-lg">
                 {listItems.map((item: string, index: number) => (
-                  <li key={index} className="
+                  <li
+                    key={index}
+                    className="
                   [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)] 
-                  sm:[text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral),_-2px_-2px_0_theme(colors.lightNeutral),_2px_-2px_0_theme(colors.lightNeutral),_-2px_2px_0_theme(colors.lightNeutral),_2px_2px_0_theme(colors.lightNeutral),_-3px_-3px_0_theme(colors.lightNeutral),_3px_-3px_0_theme(colors.lightNeutral),_-3px_3px_0_theme(colors.lightNeutral),_3px_3px_0_theme(colors.lightNeutral)]">{item}</li>
+                  sm:[text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral),_-2px_-2px_0_theme(colors.lightNeutral),_2px_-2px_0_theme(colors.lightNeutral),_-2px_2px_0_theme(colors.lightNeutral),_2px_2px_0_theme(colors.lightNeutral),_-3px_-3px_0_theme(colors.lightNeutral),_3px_-3px_0_theme(colors.lightNeutral),_-3px_3px_0_theme(colors.lightNeutral),_3px_3px_0_theme(colors.lightNeutral)]"
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
 

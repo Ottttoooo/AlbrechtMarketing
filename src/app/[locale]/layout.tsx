@@ -7,7 +7,8 @@ import "../globals.css";
 import Footer from "../components/common/Footer";
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
 import NavBarWrapper from "../components/common/NavBarWrapper";
-import ReCaptchaProvider from "@/components/providers/ReCaptchaProvider";
+import ReCaptchaProvider from "@/components/providers/ReCaptchaProvider"
+import CookieConsentBanner from "../components/CookieConsentBanner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -53,6 +54,7 @@ export default async function LocaleLayout({
             <NavBarWrapper />
             {children}
             <Footer />
+            <CookieConsentBanner />
           </ReCaptchaProvider>
         </NextIntlClientProvider>
       </body>
