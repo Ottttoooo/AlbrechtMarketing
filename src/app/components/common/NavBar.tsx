@@ -18,7 +18,7 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
   const bgcolor = bgColor;
 
   return (
-    <nav className={`${bgcolor.bgColor} py-3 sticky top-0 w-full z-50`}>
+    <nav className={`${bgcolor.bgColor} py-3 sticky top-0 w-full z-[100]`}>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
