@@ -12,7 +12,7 @@ export default function PricingSection() {
   const [isSixMonths, setIsSixMonths] = useState(false);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 py-12">
+    <div className="max-w-[1200px] mx-auto px-2 sm:px-4 sm:py-12">
       {/* Toggle for 3/6 Months Pricing - Only for Grow & Maintain */}
       <div
         className={`flex justify-center items-center mb-6 transition-all duration-300 ${
@@ -105,7 +105,7 @@ export default function PricingSection() {
                 {Object.keys(
                   t.raw(`packages.${selectedPackage}.tiers.${tier}.features`)
                 ).map((key, idx) => (
-                  <li key={idx} className="mb-2 flex items-start">
+                  <li key={idx} className="mb-2 flex items-start text-sm sm:text-base">
                     <span className="mr-2">✅</span>{" "}
                     {t(
                       `packages.${selectedPackage}.tiers.${tier}.features.${key}`

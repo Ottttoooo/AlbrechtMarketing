@@ -18,7 +18,7 @@ const SecondaryButton: React.FC<buttonProps> = ({ color, text }) => {
   return (
     <Link href={"/pricing"}>
       <div
-        className={`flex justify-center items-center  radius px-5 py-2 rounded-lg max-w-max w-max h-max ${textClasses} ${textHoverClasses} ${bgHoverClasses} transition-all font-medium text-sm cursor-pointer ${borderClasses} border-[1px] lg:text-lg md:text-base`}
+        className={`flex justify-center items-center  radius px-5 py-2 rounded-lg max-w-max w-max h-max ${textClasses} ${textHoverClasses} ${bgHoverClasses} transition-all font-medium text-xs sm:text-sm cursor-pointer ${borderClasses} border-[1px] lg:text-lg md:text-base`}
       >
         <p>{text}</p>
       </div>

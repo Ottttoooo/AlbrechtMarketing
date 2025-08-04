@@ -10,6 +10,39 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        gradient: "gradient 4s linear infinite",
+        cloudFloat: "cloudFloat 180s linear infinite",
+        waterBackFloat: "waterBackFloat 30s linear infinite",
+        waterMidFloat: "waterMidFloat 15s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        cloudFloat: {
+          "0%": { "background-position-x": "0%" },
+          "100%": { "background-position-x": "100%" },
+        },
+        waterBackFloat: {
+          "0%": { "background-position": "0% 70%" },
+          "25%": { "background-position": "5% 75%" },
+          "50%": { "background-position": "0% 80%" },
+          "75%": { "background-position": "5% 75%" },
+          "100%": { "background-position": "0% 70%" },
+        },
+        waterMidFloat: {
+          "0%": { "background-position": "0% 100%" },
+          "25%": { "background-position": "5% 90%" },
+          "50%": { "background-position": "0% 95%" },
+          "75%": { "background-position": "5% 90%" },
+          "100%": { "background-position": "0% 100%" },
+        },
+      },
+      backgroundSize: {
+        "300%": "500%",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -68,31 +101,6 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      animation: {
-        cloudFloat: "cloudFloat 180s linear infinite",
-        waterBackFloat: "waterBackFloat 30s linear infinite",
-        waterMidFloat: "waterMidFloat 15s linear infinite",
-      },
-      keyframes: {
-        cloudFloat: {
-          "0%": { "background-position-x": "0%" },
-          "100%": { "background-position-x": "100%" },
-        },
-        waterBackFloat: {
-          "0%": { "background-position": "0% 70%" },
-          "25%": { "background-position": "5% 75%" },
-          "50%": { "background-position": "0% 80%" },
-          "75%": { "background-position": "5% 75%" },
-          "100%": { "background-position": "0% 70%" },
-        },
-        waterMidFloat: {
-          "0%": { "background-position": "0% 100%" },
-          "25%": { "background-position": "5% 90%" },
-          "50%": { "background-position": "0% 95%" },
-          "75%": { "background-position": "5% 90%" },
-          "100%": { "background-position": "0% 100%" },
-        },
       },
     },
   },

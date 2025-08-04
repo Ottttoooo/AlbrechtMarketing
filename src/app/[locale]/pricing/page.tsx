@@ -35,7 +35,7 @@ function PricingPage() {
         </div>
       </section> */}
 
-      <section className="flex flex-col items-center justify-center w-full px-8 py-20">
+      <section className="flex flex-col items-center justify-center w-full px-2 py-6 sm:px-8 sm:py-20">
         <div className="flex flex-col w-full max-w-[1200px] overflow-hidden">
           <h2 className="font-bold text-3xl sm:text-5xl text-center">
             {t("packages.title")}

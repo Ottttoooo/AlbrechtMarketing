@@ -6,7 +6,7 @@ import Buttons from "../common/Buttons";
 import InfoBox from "./InfoBox";
 import CTACard from "../common/CTACard";
 import FAQItem from "./FAQItem";
-import ReviewCard from "./ReviewCard";
+// import ReviewCard from "./ReviewCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -99,7 +99,7 @@ export default function HomePageClient() {
   const secondaryButtonText = tCommon("secondaryButton.text");
 
   // Reviews section
-  const reviewsHeading = tHomepage("reviewsSection.heading");
+  // const reviewsHeading = tHomepage("reviewsSection.heading");
 
   // FAQ section
   const faqSection: FAQSection = {
@@ -139,7 +139,8 @@ export default function HomePageClient() {
           items-center 
           w-full 
           px-8 
-          pt-24 
+          pt-20
+          sm:pt-24 
           pb-36 
           sm:min-h-screen 
         bg-lightNeutral 
@@ -249,7 +250,6 @@ export default function HomePageClient() {
             w-full
             h-full
             bg-no-repeat
-            bg-[url('/images/hero/aaclouds.svg')]
             sm:bg-[url('/images/hero/movingClouds.svg')] 
             sm:bg-[length:200%_auto] 
             bg-center
@@ -261,20 +261,35 @@ export default function HomePageClient() {
           "
         />
 
-        <div className="w-full max-w-[1200px] z-50">
+        <div className="w-full max-w-[1200px] z-50 pb-32">
           <div className="flex Hero-content w-full lg:w-2/3 items-center ">
             <div className="flex flex-col max-w-max mr-5">
               {/* Heading */}
-              <h1 className="mb-1 text-3xl sm:text-5xl font-eras_itc_demi [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)]">
+              <h1 className="
+              mb-1 
+              text-3xl 
+              sm:text-6xl 
+              sm: pb-2
+              text-darkNeutral
+              font-eras_itc_demi 
+              bg-gradient-to-r
+              from-primaryHover
+              to-primary
+              bg-clip-text 
+              text-transparent 
+              animate-gradient 
+              bg-300%
+              drop-shadow-lg
+              ">
                 {heroHeading}
               </h1>
 
-              <h2 className="mb-4 w-3/4 text-lg  sm:text-xl [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)]">
+              <h2 className="mb-4 w-3/4 text-sm  sm:text-xl [text-shadow:_-1px_-1px_0_theme(colors.lightNeutral),_1px_-1px_0_theme(colors.lightNeutral),_-1px_1px_0_theme(colors.lightNeutral),_1px_1px_0_theme(colors.lightNeutral)]">
                 {heroSubHeading}
               </h2>
 
               {/* List of bullet points */}
-              <ul className="mb-4 text-lg">
+              <ul className="mb-4 text-sm sm:text-lg">
                 {listItems.map((item: string, index: number) => (
                   <li
                     key={index}
@@ -537,7 +552,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Reviews Section */}
-      <section
+      {/* <section
         id="reviewsSection"
         className="flex flex-col items-center justify-center w-full px-8 py-32 bg-slate-200"
       >
@@ -565,7 +580,7 @@ export default function HomePageClient() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section
