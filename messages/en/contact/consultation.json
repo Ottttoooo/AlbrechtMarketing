@@ -136,6 +136,15 @@
         "label": "Additional Information",
         "placeholder": "Enter any additional information or comments"
       },
+      "privacyPolicy": {
+        "label": "I agree to the privacy policy",
+        "error": "You must agree to the privacy policy to proceed",
+        "link": "Read privacy policy"
+      },
+      "newsletter": {
+        "label": "I want to subscribe to the newsletter to receive news and offers",
+        "error": "Please select whether you want to receive the newsletter"
+      },
       "errors": {
         "captcha": {
           "required": "Please complete the CAPTCHA verification"

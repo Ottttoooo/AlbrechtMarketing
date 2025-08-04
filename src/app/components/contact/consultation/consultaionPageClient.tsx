@@ -4,7 +4,7 @@ import { useMultistepForm } from "@/hooks/useMultistepForm";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormReturn } from "react-hook-form";
 import { useTranslations } from "next-intl";
-import * as z from "zod";
+
 import { Form } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CheckIcon, XIcon } from "lucide-react";
@@ -17,16 +17,18 @@ import {
 } from "react";
 import { sendConsultationEmail } from "@/app/actions";
 import { useRouter } from "next/navigation"; // Fixed import
-import { Step1 } from "./steps/Step1";
-import { Step2 } from "./steps/Step2";
-import { Step3 } from "./steps/Step3";
-import { Step4 } from "./steps/Step4";
-import { Step5 } from "./steps/step5";
+import { Step1 } from "@/app/components/contact/consultation/steps/Step1";
+import { Step2 } from "@/app/components/contact/consultation/steps/Step2";
+import { Step3 } from "@/app/components/contact/consultation/steps/Step3";
+import { Step4 } from "@/app/components/contact/consultation/steps/Step4";
+import { Step5 } from "@/app/components/contact/consultation/steps/step5";
 import { useStepValidation } from "@/hooks/useStepValidation";
-import { ConsultationFormData } from "@/types";
+import { ConsultationFormData, consultationSchema } from "@/types";
+
+export type FormType = UseFormReturn<ConsultationFormData>;
 
 export interface StepProps {
-  form: UseFormReturn<ConsultationFormData>;
+  form: FormType;
 }
 
 type StepKey = keyof ConsultationFormData;
@@ -36,58 +38,6 @@ function ConsultationContactPage() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const consultationSchema = z.object({
-    step1: z.object({
-      firstName: z.string().min(1, { message: t("errors.firstName.required") }),
-      lastName: z.string().min(1, { message: t("errors.lastName.required") }),
-      companyName: z
-        .string()
-        .min(1, { message: t("errors.companyName.required") }),
-      industry: z.string().min(1, { message: t("errors.industry.required") }),
-      companyAge: z
-        .string()
-        .min(1, { message: t("errors.companyAge.required") }),
-      companyDescription: z.string().optional(),
-      country: z.string().min(1, { message: t("errors.country.required") }),
-      state: z.string().min(1, { message: t("errors.state.required") }),
-      email: z
-        .string()
-        .email({ message: t("errors.email.invalid") })
-        .optional(),
-      phone: z.string().optional(),
-    }),
-    step2: z.object({
-      website: z.string().optional(),
-      instagram: z.string().optional(),
-      facebook: z.string().optional(),
-      tiktok: z.string().optional(),
-      youtube: z.string().optional(),
-      x: z.string().optional(),
-    }),
-    step3: z.object({
-      phase: z.array(z.string()).refine((value) => value.some((item) => item), {
-        message: t("errors.phase.required"),
-      }),
-      challenges: z
-        .array(z.string())
-        .refine((value) => value.some((item) => item), {
-          message: t("errors.challenges.required"),
-        }),
-    }),
-    step4: z.object({
-      launchBudget: z
-        .string()
-        .min(1, { message: t("errors.launchBudget.required") }),
-      runningBudget: z
-        .string()
-        .min(1, { message: t("errors.runningBudget.required") }),
-    }),
-    step5: z.object({
-      additionalInfo: z.string().optional(),
-      captcha: z.string().min(1, { message: t("errors.captcha.required") }),
-    }),
-  });
 
   const form = useForm<ConsultationFormData>({
     resolver: zodResolver(consultationSchema),
@@ -122,6 +72,9 @@ function ConsultationContactPage() {
       },
       step5: {
         additionalInfo: "",
+        privacyPolicy: false,
+        newsletter: false,
+        captcha: "",
       },
     },
     mode: "onSubmit",
@@ -190,22 +143,40 @@ function ConsultationContactPage() {
   const handleNext = useCallback(async () => {
     const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4", "step5"];
     const currentStepKey = stepKeys[currentStepIndex];
-    if (stepIsEdited(currentStepIndex)) {
-      await form.trigger(currentStepKey);
+    
+    // Always validate current step before proceeding
+    const isValid = await form.trigger(currentStepKey);
+    if (!isValid) {
+      return;
     }
+    
     next();
-  }, [currentStepIndex, stepIsEdited, next, form]);
+  }, [currentStepIndex, next, form]);
 
   const handleGoTo = useCallback(
     async (index: number) => {
-      const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4"];
-      const maxStep = Math.max(currentStepIndex, index);
-      for (let i = 0; i <= maxStep; i++) {
-        if (stepIsEdited(i)) {
-          const key = stepKeys[i];
-          await form.trigger(key);
+      const stepKeys: StepKey[] = ["step1", "step2", "step3", "step4", "step5"];
+      const currentKey = stepKeys[currentStepIndex];
+      
+      // Always validate current step before allowing navigation
+      const isValid = await form.trigger(currentKey);
+      if (!isValid) {
+        return;
+      }
+      
+      // Validate all steps up to the target step if moving forward
+      if (index > currentStepIndex) {
+        for (let i = 0; i <= index; i++) {
+          if (stepIsEdited(i)) {
+            const key = stepKeys[i];
+            const stepValid = await form.trigger(key);
+            if (!stepValid) {
+              return;
+            }
+          }
         }
       }
+      
       goTo(index);
     },
     [currentStepIndex, goTo, stepIsEdited, form]
@@ -295,7 +266,7 @@ function ConsultationContactPage() {
                   )}
                   className="space-y-4"
                 >
-                  {submitError && currentStepIndex === 3 && (
+                  {submitError && (
                     <Alert variant="destructive">
                       <AlertDescription>{t("submitError")}</AlertDescription>
                     </Alert>

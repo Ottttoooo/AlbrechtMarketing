@@ -14,6 +14,15 @@ body {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
+.cookie-consent-button:hover{
+  background-color: theme("colors.primaryHover") !important;
+}
+
+.cookie-consent-decline-button:hover{
+  background-color: #fff !important;
+  color: theme("colors.darkNeutral") !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

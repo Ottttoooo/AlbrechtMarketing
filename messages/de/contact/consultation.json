@@ -135,6 +135,15 @@
         "label": "Zusätzliche Informationen",
         "placeholder": "Geben Sie zusätzliche Informationen oder Kommentare ein"
       },
+      "privacyPolicy": {
+        "label": "Ich stimme der Datenschutzerklärung zu",
+        "error": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren",
+        "link": "Datenschutzerklärung lesen"
+      },
+      "newsletter": {
+        "label": "Ich möchte den Newsletter abonnieren und über Neuigkeiten und Angebote informiert werden",
+        "error": "Bitte wählen Sie aus, ob Sie den Newsletter erhalten möchten"
+      },
       "errors": {
         "captcha": {
           "required": "Bitte schließen Sie die CAPTCHA-Überprüfung ab"

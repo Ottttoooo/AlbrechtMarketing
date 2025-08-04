@@ -10,11 +10,18 @@ export default function ReCaptchaProvider({
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+      useEnterprise={false}
       scriptProps={{
-        async: false,
-        defer: false,
+        async: true, // Changed to true for better performance
+        defer: true, // Changed to true for better performance
         appendTo: "head",
         nonce: undefined,
+      }}
+      container={{ // Added explicit container parameters
+        parameters: {
+          badge: 'bottomright',
+          theme: 'light'
+        }
       }}
     >
       {children}

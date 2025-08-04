@@ -12,10 +12,14 @@ import { StepProps } from "../consultaionPageClient";
 import { useTranslations } from "next-intl";
 import { Textarea } from "@/components/ui/textarea";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export const Step5 = ({ form }: StepProps) => {
   const t = useTranslations("contact.consultation.multiStepForm.step5");
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const locale = useLocale();
 
   // Execute reCAPTCHA when component mounts
   useEffect(() => {
@@ -52,6 +56,57 @@ export const Step5 = ({ form }: StepProps) => {
           </FormItem>
         )}
       />
+
+      <div className="space-y-4 mt-6">
+        <FormField
+          control={form.control}
+          name="step5.privacyPolicy"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  {t("privacyPolicy.label")}{" "}
+                  <Link
+                    href={`/${locale}/legal/privacy`}
+                    className="text-primary hover:underline"
+                    target="_blank"
+                  >
+                    {t("privacyPolicy.link")}
+                  </Link>
+                </FormLabel>
+                <FormMessage />
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="step5.newsletter"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  {t("newsletter.label")}
+                </FormLabel>
+                <FormMessage />
+              </div>
+            </FormItem>
+          )}
+        />
+      </div>
     </>
   );
 };
