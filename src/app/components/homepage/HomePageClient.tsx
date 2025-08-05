@@ -372,7 +372,7 @@ export default function HomePageClient() {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="w-full max-w-[1200px] flex flex-col items-center py-32 gap-5">
           <h2 className="font-bold text-3xl sm:text-5xl">{servicesHeading}</h2>
@@ -463,7 +463,7 @@ export default function HomePageClient() {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
@@ -483,7 +483,7 @@ export default function HomePageClient() {
                 initial={{ opacity: 0, x: 70 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.9, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
@@ -503,7 +503,7 @@ export default function HomePageClient() {
                 initial={{ opacity: 0, x: 90 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">
@@ -523,7 +523,7 @@ export default function HomePageClient() {
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.1, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <div className={`${stepsNumberClasses}`}>
                   <p className="font-bold text-3xl sm:text-5xl text-lightNeutral">

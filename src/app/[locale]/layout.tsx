@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import "../globals.css";
 import Footer from "../components/common/Footer";
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google";
@@ -52,7 +52,9 @@ export default async function LocaleLayout({
       <body className="bg-lightNeutral">
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <ClientAnalytics />
+            <Suspense fallback={null}>
+              <ClientAnalytics />
+            </Suspense>
             <NavBarWrapper />
             {children}
             <Footer />

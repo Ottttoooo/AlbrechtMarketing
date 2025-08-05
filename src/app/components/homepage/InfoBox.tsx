@@ -30,10 +30,10 @@ const InfoBox: React.FC<InfoBoxProps> = ({
   return (
     <motion.section
       className={`flex flex-col ${containerClasses} gap-12 align-middle`}
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="min-w-[33%] flex justify-center">
         {/* You can use next/image or a plain img tag here */}
