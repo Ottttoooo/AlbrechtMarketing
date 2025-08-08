@@ -55,7 +55,10 @@
       "heading": "Newsletter",
       "text1": "Abonniere unseren Newsletter, um die neuesten Updates zu erhalten.",
       "placeholder": "E-Mail Eingeben",
-      "button": "Abonnieren"
+      "button": "Abonnieren",
+      "submitting": "Wird gesendet...",
+      "success": "Du bist angemeldet!",
+      "error": "Anmeldung fehlgeschlagen. Bitte erneut versuchen."
     },
     "bottomSection": {
       "text": "Albrecht Marketing. Alle Rechte vorbehalten."

@@ -7,11 +7,35 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { subscribeNewsletter } from "@/app/actions";
 
 const Footer = () => {
   const t = useTranslations("common.Footer");
   const [hovered, setHovered] = useState<boolean>(false); // ✅ Define type explicitly
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle"|"success"|"error">("idle");
+  const [message, setMessage] = useState("");
+  const [isPending, startTransition] = useTransition();
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("idle");
+    setMessage("");
+    const trimmed = email.trim();
+    if (!trimmed) return;
+    startTransition(async () => {
+      const res = await subscribeNewsletter(trimmed);
+      if (res.success) {
+        setStatus("success");
+        setMessage(t("column4.success"));
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(t("column4.error"));
+      }
+    });
+  };
   return (
     <footer className="bg-darkNeutral text-lightNeutral">
       <div className="max-w-7xl mx-auto py-8 px-8 sm:px-6 lg:px-8">
@@ -164,19 +188,26 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">{t("column4.heading")}</h3>
             <p className="text-gray-300 mb-4">{t("column4.text1")}</p>
-            <form className="flex flex-wrap gap-2 ">
+            <form className="flex flex-wrap gap-2" onSubmit={onSubmit}>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("column4.placeholder")}
                 className="px-3 py-2 w-1/2 md:w-full rounded focus:outline-none text-gray-800"
                 aria-label={t("column4.placeholder")}
+                required
               />
               <button
                 type="submit"
-                className="bg-primary hover:bg-opacity-90 text-white px-4 py-2 rounded"
+                disabled={isPending}
+                className="bg-primary disabled:opacity-60 hover:bg-opacity-90 text-white px-4 py-2 rounded"
               >
-                {t("column4.button")}
+                {isPending ? t("column4.submitting") : t("column4.button")}
               </button>
+              {message && (
+                <p className={`w-full text-sm ${status === 'error' ? 'text-red-400' : 'text-green-400'}`}>{message}</p>
+              )}
             </form>
           </div>
         </div>

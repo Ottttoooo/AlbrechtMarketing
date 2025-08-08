@@ -3,6 +3,7 @@
 import { Resend } from "resend";
 import { getTranslations } from "next-intl/server"; // For i18n in server actions
 import { ConsultationFormData, ContactFormData, PricingFormData } from '../types';
+import { addSubscriber } from '../lib/newsletterStore';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const resend2 = new Resend(process.env.RESEND_API_KEY2);
@@ -97,6 +98,10 @@ export async function sendConsultationEmail(data: ConsultationFormData) {
       subject: t("emailFormat.subject"),
       html: emailContent,
     });
+    // Persist newsletter opt-in
+    if (data.step5?.newsletter && data.step1?.email) {
+      await addSubscriber({ email: data.step1.email, source: 'consultation' });
+    }
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {
@@ -152,6 +157,9 @@ export async function sendPricingEmail(data: PricingFormData) {
       subject: t("emailFormat.subject"),
       html: emailContent,
     });
+    if (data.step5?.newsletter && data.step1?.email) {
+      await addSubscriber({ email: data.step1.email, source: 'pricing' });
+    }
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {
@@ -159,5 +167,18 @@ export async function sendPricingEmail(data: PricingFormData) {
     } else {
       return { success: false, error: "Unknown error occurred" };
     }
+  }
+}
+
+// Standalone newsletter subscription (footer)
+export async function subscribeNewsletter(email: string, locale?: string) {
+  if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return { success: false, error: 'Invalid email' };
+  }
+  try {
+    await addSubscriber({ email, source: 'footer', locale });
+    return { success: true };
+  } catch (e) {
+    return { success: false, error: e instanceof Error ? e.message : 'Unknown error' };
   }
 }

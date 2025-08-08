@@ -55,7 +55,10 @@
       "heading": "Newsletter",
       "text1": "Subscribe to our newsletter for the latest updates.",
       "placeholder": "Enter Email",
-      "button": "Subscribe"
+      "button": "Subscribe",
+      "submitting": "Submitting...",
+      "success": "You're subscribed!",
+      "error": "Subscription failed. Try again."
     },
     "bottomSection": {
       "text": "Albrecht Marketing. All rights reserved."
