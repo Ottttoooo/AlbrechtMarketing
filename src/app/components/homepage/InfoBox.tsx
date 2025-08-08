@@ -29,7 +29,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
 
   return (
     <motion.section
-      className={`flex flex-col ${containerClasses} gap-12 align-middle`}
+      className={`flex flex-col ${containerClasses} gap-12 align-middle bg-cardbg shadow-md rounded-3xl py-8 px-16`}
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -42,7 +42,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
           alt={imageAlt}
           width={400}
           height={400}
-          className="w-[200px] md:w-full"
+          className="w-[250px] h-auto"
         />
       </div>
 

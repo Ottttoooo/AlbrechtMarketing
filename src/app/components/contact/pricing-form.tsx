@@ -1,622 +1,311 @@
 "use client";
-
-import type React from "react";
-import { useState } from "react";
-import { useSearchParams } from "next/navigation";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { CheckIcon } from "lucide-react";
-import { XIcon } from "lucide-react"; // Add XIcon import
-import { Alert, AlertDescription } from "@/components/ui/alert"; // Add Alert import
+import { useMultistepForm } from "@/hooks/useMultistepForm";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, UseFormReturn } from "react-hook-form";
+import { useTranslations } from "next-intl";
+import { Form } from "@/components/ui/form";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { CheckIcon, XIcon } from "lucide-react";
+import {
+  ComponentType,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { sendPricingEmail } from "@/app/actions";
+import { useRouter, useSearchParams } from "next/navigation";
+import { PricingFormData, pricingSchema, PricingStepKey } from "@/types";
+import { useStepValidation } from "@/hooks/useStepValidation";
 
-// Define the form data schema with Zod
-const formSchema = z.object({
-  package: z.string().nonempty({ message: "errors.package.required" }),
-  tier: z.string().nonempty({ message: "errors.tier.required" }),
-  name: z.string().nonempty({ message: "errors.name.required" }),
-  email: z
-    .string()
-    .email({ message: "errors.email.invalid" })
-    .nonempty({ message: "errors.email.required" }),
-  phone: z.string().optional(),
-  company: z.string().nonempty({ message: "errors.company.required" }),
-  businessDescription: z
-    .string()
-    .nonempty({ message: "errors.businessDescription.required" }),
-  website: z.string().optional(),
-  goals: z.array(z.string()).min(1, { message: "errors.goals.required" }),
-  services: z.array(z.string()).min(1, { message: "errors.services.required" }),
-  branding: z.string().nonempty({ message: "errors.branding.required" }),
-  budget: z.string().nonempty({ message: "errors.budget.required" }),
-  timeline: z.string().nonempty({ message: "errors.timeline.required" }),
-  additionalNotes: z.string().optional(),
-});
+// Import step components (we'll create these next)
+import { PricingStep1 } from "./pricing/steps/Step1";
+import { PricingStep2 } from "./pricing/steps/Step2";
+import { PricingStep3 } from "./pricing/steps/Step3";
+import { PricingStep4 } from "./pricing/steps/Step4";
+import { PricingStep5 } from "./pricing/steps/Step5";
 
-type FormData = z.infer<typeof formSchema>;
+export type PricingFormType = UseFormReturn<PricingFormData>;
 
-export default function PricingContactForm() {
-  const t = useTranslations("contact.pricing.priceContactForm");
+export interface PricingStepProps {
+  form: PricingFormType;
+}
+
+function PricingContactForm() {
+  const t = useTranslations("contact.pricing.multiStepForm");
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const [currentStep, setCurrentStep] = useState(1);
-  const [submitError, setSubmitError] = useState(false); // Add state for submission error
+  const [submitError, setSubmitError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const stepHasErrors = (step: number): boolean => {
-    const fields = getFieldsForStep(step);
-    return fields.some((field) => !!errors[field]);
-  };
+  // Get package and tier from URL params
+  const urlPackage = searchParams.get("package") as "start" | "grow" | "maintain" | null;
+  const urlTier = searchParams.get("tier") as "basic" | "advanced" | "custom" | null;
 
-  // Get preselected package and tier from query params
-  const preselectedPackage = searchParams.get("package") || "";
-  const preselectedTier = searchParams.get("tier") || "";
-
-  // Initialize React Hook Form
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    watch,
-    formState: { errors },
-    trigger,
-  } = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<PricingFormData>({
+    resolver: zodResolver(pricingSchema),
     defaultValues: {
-      package: preselectedPackage,
-      tier: preselectedTier,
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      businessDescription: "",
-      website: "",
-      goals: [],
-      services: [],
-      branding: "",
-      budget: "",
-      timeline: "",
-      additionalNotes: "",
+      step1: {
+        selectedPackage: urlPackage || "start",
+        selectedTier: urlTier || "basic",
+        companyName: "",
+        industry: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+      },
+      step2: {
+        currentSituation: "",
+        primaryGoals: [],
+        timeline: "",
+      },
+      step3: {
+        packageSpecific: {},
+      },
+      step4: {
+        budgetRange: "",
+        additionalServices: [],
+        startDate: "",
+      },
+      step5: {
+        phone: "",
+        communicationPreference: "",
+        additionalInfo: "",
+        privacyPolicy: false,
+        newsletter: false,
+        captcha: "",
+      },
     },
+    mode: "onSubmit",
   });
 
-  // Watch form values
-  const formData = watch();
+  useEffect(() => {
+    console.log("Form state on render:", form.formState);
+  }, [form.formState]);
 
-  // Handle checkbox changes
-  const handleCheckboxChange = (field: "goals" | "services", value: string) => {
-    const currentValues = formData[field];
-    if (currentValues.includes(value)) {
-      setValue(
-        field,
-        currentValues.filter((item) => item !== value)
-      );
-    } else {
-      setValue(field, [...currentValues, value]);
-    }
-    trigger(field);
-  };
+  const onSubmit = async (data: PricingFormData) => {
+    try {
+      setIsSubmitting(true);
+      setSubmitError(false);
 
-  // Navigate to the next step
-  const nextStep = async () => {
-    const fieldsToValidate = getFieldsForStep(currentStep);
-    await trigger(fieldsToValidate); // Trigger validation to show errors
-    if (currentStep < 5) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
+      // First verify the CAPTCHA
+      const recaptchaResponse = await fetch("/api/verify-recaptcha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: data.step5.captcha }),
+      });
 
-  // Navigate to the previous step
-  const prevStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
+      const recaptchaResult = await recaptchaResponse.json();
 
-  // Navigate to a specific step
-  const goToStep = async (step: number) => {
-    // Trigger validation for all steps up to the target step
-    const stepsToValidate = Array.from(
-      { length: Math.max(currentStep, step) },
-      (_, i) => i + 1
-    );
-    for (const s of stepsToValidate) {
-      const fields = getFieldsForStep(s);
-      await trigger(fields);
-    }
-    setCurrentStep(step);
-  };
+      if (!recaptchaResult.success) {
+        setSubmitError(true);
+        return;
+      }
 
-  // Get fields to validate for each step
-  const getFieldsForStep = (step: number): (keyof FormData)[] => {
-    switch (step) {
-      case 1:
-        return ["package", "tier"];
-      case 2:
-        return [
-          "name",
-          "email",
-          "phone",
-          "company",
-          "businessDescription",
-          "website",
-        ];
-      case 3:
-        return ["goals", "services", "branding"];
-      case 4:
-        return ["budget", "timeline"];
-      case 5:
-        return ["additionalNotes"];
-      default:
-        return [];
+      // If CAPTCHA is valid, proceed with form submission
+      const result = await sendPricingEmail(data);
+      if (result.success) {
+        router.push("/thank-you");
+      } else {
+        setSubmitError(true);
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  // Handle form submission
-  const onSubmit = (data: FormData) => {
-    setSubmitError(false); // Reset error state on successful submission
-    console.log("Form submitted:", data);
-    alert(t("submitSuccess"));
-  };
+  interface Step {
+    component: ComponentType<PricingStepProps>;
+  }
 
-  // Add error handler for submission
-  const onSubmitError = () => {
-    setSubmitError(true);
-    // Trigger validation for all steps to show errors
-    for (let s = 1; s <= 5; s++) {
-      const fields = getFieldsForStep(s);
-      trigger(fields);
+  // Memoize steps array
+  const steps = useMemo<Step[]>(
+    () => [
+      { component: PricingStep1 },
+      { component: PricingStep2 },
+      { component: PricingStep3 },
+      { component: PricingStep4 },
+      { component: PricingStep5 },
+    ],
+    []
+  );
+
+  const { currentStepIndex, isFirstStep, isLastStep, next, back, goTo } =
+    useMultistepForm<PricingFormData>({ steps });
+
+  const { stepIsEdited, stepHasErrors } = useStepValidation(form);
+
+  const handleNext = useCallback(async () => {
+    const stepKeys: PricingStepKey[] = ["step1", "step2", "step3", "step4", "step5"];
+    const currentStepKey = stepKeys[currentStepIndex];
+    
+    // Always validate current step before proceeding
+    const isValid = await form.trigger(currentStepKey);
+    if (!isValid) {
+      return;
     }
-  };
+    
+    next();
+  }, [currentStepIndex, next, form]);
 
-  // Check if a step has been edited
-  const stepIsEdited = (step: number): boolean => {
-    const fields = getFieldsForStep(step);
-    return fields.some((field) => {
-      const value = formData[field];
-      if (Array.isArray(value)) return value.length > 0;
-      return value != null && value !== "";
-    });
-  };
+  const handleGoTo = useCallback(
+    async (index: number) => {
+      const stepKeys: PricingStepKey[] = ["step1", "step2", "step3", "step4", "step5"];
+      const currentKey = stepKeys[currentStepIndex];
+      
+      // Always validate current step before allowing navigation
+      const isValid = await form.trigger(currentKey);
+      if (index> currentStepIndex && !isValid) {
+        return;
+      }
+      
+      // Validate all steps up to the target step if moving forward
+      if (index > currentStepIndex) {
+        for (let i = 0; i <= index; i++) {
+          if (stepIsEdited(i)) {
+            const key = stepKeys[i];
+            const stepValid = await form.trigger(key);
+            if (!stepValid) {
+              return;
+            }
+          }
+        }
+      }
+      
+      goTo(index);
+    },
+    [currentStepIndex, goTo, stepIsEdited, form]
+  );
+
+  const step = useCallback(() => {
+    const CurrentStep = steps[currentStepIndex].component;
+    return <CurrentStep form={form} />;
+  }, [currentStepIndex, steps, form]);
 
   return (
-    <div className="space-y-8">
-      <div className="flex justify-between mb-8">
-        {[1, 2, 3, 4, 5].map((step) => (
-          <button
-            key={step}
-            type="button"
-            className="flex flex-col items-center focus:outline-none"
-            onClick={() => goToStep(step)}
-          >
-            <div
-              className={`w-10 h-10 rounded-full flex items-center justify-center border-2 cursor-pointer ${
-                stepIsEdited(step)
-                  ? stepHasErrors(step)
-                    ? "bg-destructive border-destructive text-destructive-foreground"
-                    : "bg-primary border-primary text-primary-foreground"
-                  : currentStep === step
-                  ? "bg-primary border-primary text-primary-foreground"
-                  : "border-gray-300 text-gray-400"
-              }`}
-            >
-              {stepIsEdited(step) ? (
-                stepHasErrors(step) ? (
-                  <XIcon className="h-5 w-5" />
-                ) : (
-                  <CheckIcon className="h-5 w-5" />
-                )
-              ) : (
-                step
-              )}
-            </div>
-            <span
-              className={`text-xs mt-2 ${
-                stepIsEdited(step)
-                  ? stepHasErrors(step)
-                    ? "text-destructive"
-                    : "text-primary"
-                  : currentStep === step
-                  ? "text-primary"
-                  : "text-gray-400"
-              }`}
-            >
-              {t(`step${step}`)}
-            </span>
-          </button>
-        ))}
+    <>
+      {/* Intro Text */}
+      <div className="w-full flex flex-col pt-32 pb-8 px-4 md:px-6 justify-center items-center ">
+        <div className="max-w-screen-lg w-screen-lg ">
+          <div className="flex flex-col w-2/3 ">
+            <h1 className="text-2xl sm:text-4xl font-extrabold mb-2 sm:text-left">
+              {t("intro.heading")}
+            </h1>
+            <p className="sm:text-left text-sm sm:text-base">
+              {t("intro.subHeading1")}
+            </p>
+            <p className="sm:text-left text-sm sm:text-base">
+              {t("intro.subHeading2")}
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Form Card */}
-      <Card>
-        <CardContent className="pt-6">
-          <form onSubmit={handleSubmit(onSubmit, onSubmitError)}>
-            {/* Step 1: Package Selection */}
-            {currentStep === 1 && (
-              <div className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">{t("step1")}</h2>
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <Label>{t("package")}</Label>
-                    <RadioGroup
-                      value={formData.package}
-                      onValueChange={(value) => {
-                        setValue("package", value);
-                        trigger("package");
-                      }}
-                    >
-                      {["start", "grow", "maintain"].map((pkg) => (
-                        <div key={pkg} className="flex items-center space-x-2">
-                          <RadioGroupItem value={pkg} id={`package-${pkg}`} />
-                          <Label
-                            htmlFor={`package-${pkg}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`packages.${pkg}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.package && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.package.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label>{t("tier")}</Label>
-                    <RadioGroup
-                      value={formData.tier}
-                      onValueChange={(value) => {
-                        setValue("tier", value);
-                        trigger("tier");
-                      }}
-                    >
-                      {["basic", "advanced", "custom"].map((tier) => (
-                        <div key={tier} className="flex items-center space-x-2">
-                          <RadioGroupItem value={tier} id={`tier-${tier}`} />
-                          <Label
-                            htmlFor={`tier-${tier}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`tiers.${tier}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.tier && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.tier.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="text-sm">
-                    <Link
-                      href="/pricing"
-                      className="text-blue-600 hover:underline"
-                    >
-                      {t("comparePackages")}
-                    </Link>
-                  </div>
+      {/* Form section */}
+      <div className="w-full flex flex-col p-4 pb-32 md:px-6 justify-center items-center ">
+        <div className="max-w-screen-lg w-full space-y-8">
+          {/* steps buttons */}
+          <div className="flex justify-between mb-8">
+            {steps.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => handleGoTo(index)}
+                className="flex flex-col items-center focus:outline-none"
+              >
+                <div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 cursor-pointer ${
+                    stepIsEdited(index)
+                      ? stepHasErrors(index)
+                        ? "bg-destructive border-destructive text-destructive-foreground"
+                        : "bg-primary border-primary text-primary-foreground"
+                      : currentStepIndex === index
+                        ? "bg-primary border-primary text-primary-foreground"
+                        : "border-gray-300 text-gray-400"
+                  }`}
+                >
+                  {stepIsEdited(index) ? (
+                    stepHasErrors(index) ? (
+                      <XIcon className="h-5 w-5" />
+                    ) : (
+                      <CheckIcon className="h-5 w-5" />
+                    )
+                  ) : (
+                    index + 1
+                  )}
                 </div>
-              </div>
-            )}
+                <span
+                  className={`text-xs mt-2 ${
+                    stepIsEdited(index)
+                      ? stepHasErrors(index)
+                        ? "text-destructive"
+                        : "text-primary"
+                      : currentStepIndex === index
+                        ? "text-primary"
+                        : "text-gray-400"
+                  }`}
+                >
+                  {t(`step${index + 1}.title`)}
+                </span>
+              </button>
+            ))}
+          </div>
 
-            {/* Step 2: About You / Your Business */}
-            {currentStep === 2 && (
-              <div className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">{t("step2")}</h2>
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">{t("name")}</Label>
-                    <Input id="name" {...register("name")} />
-                    {errors.name && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.name.message!)}
-                      </p>
+          {/* Form Card */}
+          <div className="rounded-xl border bg-card text-card-foreground shadow">
+            <div className="p-6 pt-6">
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit, () =>
+                    setSubmitError(true)
+                  )}
+                  className="space-y-4"
+                >
+                  {submitError && (
+                    <Alert variant="destructive">
+                      <AlertDescription>{t("submitError")}</AlertDescription>
+                    </Alert>
+                  )}
+                  {step()}
+                  <div className="flex justify-between mt-8">
+                    {!isFirstStep && (
+                      <Button type="button" variant="outline" onClick={back}>
+                        {t("previous")}
+                      </Button>
                     )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">{t("email")}</Label>
-                    <Input id="email" type="email" {...register("email")} />
-                    {errors.email && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.email.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">{t("phone")}</Label>
-                    <Input id="phone" {...register("phone")} />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company">{t("company")}</Label>
-                    <Input id="company" {...register("company")} />
-                    {errors.company && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.company.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="businessDescription">
-                      {t("businessDescription")}
-                    </Label>
-                    <Textarea
-                      id="businessDescription"
-                      {...register("businessDescription")}
-                    />
-                    {errors.businessDescription && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.businessDescription.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="website">{t("website")}</Label>
-                    <Input id="website" {...register("website")} />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Step 3: Goals & Priorities */}
-            {currentStep === 3 && (
-              <div className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">{t("step3")}</h2>
-                <div className="space-y-6">
-                  <div className="space-y-3">
-                    <Label>{t("goals")}</Label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {[
-                        "Build a new website",
-                        "Improve visibility",
-                        "Attract new customers",
-                        "Launch a product",
-                        "Look more professional",
-                        "Get social media working",
-                      ].map((goal) => (
-                        <div key={goal} className="flex items-center space-x-2">
-                          <Checkbox
-                            id={`goal-${goal}`}
-                            checked={formData.goals.includes(goal)}
-                            onCheckedChange={() =>
-                              handleCheckboxChange("goals", goal)
-                            }
-                          />
-                          <Label
-                            htmlFor={`goal-${goal}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`goalsOptions.${goal}`)}
-                          </Label>
-                        </div>
-                      ))}
+                    <div className="ml-auto space-x-2">
+                      <Button
+                        type={isLastStep ? "submit" : "button"}
+                        onClick={isLastStep ? undefined : handleNext}
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <div className="flex items-center gap-2">
+                            <span className="loading loading-spinner"></span>
+                            {t("submitting")}
+                          </div>
+                        ) : isLastStep ? (
+                          t("submit")
+                        ) : (
+                          t("next")
+                        )}
+                      </Button>
                     </div>
-                    {errors.goals && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.goals.message!)}
-                      </p>
-                    )}
                   </div>
-                  <div className="space-y-3">
-                    <Label>{t("services")}</Label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {[
-                        "Web design & development",
-                        "Content creation",
-                        "Social media management",
-                        "Online ads",
-                      ].map((service) => (
-                        <div
-                          key={service}
-                          className="flex items-center space-x-2"
-                        >
-                          <Checkbox
-                            id={`service-${service}`}
-                            checked={formData.services.includes(service)}
-                            onCheckedChange={() =>
-                              handleCheckboxChange("services", service)
-                            }
-                          />
-                          <Label
-                            htmlFor={`service-${service}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`servicesOptions.${service}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                    {errors.services && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.services.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-3">
-                    <Label>{t("branding")}</Label>
-                    <RadioGroup
-                      value={formData.branding}
-                      onValueChange={(value) => {
-                        setValue("branding", value);
-                        trigger("branding");
-                      }}
-                    >
-                      {[
-                        "Logo and colors",
-                        "Only a logo",
-                        "Logo, but want to upgrade",
-                        "Nothing yet",
-                        "Not sure",
-                      ].map((option) => (
-                        <div
-                          key={option}
-                          className="flex items-center space-x-2"
-                        >
-                          <RadioGroupItem
-                            value={option}
-                            id={`branding-${option}`}
-                          />
-                          <Label
-                            htmlFor={`branding-${option}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`brandingOptions.${option}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.branding && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.branding.message!)}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Step 4: Budget & Timeline */}
-            {currentStep === 4 && (
-              <div className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">{t("step4")}</h2>
-                <div className="space-y-6">
-                  <div className="space-y-3">
-                    <Label>{t("budget")}</Label>
-                    <RadioGroup
-                      value={formData.budget}
-                      onValueChange={(value) => {
-                        setValue("budget", value);
-                        trigger("budget");
-                      }}
-                    >
-                      {[
-                        "Under €1,000",
-                        "€1,000–€2,000",
-                        "€2,000–€5,000",
-                        "€5,000+",
-                        "Not sure yet",
-                      ].map((option) => (
-                        <div
-                          key={option}
-                          className="flex items-center space-x-2"
-                        >
-                          <RadioGroupItem
-                            value={option}
-                            id={`budget-${option}`}
-                          />
-                          <Label
-                            htmlFor={`budget-${option}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`budgetOptions.${option}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.budget && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.budget.message!)}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-3">
-                    <Label>{t("timeline")}</Label>
-                    <RadioGroup
-                      value={formData.timeline}
-                      onValueChange={(value) => {
-                        setValue("timeline", value);
-                        trigger("timeline");
-                      }}
-                    >
-                      {[
-                        "ASAP",
-                        "In 1–2 months",
-                        "Flexible",
-                        "Just exploring",
-                      ].map((option) => (
-                        <div
-                          key={option}
-                          className="flex items-center space-x-2"
-                        >
-                          <RadioGroupItem
-                            value={option}
-                            id={`timeline-${option}`}
-                          />
-                          <Label
-                            htmlFor={`timeline-${option}`}
-                            className="cursor-pointer"
-                          >
-                            {t(`timelineOptions.${option}`)}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.timeline && (
-                      <p className="text-sm text-destructive">
-                        {t(errors.timeline.message!)}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Step 5: Final Comments */}
-            {currentStep === 5 && (
-              <div className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">{t("step5")}</h2>
-                {submitError && (
-                  <Alert variant="destructive">
-                    <AlertDescription>{t("submitError")}</AlertDescription>
-                  </Alert>
-                )}
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="additionalNotes">
-                      {t("additionalNotes")}
-                    </Label>
-                    <Textarea
-                      id="additionalNotes"
-                      {...register("additionalNotes")}
-                      className="min-h-[150px]"
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-between mt-8">
-              {currentStep > 1 && (
-                <Button type="button" variant="outline" onClick={prevStep}>
-                  {t("previous")}
-                </Button>
-              )}
-              <div className="ml-auto space-x-2">
-                {currentStep < 5 && (
-                  <Button type="button" onClick={nextStep}>
-                    {t("next")}
-                  </Button>
-                )}
-                {currentStep === 5 && (
-                  <Button type="submit" className="bg-primary">
-                    {t("submit")}
-                  </Button>
-                )}
-              </div>
+                </form>
+              </Form>
             </div>
-          </form>
-        </CardContent>
-      </Card>
-    </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
+
+export default PricingContactForm;

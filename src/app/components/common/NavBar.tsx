@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 type NavProps = {
   bgColor: string;
@@ -11,14 +12,48 @@ type NavProps = {
 
 const NavBar: React.FC<NavProps> = (bgColor) => {
   const t = useTranslations("common.NavBar");
+  const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [showConsultationButton, setShowConsultationButton] = useState(false);
 
   const bgcolor = bgColor;
 
+  // Check if we're on the homepage
+  const isHomePage = pathname === "/" || pathname === "/en" || pathname === "/de";
+
+  useEffect(() => {
+    if (!isHomePage) {
+      setShowConsultationButton(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      // Assuming hero section is about 100vh (viewport height)
+      // You can adjust this value based on your actual hero section height
+      const heroHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      
+      if (scrollPosition > heroHeight * 0.8) { // Show button when 80% past hero
+        setShowConsultationButton(true);
+      } else {
+        setShowConsultationButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    // Check initial scroll position
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isHomePage]);
+
   return (
-    <nav className={`${bgcolor.bgColor} py-3 sticky top-0 w-full z-[100]`}>
+    <nav className={`${bgcolor.bgColor} py-3 sticky top-0 w-full z-[1000]`}>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
@@ -35,7 +70,7 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-8 font-medium items-end">
+          <div className="hidden md:flex space-x-8 font-medium items-center">
             {/* Services Dropdown */}
             <div
               className="relative py-1"
@@ -106,6 +141,19 @@ const NavBar: React.FC<NavProps> = (bgColor) => {
 
             {/* Language Switcher */}
             <LanguageSwitcher />
+
+            {/* Consultation Button - Show only after scrolling past hero on homepage */}
+            <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
+              showConsultationButton 
+                ? 'opacity-100 max-w-[220px] ml-8' 
+                : 'opacity-0 max-w-0 ml-0'
+            }`}>
+              <Link href={"/contact/consultation"}>
+                <div className="flex justify-center items-center bg-accent hover:bg-accentHover transition-all duration-300 radius py-2 px-5 rounded-lg w-max max-w-max h-max text-lightNeutral font-bold text-xs sm:text-sm cursor-pointer lg: md:text-base box-border border border-transparent whitespace-nowrap">
+                  <p>{t("links.consultation")}</p>
+                </div>
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

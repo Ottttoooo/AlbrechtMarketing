@@ -15,24 +15,24 @@
   "infoBoxes": {
     "0": {
       "title": "Entfalte dein Potenzial – Erreiche deine Kunden",
-      "description1": "Du hast ein großartiges Produkt oder eine Dienstleistung, die deinen Kunden echten Mehrwert bringt. Aber ohne die richtige Sichtbarkeit geht dieses Potenzial verloren. Viele Unternehmen setzen darauf, dass ihr Angebot schon irgendwie ankommt, doch das ist ein riskanter Weg.",
-      "descriptionBold": "Bei Albrecht Marketing wissen wir: Marketingerfolg ist kein Zufall. ",
-      "description2": "Unser Team versteht, wie man dein Geschäft authentisch und effektiv präsentiert – und wie man es dorthin bringt, wo deine Kunden sind. Mit bewährten Strategien und einem klaren Plan sorgen wir dafür, dass dein Angebot nicht nur sichtbar wird, sondern überzeugt.",
-      "description3": "Lass uns dir helfen, den Erfolg zu erreichen, den dein Geschäft verdient. Verpasse keine Chancen mehr – sichere dein Einkommen und zeige der Welt, was dein Business kann."
+      "description1": "Du hast ein starkes Angebot, aber ohne Sichtbarkeit bleibt das Potenzial ungenutzt.",
+      "descriptionBold": "Marketingerfolg ist kein Zufall. ",
+      "description2": "Wir bringen dein Geschäft dorthin, wo deine Kunden sind – mit klarer Strategie und überzeugender Präsentation.",
+      "description3": "Nutze deine Chancen und zeige, was dein Business kann."
     },
     "1": {
       "title": "Mehr Zeit für das, was wirklich zählt",
-      "description1": "Als Unternehmer kennst du den Druck, alles selbst managen zu müssen – von der Produktentwicklung bis zur Kundenpflege. Marketing wird da oft zur zusätzlichen Belastung. Genau hier kommen wir ins Spiel.",
-      "descriptionBold": "Wir bei Albrecht Marketing verstehen deinen Alltag und nehmen dir den Marketingstress ab. ",
-      "description2": "Unser erfahrenes Team übernimmt die Verantwortung für deine Online-Präsenz und entwickelt maßgeschneiderte Strategien, die deinem Geschäft Aufmerksamkeit verschaffen. So kannst du dich auf das Wesentliche konzentrieren, während wir dafür sorgen, dass dein Unternehmen im digitalen Raum wächst.",
-      "description3": "Und das Beste: Du behältst jederzeit den Überblick. Unser Dashboard macht alle Fortschritte und Ergebnisse transparent und einfach für dich einsehbar – alles an einem Ort, mit minimalem Aufwand für dich."
+      "description1": "Marketing kostet Zeit und Energie. Wir nehmen dir diese Aufgabe ab.",
+      "descriptionBold": "Wir übernehmen den Marketingstress für dich. ",
+      "description2": "Du konzentrierst dich auf dein Geschäft, wir sorgen für deine Online-Präsenz.",
+      "description3": "Mit unserem Dashboard siehst du alle Fortschritte auf einen Blick."
     },
     "2": {
       "title": "Erfolg ist kein Zufall – Wir garantieren Ergebnisse",
-      "description1": "Bei Albrecht Marketing sind wir überzeugt von der Qualität unserer Arbeit. Unser Ziel ist klar: Dein Erfolg ist unser Erfolg. Deshalb bieten wir dir eine ",
+      "description1": "Dein Erfolg ist unser Ziel. Deshalb bieten wir eine ",
       "descriptionBold": "Geld-zurück-Garantie ",
-      "description2": "– wir profitieren nur, wenn auch du profitierst. Unsere Strategien sind darauf ausgerichtet, Ergebnisse zu liefern. Ob mehr Besucher, neue Leads oder höhere Umsätze – wir stehen für messbaren Mehrwert. Sollte dein Projekt die vereinbarten Ziele nicht erreichen, erhältst du dein Geld zurück. Mit dieser Garantie gehen wir sicher, dass du bei uns in guten Händen bist und volle Kontrolle über deine Investition hast.",
-      "description3": "Setze auf Marketing, das Ergebnisse bringt – ohne Risiko."
+      "description2": "Wir liefern messbare Ergebnisse – mehr Besucher, Leads oder Umsatz. Erreichen wir die Ziele nicht, bekommst du dein Geld zurück.",
+      "description3": "Setze auf Marketing mit Garantie."
     }
   },
   "services": {
@@ -48,19 +48,19 @@
     "steps": {
       "0": {
         "heading": "Strategiegespräch",
-        "text": "Zuerst möchten wir dein Unternehmen und deine Ziele verstehen. In einem persönlichen Gespräch analysieren wir, welche Herausforderungen und Chancen bestehen. So können wir gezielt Maßnahmen entwickeln, die genau zu deinem Geschäft passen – ob Webdesign, Social Media oder Online-Werbung."
+        "text": "In einem persönlichen Gespräch analysieren wir dein Unternehmen, deine Ziele und Herausforderungen. So entwickeln wir Maßnahmen, die perfekt zu deinem Geschäft passen."
       },
       "1": {
         "heading": "Individuelle Planung",
-        "text": "Basierend auf unserer Analyse erstellen wir eine maßgeschneiderte Strategie für dich. Wir legen fest, welche Kanäle, Inhalte und Designs am besten funktionieren, und entwickeln einen klaren Plan, um deine Zielgruppe effektiv zu erreichen."
+        "text": "Wir erstellen eine maßgeschneiderte Strategie und wählen die effektivsten Kanäle und Inhalte, um deine Zielgruppe zu erreichen."
       },
       "2": {
         "heading": "Umsetzung und Anpassung",
-        "text": "Nun geht es an die Umsetzung. Unser erfahrenes Team sorgt dafür, dass alle Maßnahmen präzise und mit höchster Qualität umgesetzt werden – vom Erstellen deiner Website bis zur Optimierung deiner Social Media Präsenz. Währenddessen halten wir dich auf dem Laufenden und reagieren flexibel auf Feedback."
+        "text": "Unser Team setzt alle Maßnahmen mit höchster Qualität um – von der Website bis zu Social Media. Dabei bleiben wir flexibel und passen uns deinem Feedback an."
       },
       "3": {
         "heading": "Ergebnisse und fortlaufende Optimierung",
-        "text": "Nach dem Start analysieren wir kontinuierlich die Ergebnisse unserer Maßnahmen. Durch regelmäßige Updates und Optimierungen stellen wir sicher, dass deine digitale Präsenz auf Kurs bleibt und den bestmöglichen Erfolg erzielt. Mit unserem Dashboard hast du dabei alle Fortschritte stets im Blick."
+        "text": "Wir analysieren kontinuierlich die Ergebnisse und optimieren unsere Maßnahmen. Über unser Dashboard behältst du alle Fortschritte im Blick."
       }
     }
   },

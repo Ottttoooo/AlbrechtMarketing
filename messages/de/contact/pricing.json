@@ -3,113 +3,271 @@
     "title": "Contact Us"
   },
   "title": "Contact Us",
-  "priceContactForm": {
-    "step1": "Paketauswahl",
-    "step2": "Über Sie / Ihr Unternehmen",
-    "step3": "Ziele & Prioritäten",
-    "step4": "Budget & Zeitplan",
-    "step5": "Abschließende Kommentare",
-    "package": "Paket auswählen",
-    "packagePlaceholder": "Wählen Sie ein Paket",
-    "packages": {
-      "start": "Start",
-      "grow": "Wachstum",
-      "maintain": "Pflege"
+  "multiStepForm": {
+    "intro": {
+      "heading": "Holen Sie sich Ihr personalisiertes Angebot",
+      "subHeading1": "Füllen Sie unser detailliertes Formular aus, um ein maßgeschneidertes Angebot zu erhalten.",
+      "subHeading2": "Wir prüfen Ihre Anforderungen und senden Ihnen innerhalb von 24-48 Stunden ein detailliertes Angebot."
     },
-    "tier": "Stufe auswählen",
-    "tierPlaceholder": "Wählen Sie eine Stufe",
-    "tiers": {
-      "basic": "Basis",
-      "advanced": "Erweitert",
-      "custom": "Individuell"
-    },
-    "comparePackages": "Pakete auf unserer Preisseite vergleichen",
-    "name": "Name",
-    "email": "E-Mail",
-    "phone": "Telefonnummer (optional)",
-    "company": "Unternehmen oder Projektname",
-    "businessDescription": "Was macht Ihr Unternehmen?",
-    "website": "Website-URL (optional)",
-    "goals": "Was möchten Sie mit diesem Projekt erreichen?",
-    "goalsOptions": {
-      "Build a new website": "Eine neue Website erstellen",
-      "Improve visibility": "Sichtbarkeit verbessern",
-      "Attract new customers": "Neue Kunden gewinnen",
-      "Launch a product": "Ein Produkt launchen",
-      "Look more professional": "Professioneller wirken",
-      "Get social media working": "Social Media zum Laufen bringen"
-    },
-    "services": "An welchen Dienstleistungen sind Sie interessiert?",
-    "servicesOptions": {
-      "Web design & development": "Webdesign & Entwicklung",
-      "Content creation": "Content-Erstellung",
-      "Social media management": "Social-Media-Management",
-      "Online ads": "Online-Werbung"
-    },
-    "branding": "Haben Sie bereits ein Branding?",
-    "brandingOptions": {
-      "Logo and colors": "Logo und Farben",
-      "Only a logo": "Nur ein Logo",
-      "Logo, but want to upgrade": "Logo, aber möchte es verbessern",
-      "Nothing yet": "Noch nichts",
-      "Not sure": "Nicht sicher"
-    },
-    "budget": "Was ist Ihr ungefähres Budget?",
-    "budgetOptions": {
-      "Under €1,000": "Unter €1.000",
-      "€1,000–€2,000": "€1.000–€2.000",
-      "€2,000–€5,000": "€2.000–€5.000",
-      "€5,000+": "€5.000+",
-      "Not sure yet": "Noch nicht sicher"
-    },
-    "timeline": "Wann möchten Sie beginnen?",
-    "timelineOptions": {
-      "ASAP": "So bald wie möglich",
-      "In 1–2 months": "In 1–2 Monaten",
-      "Flexible": "Flexibel",
-      "Just exploring": "Nur erkunden"
-    },
-    "additionalNotes": "Gibt es weitere Anmerkungen, die wir wissen sollten?",
-    "previous": "Zurück",
-    "next": "Weiter",
-    "submit": "Absenden",
-    "submitSuccess": "Formular erfolgreich gesendet!",
-    "submitError": "Bitte korrigieren Sie die Fehler im Formular, bevor Sie es absenden.",
-    "errors": {
-      "package": {
-        "required": "Bitte wählen Sie ein Paket aus"
+    "step1": {
+      "title": "Paket-Auswahl",
+      "description": "Bitte bestätigen Sie Ihre Paket-Auswahl und geben Sie einige grundlegende Informationen über Ihr Unternehmen an.",
+      "selectedPackage": {
+        "label": "Ausgewähltes Paket",
+        "description": "Bestätigen oder ändern Sie Ihr ausgewähltes Paket",
+        "options": {
+          "start": "START - Starten Sie Ihre Online-Präsenz",
+          "grow": "GROW - Erreichen Sie mehr Zielgruppen",
+          "maintain": "MAINTAIN - Optimieren und pflegen"
+        }
       },
-      "tier": {
-        "required": "Bitte wählen Sie eine Stufe aus"
+      "selectedTier": {
+        "label": "Ausgewählte Stufe",
+        "description": "Bestätigen oder ändern Sie Ihre ausgewählte Stufe",
+        "options": {
+          "basic": "Basis",
+          "advanced": "Erweitert",
+          "custom": "Individuell"
+        }
       },
-      "name": {
-        "required": "Name ist erforderlich"
+      "companyName": {
+        "label": "Firmenname",
+        "placeholder": "Geben Sie Ihren Firmennamen ein"
+      },
+      "industry": {
+        "label": "Branche",
+        "placeholder": "z.B. Gesundheitswesen, Technologie, Einzelhandel"
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
       },
       "email": {
-        "required": "E-Mail ist erforderlich",
-        "invalid": "Bitte geben Sie eine gültige E-Mail ein"
+        "label": "E-Mail-Adresse",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+      }
+    },
+    "step2": {
+      "title": "Geschäftskontext & Ziele",
+      "description": "Helfen Sie uns, Ihre aktuelle Situation und Ihre Ziele zu verstehen.",
+      "currentSituation": {
+        "label": "Aktuelle Geschäftssituation",
+        "description": "Beschreiben Sie kurz Ihre aktuelle Online-Präsenz und Marketing-Aktivitäten",
+        "placeholder": "z.B. Wir haben eine einfache Website, aber keine Social Media Präsenz, oder wir starten ein neues Produkt..."
       },
-      "company": {
-        "required": "Unternehmen oder Projektname ist erforderlich"
-      },
-      "businessDescription": {
-        "required": "Geschäftsbeschreibung ist erforderlich"
-      },
-      "goals": {
-        "required": "Bitte wählen Sie mindestens ein Ziel aus"
-      },
-      "services": {
-        "required": "Bitte wählen Sie mindestens eine Dienstleistung aus"
-      },
-      "branding": {
-        "required": "Bitte wählen Sie eine Branding-Option aus"
-      },
-      "budget": {
-        "required": "Bitte wählen Sie eine Budget-Option aus"
+      "primaryGoals": {
+        "label": "Hauptziele",
+        "description": "Was möchten Sie erreichen? (Wählen Sie alle zutreffenden aus)",
+        "options": {
+          "increaseSales": "Umsatz und Einnahmen steigern",
+          "brandAwareness": "Markenbekanntheit aufbauen",
+          "leadGeneration": "Mehr Leads generieren",
+          "customerRetention": "Kundenbindung verbessern",
+          "marketExpansion": "Neue Märkte erschließen",
+          "costReduction": "Marketing-Kosten reduzieren"
+        }
       },
       "timeline": {
-        "required": "Bitte wählen Sie eine Zeitplan-Option aus"
+        "label": "Projekt-Zeitplan",
+        "description": "Wann soll das Projekt abgeschlossen sein?",
+        "options": {
+          "asap": "So schnell wie möglich",
+          "oneToTwoWeeks": "Innerhalb von 1-2 Wochen",
+          "oneMonth": "Innerhalb von 1 Monat",
+          "twoToThreeMonths": "Innerhalb von 2-3 Monaten",
+          "flexible": "Zeitplan ist flexibel"
+        }
       }
+    },
+    "step3": {
+      "title": "Paket-spezifische Anforderungen",
+      "description": "Basierend auf Ihrer {package} Paket-Auswahl, geben Sie bitte weitere Details an:",
+      "start": {
+        "existingBranding": {
+          "label": "Vorhandenes Branding",
+          "description": "Haben Sie bereits Branding-Materialien (Logo, Farben, Schriftarten)?",
+          "options": {
+            "complete": "Ja, vollständige Brand-Richtlinien",
+            "partial": "Einige Elemente (Logo oder Farben)",
+            "none": "Kein vorhandenes Branding"
+          }
+        },
+        "websiteComplexity": {
+          "label": "Website-Komplexität",
+          "description": "Welche Art von Website benötigen Sie?",
+          "options": {
+            "landingPage": "Einfache Landing Page",
+            "smallBusiness": "Kleine Unternehmens-Website (5-10 Seiten)",
+            "comprehensive": "Umfassende Website (10+ Seiten, E-Commerce)"
+          }
+        },
+        "contentCreationNeeds": {
+          "label": "Content-Erstellung Bedürfnisse",
+          "description": "Welche Inhalte sollen wir für Sie erstellen?",
+          "options": {
+            "copywriting": "Website-Texte",
+            "photography": "Professionelle Fotografie",
+            "graphics": "Grafiken und Illustrationen",
+            "video": "Video-Inhalte",
+            "blogContent": "Blog-Inhalte"
+          }
+        }
+      },
+      "grow": {
+        "currentWebsiteTraffic": {
+          "label": "Aktueller Website-Traffic",
+          "description": "Wie viele Besucher haben Sie ungefähr pro Monat?",
+          "placeholder": "z.B. 500 Besucher/Monat, oder 'Neue Website'"
+        },
+        "targetAudience": {
+          "label": "Zielgruppe",
+          "description": "Beschreiben Sie Ihre idealen Kunden",
+          "placeholder": "z.B. Kleine Unternehmer im Alter von 30-50, oder B2B-Entscheidungsträger"
+        },
+        "geographicTargeting": {
+          "label": "Geografische Ausrichtung",
+          "description": "Wo möchten Sie Kunden erreichen?",
+          "options": {
+            "local": "Lokal/Regional",
+            "national": "National",
+            "international": "International"
+          }
+        },
+        "preferredAdPlatforms": {
+          "label": "Bevorzugte Werbeplattformen",
+          "description": "Welche Plattformen interessieren Sie am meisten?",
+          "options": {
+            "googleAds": "Google Ads",
+            "facebookInstagram": "Facebook & Instagram",
+            "linkedin": "LinkedIn",
+            "tiktok": "TikTok",
+            "youtube": "YouTube"
+          }
+        }
+      },
+      "maintain": {
+        "currentSeoPerformance": {
+          "label": "Aktuelle SEO-Performance",
+          "description": "Wie ist die aktuelle Performance Ihrer Website in den Suchergebnissen?",
+          "placeholder": "z.B. Seite 2 für Haupt-Keywords, oder 'Nicht sicher über aktuelles Ranking'"
+        },
+        "existingCampaigns": {
+          "label": "Bestehende Marketing-Kampagnen",
+          "description": "Haben Sie laufende Marketing-Kampagnen?",
+          "options": {
+            "performingWell": "Ja, laufen gut",
+            "needOptimization": "Ja, aber brauchen Optimierung",
+            "noCampaigns": "Keine aktuellen Kampagnen"
+          }
+        },
+        "maintenanceFrequency": {
+          "label": "Bevorzugte Wartungsfrequenz",
+          "description": "Wie oft sollen wir überprüfen und optimieren?",
+          "options": {
+            "weekly": "Wöchentliche Überprüfungen",
+            "biweekly": "Zweiwöchentliche Überprüfungen",
+            "monthly": "Monatliche Überprüfungen",
+            "asNeeded": "Nach Bedarf"
+          }
+        },
+        "priorityAreas": {
+          "label": "Prioritätsbereiche",
+          "description": "Welche Bereiche benötigen die meiste Aufmerksamkeit?",
+          "options": {
+            "seoOptimization": "SEO-Optimierung",
+            "adPerformance": "Anzeigen-Performance",
+            "socialMedia": "Social Media Management",
+            "contentUpdates": "Content-Updates",
+            "analyticsReporting": "Analytics und Reporting"
+          }
+        }
+      }
+    },
+    "step4": {
+      "title": "Budget & Projekt-Details",
+      "description": "Helfen Sie uns, Ihre Budget-Erwartungen und Projekt-Anforderungen zu verstehen.",
+      "budgetRange": {
+        "label": "Budget-Bereich",
+        "description": "Was ist Ihr erwartetes Budget für dieses Projekt? (Dies hilft uns, das genaueste Angebot zu erstellen)",
+        "options": {
+          "low": "€500 - €1.500",
+          "medium": "€1.500 - €3.000",
+          "high": "€3.000 - €5.000",
+          "premium": "€5.000 - €10.000",
+          "enterprise": "€10.000+",
+          "discuss": "Bevorzuge Gespräch"
+        }
+      },
+      "additionalServices": {
+        "label": "Zusätzliche Dienstleistungen",
+        "description": "Sind Sie an zusätzlichen Dienstleistungen interessiert? (Optional)",
+        "options": {
+          "seoAudit": "Umfassende SEO-Analyse",
+          "competitorAnalysis": "Konkurrenz-Analyse",
+          "conversionOptimization": "Conversion-Rate-Optimierung",
+          "emailMarketing": "E-Mail-Marketing Setup",
+          "analyticsSetup": "Erweiterte Analytics-Einrichtung",
+          "trainingSupport": "Schulung und Support"
+        }
+      },
+      "startDate": {
+        "label": "Bevorzugtes Startdatum",
+        "description": "Wann möchten Sie mit diesem Projekt beginnen?",
+        "options": {
+          "immediately": "Sofort",
+          "withinWeek": "Innerhalb 1 Woche",
+          "withinMonth": "Innerhalb 1 Monat",
+          "nextQuarter": "Nächstes Quartal",
+          "flexible": "Flexibles Timing"
+        }
+      }
+    },
+    "step5": {
+      "title": "Kontaktdaten & Abschließende Informationen",
+      "expectation": {
+        "title": "Was passiert als nächstes?",
+        "description": "Nach dem Absenden dieses Formulars wird unser Team Ihre Anforderungen prüfen und einen detaillierten Vorschlag vorbereiten. Sie erhalten Ihr personalisiertes Angebot innerhalb von 24-48 Stunden per E-Mail."
+      },
+      "phone": {
+        "label": "Telefonnummer (Optional)",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein"
+      },
+      "communicationPreference": {
+        "label": "Bevorzugte Kommunikationsmethode",
+        "options": {
+          "email": "Nur E-Mail",
+          "phone": "Telefonanruf bevorzugt",
+          "both": "Sowohl E-Mail als auch Telefon"
+        }
+      },
+      "additionalInfo": {
+        "label": "Zusätzliche Informationen (Optional)",
+        "placeholder": "Weitere Details, besondere Anforderungen oder Fragen, die Sie uns mitteilen möchten..."
+      },
+      "privacyPolicy": {
+        "label": "Ich stimme der",
+        "link": "Datenschutzerklärung zu"
+      },
+      "newsletter": {
+        "label": "Ich möchte Marketing-Updates und Tipps per E-Mail erhalten"
+      }
+    },
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Angebot anfordern",
+    "submitting": "Wird gesendet...",
+    "submitError": "Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "emailFormat": {
+      "subject": "Neue Preisanfrage",
+      "step1": "Paket-Auswahl & Geschäftsinformationen",
+      "step2": "Geschäftskontext & Ziele",
+      "step3": "Paket-spezifische Anforderungen",
+      "step4": "Budget & Projekt-Details",
+      "step5": "Kontaktdaten & Zusätzliche Informationen"
     }
   }
 }

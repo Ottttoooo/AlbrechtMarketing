@@ -15,24 +15,24 @@
   "infoBoxes": {
     "0": {
       "title": "Unleash Your Potential – Reach Your Customers",
-      "description1": "You have a great product or service that truly benefits your customers. But without the right visibility, that potential goes to waste. Many companies assume their offering will somehow reach people, but that’s a risky gamble.",
-      "descriptionBold": "At Albrecht Marketing, we know: Marketing success is no accident. ",
-      "description2": "Our team understands how to present your business authentically and effectively—and how to place it where your customers are. With proven strategies and a clear plan, we make sure your offering isn’t just seen but truly convinces.",
-      "description3": "Let us help you achieve the success your business deserves. Don’t miss out on opportunities—secure your income and show the world what your business can do."
+      "description1": "You have a great offer, but without visibility, its potential is lost.",
+      "descriptionBold": "Marketing success is no accident. ",
+      "description2": "We put your business where your customers are—with clear strategy and convincing presentation.",
+      "description3": "Seize your opportunities and show what your business can do."
     },
     "1": {
       "title": "More Time for What Really Matters",
-      "description1": "As a business owner, you know the pressure of managing everything yourself—from product development to customer care. Marketing often becomes an extra burden. This is where we step in.",
-      "descriptionBold": "At Albrecht Marketing, we get your daily challenges and take the marketing stress off your shoulders. ",
-      "description2": "Our experienced team assumes responsibility for your online presence, crafting tailored strategies that get your business noticed. You can focus on what truly matters while we ensure your online growth.",
-      "description3": "And the best part: you remain fully informed at all times. Our dashboard makes all progress and results transparent and easy to view—everything in one place, with minimal effort on your part."
+      "description1": "Marketing takes time and energy. We take care of it for you.",
+      "descriptionBold": "We handle your marketing stress. ",
+      "description2": "You focus on your business, we grow your online presence.",
+      "description3": "Our dashboard keeps you updated at a glance."
     },
     "2": {
       "title": "Success Is No Accident – We Guarantee Results",
-      "description1": "At Albrecht Marketing, we believe in the quality of our work. Our goal is clear: Your success is our success. That’s why we offer a ",
+      "description1": "Your success is our goal. That’s why we offer a ",
       "descriptionBold": "money-back guarantee ",
-      "description2": "—we only profit if you profit. Our strategies are geared toward results, whether that’s more visitors, new leads, or higher revenue. If your project doesn’t meet the agreed goals, you get your money back. With this guarantee, we ensure you’re in good hands and in full control of your investment.",
-      "description3": "Choose marketing that delivers—risk-free."
+      "description2": "We deliver measurable results—more visitors, leads, or revenue. If we don’t meet the goals, you get your money back.",
+      "description3": "Choose marketing with a guarantee."
     }
   },
   "services": {
@@ -48,19 +48,19 @@
     "steps": {
       "0": {
         "heading": "Strategy Consultation",
-        "text": "First, we want to understand your business and your goals. In a personal meeting, we’ll evaluate your current situation, identify challenges, and explore opportunities. This helps us develop targeted initiatives tailored to your specific needs—whether that’s web design, social media, or online advertising."
+          "text": "We get to know your business and goals, assess your situation, and identify key opportunities. This lets us create targeted solutions for your needs."
       },
       "1": {
         "heading": "Customized Planning",
-        "text": "Building on our findings, we create a bespoke strategy for you. We’ll determine which channels, content, and designs work best, and craft a clear plan to effectively reach your target audience."
+          "text": "We develop a custom strategy, choosing the best channels and content to reach your audience effectively."
       },
       "2": {
         "heading": "Implementation & Adaptation",
-        "text": "Next comes the execution phase. Our experienced team ensures every measure is carried out with precision and quality—from building your website to optimizing your social media presence. Throughout the process, we keep you informed and stay flexible so we can adjust quickly based on your feedback."
+          "text": "We execute your plan with precision, building your website and optimizing your social media. We keep you updated and adapt quickly to your feedback."
       },
       "3": {
         "heading": "Results & Ongoing Optimization",
-        "text": "After launch, we continuously analyze the results of our efforts. Through regular updates and optimizations, we make sure your digital presence stays on track and delivers the best possible outcomes. And with our dashboard, you always have a clear view of every milestone and progression."
+          "text": "We monitor results, provide regular updates, and optimize your digital presence for the best outcomes. Our dashboard keeps you informed at every step."
       }
     }
   },

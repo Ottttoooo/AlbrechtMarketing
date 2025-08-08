@@ -52,18 +52,20 @@ export default {
         },
         primaryHover: "#3B6FC2",
         secondary: {
-          DEFAULT: "#B57BF0",
+          DEFAULT: "#046865",
           foreground: "hsl(var(--secondary-foreground))",
         },
         secondaryHover: "#9711FF",
         accent: {
-          DEFAULT: "#EF9747",
+          DEFAULT: "#F55D3E",
           foreground: "hsl(var(--accent-foreground))",
         },
+        accentHover: "#D85039",
         darkNeutral: "#071A2B",
         lightNeutral: "#F0F7FF",
         accentLow: "#E7EBFD",
         subTextLight: "#BDCEF4",
+        cardbg: "#FAFCFF",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

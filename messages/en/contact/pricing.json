@@ -3,113 +3,271 @@
     "title": "Contact Us"
   },
   "title": "Contact Us",
-  "priceContactForm": {
-    "step1": "Package Selection",
-    "step2": "About You / Your Business",
-    "step3": "Goals & Priorities",
-    "step4": "Budget & Timeline",
-    "step5": "Final Comments",
-    "package": "Select Package",
-    "packagePlaceholder": "Choose a package",
-    "packages": {
-      "start": "Start",
-      "grow": "Grow",
-      "maintain": "Maintain"
-    },
-    "tier": "Select Tier",
-    "tierPlaceholder": "Choose a tier",
-    "tiers": {
-      "basic": "Basic",
-      "advanced": "Advanced",
-      "custom": "Custom"
-    },
-    "comparePackages": "Compare packages on our pricing page",
-    "name": "Name",
-    "email": "Email",
-    "phone": "Phone number (optional)",
-    "company": "Company or Project name",
-    "businessDescription": "What does your business do?",
-    "website": "Website URL (optional)",
-    "goals": "What do you want to achieve with this project?",
-    "goalsOptions": {
-      "Build a new website": "Build a new website",
-      "Improve visibility": "Improve visibility",
-      "Attract new customers": "Attract new customers",
-      "Launch a product": "Launch a product",
-      "Look more professional": "Look more professional",
-      "Get social media working": "Get social media working"
-    },
-    "services": "Which services are you interested in?",
-    "servicesOptions": {
-      "Web design & development": "Web design & development",
-      "Content creation": "Content creation",
-      "Social media management": "Social media management",
-      "Online ads": "Online ads"
-    },
-    "branding": "Do you have existing branding?",
-    "brandingOptions": {
-      "Logo and colors": "Logo and colors",
-      "Only a logo": "Only a logo",
-      "Logo, but want to upgrade": "Logo, but want to upgrade",
-      "Nothing yet": "Nothing yet",
-      "Not sure": "Not sure"
-    },
-    "budget": "What is your approximate budget?",
-    "budgetOptions": {
-      "Under €1,000": "Under €1,000",
-      "€1,000–€2,000": "€1,000–€2,000",
-      "€2,000–€5,000": "€2,000–€5,000",
-      "€5,000+": "€5,000+",
-      "Not sure yet": "Not sure yet"
-    },
-    "timeline": "When would you like to get started?",
-    "timelineOptions": {
-      "ASAP": "ASAP",
-      "In 1–2 months": "In 1–2 months",
-      "Flexible": "Flexible",
-      "Just exploring": "Just exploring"
-    },
-    "additionalNotes": "Any other notes you want us to know?",
-    "previous": "Previous",
-    "next": "Next",
-    "submit": "Submit",
-    "submitSuccess": "Form submitted successfully!",
-    "submitError": "Please fix the errors in the form before submitting.",
-    "errors": {
-      "package": {
-        "required": "Please select a package"
-      },
-      "tier": {
-        "required": "Please select a tier"
-      },
-      "name": {
-        "required": "Name is required"
-      },
-      "email": {
-        "required": "Email is required",
-        "invalid": "Please enter a valid email"
-      },
-      "company": {
-        "required": "Company or project name is required"
-      },
-      "businessDescription": {
-        "required": "Business description is required"
-      },
-      "goals": {
-        "required": "Please select at least one goal"
-      },
-      "services": {
-        "required": "Please select at least one service"
-      },
-      "branding": {
-        "required": "Please select a branding option"
-      },
-      "budget": {
-        "required": "Please select a budget option"
-      },
-      "timeline": {
-        "required": "Please select a timeline option"
+  "multiStepForm": {
+        "intro": {
+          "heading": "Get Your Personalized Quote",
+          "subHeading1": "Fill out our detailed form to receive a custom proposal tailored to your specific needs.",
+          "subHeading2": "We'll review your requirements and send you a detailed quote within 24-48 hours."
+        },
+        "step1": {
+          "title": "Package Selection",
+          "description": "Please confirm your package selection and provide some basic information about your business.",
+          "selectedPackage": {
+            "label": "Selected Package",
+            "description": "Confirm or change your selected package",
+            "options": {
+              "start": "START - Launch your online presence",
+              "grow": "GROW - Reach more audience",
+              "maintain": "MAINTAIN - Optimize and maintain"
+            }
+          },
+          "selectedTier": {
+            "label": "Selected Tier",
+            "description": "Confirm or change your selected tier",
+            "options": {
+              "basic": "Basic",
+              "advanced": "Advanced", 
+              "custom": "Custom"
+            }
+          },
+          "companyName": {
+            "label": "Company Name",
+            "placeholder": "Enter your company name"
+          },
+          "industry": {
+            "label": "Industry",
+            "placeholder": "e.g., Healthcare, Technology, Retail"
+          },
+          "firstName": {
+            "label": "First Name",
+            "placeholder": "Enter your first name"
+          },
+          "lastName": {
+            "label": "Last Name",
+            "placeholder": "Enter your last name"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          }
+        },
+        "step2": {
+          "title": "Business Context & Goals",
+          "description": "Help us understand your current situation and what you're trying to achieve.",
+          "currentSituation": {
+            "label": "Current Business Situation",
+            "description": "Briefly describe your current online presence and marketing efforts",
+            "placeholder": "e.g., We have a basic website but no social media presence, or we're launching a new product..."
+          },
+          "primaryGoals": {
+            "label": "Primary Goals",
+            "description": "What are you hoping to achieve? (Select all that apply)",
+            "options": {
+              "increaseSales": "Increase sales and revenue",
+              "brandAwareness": "Build brand awareness",
+              "leadGeneration": "Generate more leads",
+              "customerRetention": "Improve customer retention",
+              "marketExpansion": "Expand to new markets",
+              "costReduction": "Reduce marketing costs"
+            }
+          },
+          "timeline": {
+            "label": "Project Timeline",
+            "description": "When do you need this project completed?",
+            "options": {
+              "asap": "As soon as possible",
+              "oneToTwoWeeks": "Within 1-2 weeks",
+              "oneMonth": "Within 1 month",
+              "twoToThreeMonths": "Within 2-3 months",
+              "flexible": "Timeline is flexible"
+            }
+          }
+        },
+        "step3": {
+          "title": "Package-Specific Requirements",
+          "description": "Based on your {package} package selection, please provide additional details:",
+          "start": {
+            "existingBranding": {
+              "label": "Existing Branding",
+              "description": "Do you have existing branding materials (logo, colors, fonts)?",
+              "options": {
+                "complete": "Yes, complete brand guidelines",
+                "partial": "Some elements (logo or colors)",
+                "none": "No existing branding"
+              }
+            },
+            "websiteComplexity": {
+              "label": "Website Complexity",
+              "description": "What type of website do you need?",
+              "options": {
+                "landingPage": "Simple landing page",
+                "smallBusiness": "Small business website (5-10 pages)",
+                "comprehensive": "Comprehensive website (10+ pages, e-commerce)"
+              }
+            },
+            "contentCreationNeeds": {
+              "label": "Content Creation Needs",
+              "description": "What content do you need us to create?",
+              "options": {
+                "copywriting": "Website copywriting",
+                "photography": "Professional photography",
+                "graphics": "Graphics and illustrations",
+                "video": "Video content",
+                "blogContent": "Blog content"
+              }
+            }
+          },
+          "grow": {
+            "currentWebsiteTraffic": {
+              "label": "Current Website Traffic",
+              "description": "Approximately how many visitors per month do you currently get?",
+              "placeholder": "e.g., 500 visitors/month, or 'New website'"
+            },
+            "targetAudience": {
+              "label": "Target Audience",
+              "description": "Describe your ideal customers",
+              "placeholder": "e.g., Small business owners aged 30-50, or B2B decision makers"
+            },
+            "geographicTargeting": {
+              "label": "Geographic Targeting",
+              "description": "Where do you want to reach customers?",
+              "options": {
+                "local": "Local/Regional",
+                "national": "National",
+                "international": "International"
+              }
+            },
+            "preferredAdPlatforms": {
+              "label": "Preferred Advertising Platforms",
+              "description": "Which platforms are you most interested in?",
+              "options": {
+                "googleAds": "Google Ads",
+                "facebookInstagram": "Facebook & Instagram",
+                "linkedin": "LinkedIn",
+                "tiktok": "TikTok",
+                "youtube": "YouTube"
+              }
+            }
+          },
+          "maintain": {
+            "currentSeoPerformance": {
+              "label": "Current SEO Performance",
+              "description": "How is your website currently performing in search results?",
+              "placeholder": "e.g., Page 2 for main keywords, or 'Not sure about current ranking'"
+            },
+            "existingCampaigns": {
+              "label": "Existing Marketing Campaigns",
+              "description": "Do you have ongoing marketing campaigns?",
+              "options": {
+                "performingWell": "Yes, performing well",
+                "needOptimization": "Yes, but need optimization",
+                "noCampaigns": "No current campaigns"
+              }
+            },
+            "maintenanceFrequency": {
+              "label": "Preferred Maintenance Frequency",
+              "description": "How often would you like us to review and optimize?",
+              "options": {
+                "weekly": "Weekly reviews",
+                "biweekly": "Bi-weekly reviews",
+                "monthly": "Monthly reviews",
+                "asNeeded": "As needed basis"
+              }
+            },
+            "priorityAreas": {
+              "label": "Priority Areas",
+              "description": "Which areas need the most attention?",
+              "options": {
+                "seoOptimization": "SEO optimization",
+                "adPerformance": "Ad performance",
+                "socialMedia": "Social media management",
+                "contentUpdates": "Content updates",
+                "analyticsReporting": "Analytics and reporting"
+              }
+            }
+          }
+        },
+        "step4": {
+          "title": "Budget & Project Details",
+          "description": "Help us understand your budget expectations and project requirements.",
+          "budgetRange": {
+            "label": "Budget Range",
+            "description": "What is your expected budget for this project? (This helps us provide the most accurate quote)",
+            "options": {
+              "low": "€500 - €1,500",
+              "medium": "€1,500 - €3,000",
+              "high": "€3,000 - €5,000",
+              "premium": "€5,000 - €10,000",
+              "enterprise": "€10,000+",
+              "discuss": "Prefer to discuss"
+            }
+          },
+          "additionalServices": {
+            "label": "Additional Services",
+            "description": "Are you interested in any additional services? (Optional)",
+            "options": {
+              "seoAudit": "Comprehensive SEO audit",
+              "competitorAnalysis": "Competitor analysis",
+              "conversionOptimization": "Conversion rate optimization",
+              "emailMarketing": "Email marketing setup",
+              "analyticsSetup": "Advanced analytics setup",
+              "trainingSupport": "Training and support"
+            }
+          },
+          "startDate": {
+            "label": "Preferred Start Date",
+            "description": "When would you like to start this project?",
+            "options": {
+              "immediately": "Immediately",
+              "withinWeek": "Within 1 week",
+              "withinMonth": "Within 1 month",
+              "nextQuarter": "Next quarter",
+              "flexible": "Flexible timing"
+            }
+          }
+        },
+        "step5": {
+          "title": "Contact Details & Final Information",
+          "expectation": {
+            "title": "What happens next?",
+            "description": "After submitting this form, our team will review your requirements and prepare a detailed proposal. You'll receive your personalized quote within 24-48 hours via email."
+          },
+          "phone": {
+            "label": "Phone Number (Optional)",
+            "placeholder": "Enter your phone number"
+          },
+          "communicationPreference": {
+            "label": "Preferred Communication Method",
+            "options": {
+              "email": "Email only",
+              "phone": "Phone call preferred",
+              "both": "Both email and phone"
+            }
+          },
+          "additionalInfo": {
+            "label": "Additional Information (Optional)",
+            "placeholder": "Any additional details, special requirements, or questions you'd like us to know about..."
+          },
+          "privacyPolicy": {
+            "label": "I agree to the",
+            "link": "Privacy Policy"
+          },
+          "newsletter": {
+            "label": "I would like to receive marketing updates and tips via email"
+          }
+        },
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Submit Quote Request",
+        "submitting": "Submitting...",
+        "submitError": "There was an error submitting your request. Please try again.",
+        "emailFormat": {
+          "subject": "New Pricing Quote Request",
+          "step1": "Package Selection & Business Information",
+          "step2": "Business Context & Goals",
+          "step3": "Package-Specific Requirements",
+          "step4": "Budget & Project Details",
+          "step5": "Contact Details & Additional Information"
+        }
       }
-    }
-  }
 }
