@@ -192,7 +192,7 @@ function PricingContactForm() {
     <>
       {/* Intro Text */}
       <div className="w-full flex flex-col pt-32 pb-8 px-4 md:px-6 justify-center items-center ">
-        <div className="max-w-screen-lg w-screen-lg ">
+        <div className="max-w-screen-lg w-full ">
           <div className="flex flex-col w-2/3 ">
             <h1 className="text-2xl sm:text-4xl font-extrabold mb-2 sm:text-left">
               {t("intro.heading")}

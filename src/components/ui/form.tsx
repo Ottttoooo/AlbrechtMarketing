@@ -14,6 +14,7 @@ import {
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
+import { useTranslations } from "next-intl";
 
 const Form = FormProvider
 
@@ -141,13 +142,26 @@ const FormDescription = React.forwardRef<
   )
 })
 FormDescription.displayName = "FormDescription"
-
 const FormMessage = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
   const { error, formMessageId } = useFormField()
-  const body = error ? String(error?.message ?? "") : children
+  const t = useTranslations()
+
+  let body = error ? String(error?.message ?? "") : children
+
+  // If the message looks like an i18n key (contains dots), attempt translation
+  if (typeof body === "string" && body.includes(".")) {
+    try {
+      const translated = t(body)
+      if (translated && translated !== body) {
+        body = translated
+      }
+    } catch {
+      // fallback to raw message if translation key not found
+    }
+  }
 
   if (!body) {
     return null

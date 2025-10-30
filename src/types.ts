@@ -9,42 +9,48 @@ export interface ContactFormData {
 import { z } from "zod";
 
 const step1Schema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  companyName: z.string(),
-  industry: z.string(),
-  companyAge: z.string(),
+  firstName: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.firstName.required" }),
+  lastName: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.lastName.required" }),
+  companyName: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.companyName.required" }),
+  industry: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.industry.required" }),
+  companyAge: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.companyAge.required" }),
   companyDescription: z.string().optional(),
-  country: z.string(),
-  state: z.string(),
-  email: z.string().email(),
+  country: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.country.required" }),
+  state: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.state.required" }),
+  email: z.string().email({ message: "contact.consultation.multiStepForm.errors.email.invalid" }),
   phone: z.string().optional(),
 });
 
+const optionalUrl = (key: string) =>
+  z
+    .string()
+    .optional()
+    .refine((v) => !v || /^https?:\/\//i.test(v), { message: key });
+
 const step2Schema = z.object({
-  website: z.string().optional(),
-  instagram: z.string().optional(),
-  facebook: z.string().optional(),
-  tiktok: z.string().optional(),
-  youtube: z.string().optional(),
-  x: z.string().optional(),
+  website: optionalUrl("contact.consultation.multiStepForm.errors.website.url"),
+  instagram: optionalUrl("contact.consultation.multiStepForm.errors.instagram.url"),
+  facebook: optionalUrl("contact.consultation.multiStepForm.errors.facebook.url"),
+  tiktok: optionalUrl("contact.consultation.multiStepForm.errors.tiktok.url"),
+  youtube: optionalUrl("contact.consultation.multiStepForm.errors.youtube.url"),
+  x: optionalUrl("contact.consultation.multiStepForm.errors.x.url"),
 });
 
 const step3Schema = z.object({
-  phase: z.array(z.string()).min(1),
-  challenges: z.array(z.string()).min(1),
+  phase: z.array(z.string()).min(1, { message: "contact.consultation.multiStepForm.errors.phase.required" }),
+  challenges: z.array(z.string()).min(1, { message: "contact.consultation.multiStepForm.errors.challenges.required" }),
 });
 
 const step4Schema = z.object({
-  launchBudget: z.string().min(1),
-  runningBudget: z.string().min(1),
+  launchBudget: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.launchBudget.required" }),
+  runningBudget: z.string().min(1, { message: "contact.consultation.multiStepForm.errors.runningBudget.required" }),
 });
 
 const step5Schema = z.object({
   additionalInfo: z.string().optional(),
-  privacyPolicy: z.boolean(),
+  privacyPolicy: z.boolean().refine((v) => v === true, { message: "contact.consultation.multiStepForm.step5.privacyPolicy.error" }),
   newsletter: z.boolean(),
-  captcha: z.string().min(1),
+  captcha: z.string().min(1, { message: "contact.consultation.multiStepForm.step5.errors.captcha.required" }),
 });
 
 export const consultationSchema = z.object({
@@ -69,39 +75,39 @@ export type StepKey = typeof STEP_KEYS[number];
 
 // Pricing Form Schema
 const pricingStep1Schema = z.object({
-  selectedPackage: z.enum(["start", "grow", "maintain"]),
-  selectedTier: z.enum(["basic", "advanced", "custom"]),
-  companyName: z.string().min(1),
-  industry: z.string().min(1),
-  firstName: z.string().min(1),
-  lastName: z.string().min(1),
-  email: z.string().email(),
+  selectedPackage: z.enum(["start", "grow", "maintain"], { errorMap: () => ({ message: "contact.pricing.multiStepForm.step1.errors.selectedPackage.required" }) }),
+  selectedTier: z.enum(["basic", "advanced", "custom"], { errorMap: () => ({ message: "contact.pricing.multiStepForm.step1.errors.selectedTier.required" }) }),
+  companyName: z.string().min(1, { message: "contact.pricing.multiStepForm.step1.errors.companyName.required" }),
+  industry: z.string().min(1, { message: "contact.pricing.multiStepForm.step1.errors.industry.required" }),
+  firstName: z.string().min(1, { message: "contact.pricing.multiStepForm.step1.errors.firstName.required" }),
+  lastName: z.string().min(1, { message: "contact.pricing.multiStepForm.step1.errors.lastName.required" }),
+  email: z.string().email({ message: "contact.pricing.multiStepForm.step1.errors.email.invalid" }),
 });
 
 const pricingStep2Schema = z.object({
-  currentSituation: z.string().min(1),
-  primaryGoals: z.array(z.string()).min(1),
-  timeline: z.string().min(1),
+  currentSituation: z.string().min(1, { message: "contact.pricing.multiStepForm.step2.errors.currentSituation.required" }),
+  primaryGoals: z.array(z.string()).min(1, { message: "contact.pricing.multiStepForm.step2.errors.primaryGoals.required" }),
+  timeline: z.string().min(1, { message: "contact.pricing.multiStepForm.step2.errors.timeline.required" }),
 });
 
 const pricingStep3Schema = z.object({
   // Dynamic fields based on package - we'll use a union type
-  packageSpecific: z.record(z.string(), z.any()),
+  packageSpecific: z.record(z.string(), z.any()).refine((v) => v && Object.keys(v).length >= 0, { message: "contact.pricing.multiStepForm.step3.errors.packageSpecific.required" }),
 });
 
 const pricingStep4Schema = z.object({
-  budgetRange: z.string().min(1),
+  budgetRange: z.string().min(1, { message: "contact.pricing.multiStepForm.step4.errors.budgetRange.required" }),
   additionalServices: z.array(z.string()).optional(),
-  startDate: z.string().min(1),
+  startDate: z.string().min(1, { message: "contact.pricing.multiStepForm.step4.errors.startDate.required" }),
 });
 
 const pricingStep5Schema = z.object({
   phone: z.string().optional(),
-  communicationPreference: z.string().min(1),
+  communicationPreference: z.string().min(1, { message: "contact.pricing.multiStepForm.step5.errors.communicationPreference.required" }),
   additionalInfo: z.string().optional(),
-  privacyPolicy: z.boolean(),
+  privacyPolicy: z.boolean().refine((v) => v === true, { message: "contact.pricing.multiStepForm.step5.errors.privacyPolicy.required" }),
   newsletter: z.boolean(),
-  captcha: z.string().min(1),
+  captcha: z.string().min(1, { message: "contact.pricing.multiStepForm.step5.errors.captcha.required" }),
 });
 
 export const pricingSchema = z.object({

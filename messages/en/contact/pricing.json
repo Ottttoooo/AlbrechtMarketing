@@ -50,6 +50,16 @@
             "label": "Email Address",
             "placeholder": "Enter your email address"
           }
+        ,
+        "errors": {
+          "selectedPackage": { "required": "Please select a package" },
+          "selectedTier": { "required": "Please select a tier" },
+          "companyName": { "required": "Company name is required" },
+          "industry": { "required": "Industry is required" },
+          "firstName": { "required": "First name is required" },
+          "lastName": { "required": "Last name is required" },
+          "email": { "invalid": "Please enter a valid email address" }
+        }
         },
         "step2": {
           "title": "Business Context & Goals",
@@ -82,6 +92,12 @@
               "flexible": "Timeline is flexible"
             }
           }
+        ,
+        "errors": {
+          "currentSituation": { "required": "Please describe your current situation" },
+          "primaryGoals": { "required": "Please select at least one primary goal" },
+          "timeline": { "required": "Please select a timeline" }
+        }
         },
         "step3": {
           "title": "Package-Specific Requirements",
@@ -187,6 +203,9 @@
             }
           }
         },
+        "errors": {
+          "packageSpecific": { "required": "Please provide package-specific details" }
+        },
         "step4": {
           "title": "Budget & Project Details",
           "description": "Help us understand your budget expectations and project requirements.",
@@ -225,6 +244,11 @@
               "flexible": "Flexible timing"
             }
           }
+        ,
+        "errors": {
+          "budgetRange": { "required": "Please select a budget range" },
+          "startDate": { "required": "Please select a preferred start date" }
+        }
         },
         "step5": {
           "title": "Contact Details & Final Information",
@@ -255,6 +279,11 @@
           "newsletter": {
             "label": "I would like to receive marketing updates and tips via email"
           }
+        ,
+        "errors": {
+          "communicationPreference": { "required": "Please select a communication preference" },
+          "privacyPolicy": { "required": "You must agree to the privacy policy to proceed" }
+        }
         },
         "next": "Next",
         "previous": "Previous",

@@ -168,6 +168,9 @@
       "firstName": {
         "required": "Vorname ist erforderlich"
       },
+      "companyDescription": {
+        "invalid": "Bitte geben Sie eine gültige Firmenbeschreibung ein"
+      },
       "lastName": {
         "required": "Nachname ist erforderlich"
       },
@@ -188,6 +191,9 @@
       },
       "email": {
         "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "phone": {
+        "invalid": "Bitte geben Sie eine gültige Telefonnummer ein"
       },
       "website": {
         "url": "Bitte geben Sie eine gültige Website-URL ein"
@@ -218,6 +224,12 @@
       },
       "runningBudget": {
         "required": "Bitte geben Sie ein laufendes Budget ein"
+      },
+      "privacyPolicy": {
+        "required": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren"
+      },
+      "newsletter": {
+        "required": "Bitte wählen Sie aus, ob Sie den Newsletter erhalten möchten"
       },
       "captcha": {
           "required": "Bitte schließen Sie die CAPTCHA-Überprüfung ab"

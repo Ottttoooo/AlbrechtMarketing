@@ -1,8 +1,8 @@
 {
   "MetaData": {
-    "title": "Contact Us"
+    "title": "Kontaktiere Uns"
   },
-  "title": "Contact Us",
+  "title": "Kontaktiere Uns",
   "multiStepForm": {
     "intro": {
       "heading": "Holen Sie sich Ihr personalisiertes Angebot",
@@ -50,6 +50,16 @@
         "label": "E-Mail-Adresse",
         "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
       }
+        ,
+        "errors": {
+          "selectedPackage": { "required": "Bitte wählen Sie ein Paket aus" },
+          "selectedTier": { "required": "Bitte wählen Sie eine Stufe aus" },
+          "companyName": { "required": "Firmenname ist erforderlich" },
+          "industry": { "required": "Branche ist erforderlich" },
+          "firstName": { "required": "Vorname ist erforderlich" },
+          "lastName": { "required": "Nachname ist erforderlich" },
+          "email": { "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein" }
+        }
     },
     "step2": {
       "title": "Geschäftskontext & Ziele",
@@ -95,6 +105,12 @@
             "partial": "Einige Elemente (Logo oder Farben)",
             "none": "Kein vorhandenes Branding"
           }
+        ,
+        "errors": {
+          "currentSituation": { "required": "Bitte beschreiben Sie Ihre aktuelle Situation" },
+          "primaryGoals": { "required": "Bitte wählen Sie mindestens ein Hauptziel aus" },
+          "timeline": { "required": "Bitte wählen Sie einen Zeitplan aus" }
+        }
         },
         "websiteComplexity": {
           "label": "Website-Komplexität",
@@ -187,6 +203,9 @@
         }
       }
     },
+        "errors": {
+          "packageSpecific": { "required": "Bitte geben Sie paket-spezifische Details an" }
+        },
     "step4": {
       "title": "Budget & Projekt-Details",
       "description": "Helfen Sie uns, Ihre Budget-Erwartungen und Projekt-Anforderungen zu verstehen.",
@@ -225,6 +244,11 @@
           "flexible": "Flexibles Timing"
         }
       }
+        ,
+        "errors": {
+          "budgetRange": { "required": "Bitte wählen Sie einen Budgetbereich aus" },
+          "startDate": { "required": "Bitte wählen Sie ein bevorzugtes Startdatum aus" }
+        }
     },
     "step5": {
       "title": "Kontaktdaten & Abschließende Informationen",
@@ -255,6 +279,11 @@
       "newsletter": {
         "label": "Ich möchte Marketing-Updates und Tipps per E-Mail erhalten"
       }
+        ,
+        "errors": {
+          "communicationPreference": { "required": "Bitte wählen Sie eine bevorzugte Kommunikationsmethode" },
+          "privacyPolicy": { "required": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren" }
+        }
     },
     "next": "Weiter",
     "previous": "Zurück",

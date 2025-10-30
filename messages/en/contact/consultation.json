@@ -169,6 +169,9 @@
       "firstName": {
         "required": "First name is required"
       },
+      "companyDescription": {
+        "invalid": "Please enter a valid company description"
+      },
       "lastName": {
         "required": "Last name is required"
       },
@@ -189,6 +192,9 @@
       },
       "email": {
         "invalid": "Please enter a valid email address"
+      },
+      "phone": {
+        "invalid": "Please enter a valid phone number"
       },
       "website": {
         "url": "Please enter a valid website URL"
@@ -219,6 +225,12 @@
       },
       "runningBudget": {
         "required": "Please enter a running budget"
+      },
+      "privacyPolicy": {
+        "required": "You must agree to the privacy policy to proceed"
+      },
+      "newsletter": {
+        "required": "Please select whether you want to receive the newsletter"
       },
       "captcha": {
         "required": "Please complete the CAPTCHA verification"
