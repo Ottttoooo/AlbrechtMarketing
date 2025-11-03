@@ -98,13 +98,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services">
-                  <span className="text-gray-400 hover:text-white transition-colors">
-                    {t("column2.link2")}
-                  </span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/preise">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link3")}
