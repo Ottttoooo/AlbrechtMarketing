@@ -1,38 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { Transition } from "@headlessui/react"; // For smooth enter/leave animations
-import { usePathname } from "next/navigation";
-import { useParams } from "next/navigation";
+import { Transition } from "@headlessui/react";
 
-// Suppose we track the user's current locale in local state,
-// or get it from Next.js routing, or a global store:
+import {
+  Link,
+  usePathname,
+} from "@/i18n/routing";
+
 const AVAILABLE_LANGUAGES = [
   { code: "de", label: "Deutsch", flagSrc: "/images/de.svg" },
   { code: "en", label: "English", flagSrc: "/images/gb.svg" },
 ];
 
 export default function LanguageSwitcher() {
-  const pathname = usePathname();
-
   const [isOpen, setIsOpen] = useState(false);
 
-  const { locale } = useParams(); // "de" or "en", etc.
+  // ✅ next-intl–aware pathname
+  const pathname = usePathname();
 
-  // The flag + label for the currently selected language
   const selectedLang =
-    AVAILABLE_LANGUAGES.find((lang) => lang.code === locale) ||
-    AVAILABLE_LANGUAGES[0];
+    AVAILABLE_LANGUAGES.find((lang) =>
+      pathname.startsWith(`/${lang.code}`)
+    ) ?? AVAILABLE_LANGUAGES[0];
 
   return (
     <div className="relative inline-block text-left">
-      {/* The Button: shows only the current locale’s flag */}
       <button
         type="button"
-        className="flex items-center gap-2 rounded-md px-2 py-1  hover:bg-gray-200 transition-colors"
-        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 rounded-md px-2 py-1 hover:bg-gray-200 transition-colors"
+        onClick={() => setIsOpen((v) => !v)}
       >
         <Image
           src={selectedLang.flagSrc}
@@ -40,11 +38,11 @@ export default function LanguageSwitcher() {
           width={16}
           height={16}
         />
-        {/* You could show the label too, if you like */}
-        <span className="text-base text-gray-600">{selectedLang.label}</span>
+        <span className="text-base text-gray-600">
+          {selectedLang.label}
+        </span>
       </button>
 
-      {/* The Dropdown Menu */}
       <Transition
         show={isOpen}
         enter="transition ease-out duration-100"
@@ -55,16 +53,14 @@ export default function LanguageSwitcher() {
         leaveTo="transform opacity-0 scale-95"
       >
         <div
-          className="absolute right-0 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+          className="absolute right-0 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-10"
           onMouseLeave={() => setIsOpen(false)}
-          /* optional: hide menu on mouse leave */
         >
           <ul className="py-1">
             {AVAILABLE_LANGUAGES.map((lang) => (
               <li key={lang.code}>
                 <Link
-                  // @ts-expect-error - Dynamic locale switching with pathname
-                  href={pathname.replace(/^\/(de|en)/, "")}
+                  href={pathname}
                   locale={lang.code}
                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   onClick={() => setIsOpen(false)}
