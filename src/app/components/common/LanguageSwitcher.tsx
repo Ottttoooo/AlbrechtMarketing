@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
+import { useParams } from "next/navigation";
 
 import {
   Link,
@@ -16,14 +17,13 @@ const AVAILABLE_LANGUAGES = [
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
-
-  // ✅ next-intl–aware pathname
   const pathname = usePathname();
+  const params = useParams();
+  const currentLocale = params.locale as string;
 
   const selectedLang =
-    AVAILABLE_LANGUAGES.find((lang) =>
-      pathname.startsWith(`/${lang.code}`)
-    ) ?? AVAILABLE_LANGUAGES[0];
+    AVAILABLE_LANGUAGES.find((lang) => lang.code === currentLocale) 
+    ?? AVAILABLE_LANGUAGES[0];
 
   return (
     <div className="relative inline-block text-left">
