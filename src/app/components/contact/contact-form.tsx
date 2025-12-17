@@ -28,6 +28,10 @@ export default function ContactForm() {
     event.preventDefault();
     setIsSubmitting(true);
 
+    // ✅ capture immediately (before any await)
+    const form = event.currentTarget;
+    const elements = form.elements;
+
     try {
       if (!executeRecaptcha) {
         throw new Error("reCAPTCHA not available");
@@ -35,19 +39,17 @@ export default function ContactForm() {
 
       // Execute reCAPTCHA and get token
       const token = await executeRecaptcha("contact_form");
-      
-      // Verify the token on your server side
-      const form = event.currentTarget;
+
       const formData: ContactFormData = {
-        name: (form.elements.namedItem("name") as HTMLInputElement).value,
-        email: (form.elements.namedItem("email") as HTMLInputElement).value,
-        subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
-        message: (form.elements.namedItem("message") as HTMLInputElement).value,
+        name: (elements.namedItem("name") as HTMLInputElement).value,
+        email: (elements.namedItem("email") as HTMLInputElement).value,
+        subject: (elements.namedItem("subject") as HTMLInputElement).value,
+        message: (elements.namedItem("message") as HTMLInputElement).value,
         recaptchaToken: token,
       };
 
       const result = await sendContactEmail(formData);
-      
+
       if (result.success) {
         router.push("/thank-you");
       } else {
@@ -55,7 +57,11 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert(error instanceof Error ? error.message : "There was an error sending your message. Please try again later.");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "There was an error sending your message. Please try again later."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -68,15 +74,17 @@ export default function ContactForm() {
         <Card className="shadow-md">
           <CardHeader>
             <CardTitle className="text-2xl">{t("form.title")}</CardTitle>
-            <CardDescription>
-              {t("form.subTitle")}
-            </CardDescription>
+            <CardDescription>{t("form.subTitle")}</CardDescription>
           </CardHeader>
           <CardContent>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="name">{t("form.name.label")}</Label>
-                <Input id="name" placeholder={t("form.name.placeholder")} required />
+                <Input
+                  id="name"
+                  placeholder={t("form.name.placeholder")}
+                  required
+                />
               </div>
 
               <div className="space-y-2">
@@ -91,7 +99,10 @@ export default function ContactForm() {
 
               <div className="space-y-2">
                 <Label htmlFor="subject">{t("form.subject.label")}</Label>
-                <Input id="subject" placeholder={t("form.subject.placeholder")} />
+                <Input
+                  id="subject"
+                  placeholder={t("form.subject.placeholder")}
+                />
               </div>
 
               <div className="space-y-2">
@@ -123,9 +134,7 @@ export default function ContactForm() {
           <Card className="shadow-md">
             <CardHeader>
               <CardTitle className="text-2xl">{t("infoBox.title")}</CardTitle>
-              <CardDescription>
-                {t("infoBox.description")}
-              </CardDescription>
+              <CardDescription>{t("infoBox.description")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-start gap-3">
@@ -156,7 +165,9 @@ export default function ContactForm() {
               </div> */}
 
               <div className="mt-6 rounded-lg bg-muted p-4">
-                <h3 className="font-medium">{t("infoBox.responseTimeTitle")}</h3>
+                <h3 className="font-medium">
+                  {t("infoBox.responseTimeTitle")}
+                </h3>
                 <p className="text-sm text-muted-foreground mt-1">
                   {t("infoBox.responseTime")}
                 </p>
