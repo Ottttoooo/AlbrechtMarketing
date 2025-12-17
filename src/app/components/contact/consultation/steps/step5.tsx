@@ -13,13 +13,11 @@ import { useTranslations } from "next-intl";
 import { Textarea } from "@/components/ui/textarea";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
-import { useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export const Step5 = ({ form }: StepProps) => {
   const t = useTranslations("contact.consultation.multiStepForm.step5");
   const { executeRecaptcha } = useGoogleReCaptcha();
-  const locale = useLocale();
 
   // Execute reCAPTCHA when component mounts
   useEffect(() => {
@@ -73,7 +71,7 @@ export const Step5 = ({ form }: StepProps) => {
                 <FormLabel>
                   {t("privacyPolicy.label")}{" "}
                   <Link
-                    href={`/${locale}/legal/privacy`}
+                    href="/legal/privacy"
                     className="text-primary hover:underline"
                     target="_blank"
                   >

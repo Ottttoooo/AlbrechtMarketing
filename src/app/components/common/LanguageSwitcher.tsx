@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Transition } from "@headlessui/react"; // For smooth enter/leave animations
 import { usePathname } from "next/navigation";
@@ -63,7 +63,9 @@ export default function LanguageSwitcher() {
             {AVAILABLE_LANGUAGES.map((lang) => (
               <li key={lang.code}>
                 <Link
-                  href={`/${lang.code}${pathname.replace(/^\/(de|en)/, "")}`}
+                  // @ts-expect-error - Dynamic locale switching with pathname
+                  href={pathname.replace(/^\/(de|en)/, "")}
+                  locale={lang.code}
                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   onClick={() => setIsOpen(false)}
                 >

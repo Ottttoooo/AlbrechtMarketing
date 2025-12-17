@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,13 +56,13 @@ const Footer = () => {
               {t("column1.text2")}
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/people/Albrecht-Marketing/100090449678717/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/people/Albrecht-Marketing/100090449678717/" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={t("socialMedia.facebook")}
                 />
-              </Link>
-              <Link href="https://x.com/AlbrMarketing" target="_blank" rel="noopener noreferrer" className="flex items-start">
+              </a>
+              <a href="https://x.com/AlbrMarketing" target="_blank" rel="noopener noreferrer" className="flex items-start">
                 <FontAwesomeIcon
                   icon={faXTwitter}
                   style={{
@@ -72,8 +72,8 @@ const Footer = () => {
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                 />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://www.instagram.com/albrechtmarketing/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -82,7 +82,7 @@ const Footer = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={t("socialMedia.instagram")}
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/preise">
+                <Link href="/pricing">
                   <span className="text-gray-400 hover:text-white transition-colors">
                     {t("column2.link3")}
                   </span>

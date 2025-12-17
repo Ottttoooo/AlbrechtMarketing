@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import type { ComponentProps } from "react";
 
 interface ServiceCardProps {
-  href: string;
+  href: ComponentProps<typeof Link>['href'];
   imageSrc: string;
   imageAlt: string;
   title: string;

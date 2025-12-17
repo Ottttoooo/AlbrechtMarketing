@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
@@ -113,7 +113,10 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Link href={`/contact/pricing?package=${selectedPackage}&tier=${tier.toLowerCase()}`}>
+              <Link 
+                // @ts-expect-error - Dynamic query params for pricing selection
+                href={`/contact/pricing?package=${selectedPackage}&tier=${tier.toLowerCase()}`}
+              >
                 <button className="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-700 transition">
                   {t("cta.select")}
                 </button>
